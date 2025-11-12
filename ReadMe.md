@@ -1,0 +1,259 @@
+# NeatData - CSV Data Cleaner 🧹
+
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https.img.shields.io/badge/status-active-success.svg)]()
+
+A simple yet powerful Python script to clean and standardize messy CSV files, saving the output to a pristine Excel file.
+
+Türkçe açıklama için [aşağıya inin](#-neatdata---csv-veri-temizleyici-).
+
+---
+
+## 🌟 About The Project
+
+
+This project provides a robust, extensible, and fully modular command-line tool for cleaning and standardizing messy CSV files. Key features and recent updates:
+- **Modular architecture**: Each cleaning step is implemented as a separate module in the `modules/` folder. The pipeline manager orchestrates the execution order, making it easy to add, remove, or customize steps.
+- **Dynamic pipeline management**: Users and developers can control which cleaning modules are applied, their order, and parameters via configuration or CLI.
+- **Multiple file cleaning**: Clean any number of CSV files in a single run.
+- **Automatic delimiter and encoding detection**: No need to guess file format.
+- **Comprehensive cleaning report**: Summarizes all changes for each file.
+- **User parameterization**: Choose cleaning options via command line.
+It automates tedious tasks like removing duplicates, handling missing values, standardizing text, and more. The modular design makes it easy to extend the tool with new cleaning steps or custom workflows.
+
+### Built With
+*   [Python](https://www.python.org/)
+*   [Pandas](https://pandas.pydata.org/)
+*   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+
+## 🚀 Features
+
+
+- **Modular cleaning pipeline**: Each cleaning step (column normalization, type inference, error value handling, duplicate removal, missing value handling, text standardization, export) is a separate module. Easily add, remove, or customize steps.
+- **Pipeline manager**: Orchestrates the execution order of modules. Users can configure which steps to run and in what order.
+- **Multi-file support**: Clean one or many CSV files in a single command.
+- **Automatic delimiter & encoding detection**: No manual format guessing.
+- **Column normalization**: Cleans and standardizes column names.
+- **Type inference**: Automatically detects and converts column types.
+- **Error/missing value handling**: Standardizes error values (ERROR, UNKNOWN, blank, NaN) and manages missing data.
+- **Remove duplicates**: Ensures data integrity by dropping duplicate rows.
+- **Text standardization**: Lowercases all text in a specified column.
+- **User parameterization**: Choose cleaning options (drop/fill missing, text column, etc.) via CLI.
+- **Flexible output**: Save cleaned data as Excel or CSV, with automatic output naming for batch jobs.
+- **Cleaning report**: For each file, a summary of all cleaning actions and changes is printed.
+
+## 📦 Installation
+
+### Prerequisites
+*   Python 3.6 or higher
+*   pip (Python package installer)
+
+### Steps
+1.  Clone the repository (or download the script)
+    ```bash
+    git clone https://github.com/your_username/NeatData.git
+    cd NeatData
+    ```
+
+2.  Install required packages
+    ```bash
+    pip install pandas openpyxl chardet python-dateutil
+    ```
+
+## 💻 Usage
+
+
+The script is run from the command line and now supports cleaning multiple files at once. You do **not** need to edit the script for basic usage. Advanced users and developers can customize the cleaning pipeline by adding/removing modules in the `modules/` folder and configuring the pipeline manager.
+
+**Basic single file cleaning:**
+```bash
+python clean_data.py --input data.csv
+```
+
+**Batch cleaning multiple files:**
+```bash
+python clean_data.py --input data1.csv data2.csv data3.csv
+```
+
+**Custom output name (single file):**
+```bash
+python clean_data.py --input data.csv --output my_cleaned.xlsx
+```
+
+**Custom options:**
+- Drop rows with missing values:
+    ```bash
+    python clean_data.py --input data.csv --dropna
+    ```
+- Fill missing values with a default:
+    ```bash
+    python clean_data.py --input data.csv --fillna 0
+    ```
+- Standardize a text column:
+    ```bash
+    python clean_data.py --input data.csv --textcol name
+    ```
+
+**Advanced pipeline customization:**
+- To add a new cleaning step, create a new module in the `modules/` folder and register it in the pipeline manager.
+- To change the order or remove steps, edit the pipeline manager configuration in `clean_data.py`.
+
+**Output:**
+- For each input file, a cleaned Excel or CSV file is created (default: `cleaned_<filename>.xlsx`).
+- A cleaning report is printed for each file, summarizing all changes.
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+## 📞 Contact
+
+Hazar Ute - hazarute@gmail.com
+
+Proje Linki: [https://github.com/hazarute/NeatData](https://github.com/hazarute/NeatData)
+
+## 🙏 Acknowledgments
+
+*   [Pandas Library](https://pandas.pydata.org/) for its powerful data manipulation capabilities.
+*   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/) for making Excel file generation seamless.
+
+---
+
+# 🧹 NeatData - CSV Veri Temizleyici 🧹
+
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
+[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Durum](https.img.shields.io/badge/durum-aktif-başarılı.svg)]()
+
+Dağınık CSV dosyalarını temizleyen, standartlaştıran ve çıktıyı temiz bir Excel/CSV dosyası olarak kaydeden, çoklu dosya desteği ve otomatik ayraç/encoding tespiti içeren güçlü bir Python betiği.
+
+---
+
+## 🌟 Proje Hakkında
+
+
+Bu proje, dağınık CSV dosyalarını temizlemek ve standartlaştırmak için tamamen modüler, genişletilebilir ve dinamik bir komut satırı aracı sunar. Son güncellemeler ve ana özellikler:
+- **Modüler mimari**: Her temizlik adımı `modules/` klasöründe ayrı bir modül olarak uygulanır. Pipeline yöneticisi, adımların sırasını ve uygulanacak modülleri kolayca kontrol etmenizi sağlar.
+- **Dinamik pipeline yönetimi**: Kullanıcı ve geliştirici, hangi temizlik modüllerinin uygulanacağını, sırasını ve parametrelerini CLI veya yapılandırma ile belirleyebilir.
+- **Çoklu dosya temizleme**: Birden fazla CSV dosyasını tek seferde temizleyin.
+- **Otomatik ayraç ve encoding tespiti**: Dosya formatını manuel seçmeye gerek yok.
+- **Kapsamlı temizlik raporu**: Her dosya için yapılan tüm değişikliklerin özetini sunar.
+- **Kullanıcıdan parametre alma**: Temizlik seçeneklerini komut satırından belirleyin.
+Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştırma gibi işlemleri otomatikleştirir. Modüler tasarım sayesinde yeni temizlik adımları veya özel iş akışları kolayca eklenebilir.
+
+### Kullanılan Teknolojiler
+*   [Python](https://www.python.org/)
+*   [Pandas](https://pandas.pydata.org/)
+*   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+
+## 🚀 Özellikler
+
+
+- **Modüler temizlik pipeline'ı**: Her temizlik adımı (sütun adı normalizasyonu, veri tipi algılama, hatalı değer yönetimi, tekrarları silme, eksik değer yönetimi, metin standardizasyonu, çıktı) ayrı bir modüldür. Adımları kolayca ekleyin, çıkarın veya özelleştirin.
+- **Pipeline yöneticisi**: Modüllerin sırasını ve uygulanacak adımları yönetir. Kullanıcılar hangi adımların çalışacağını ve sırasını belirleyebilir.
+- **Çoklu dosya desteği**: Birden fazla CSV dosyasını tek komutla temizleyin.
+- **Otomatik ayraç ve encoding tespiti**: Dosya formatını elle seçmeye gerek yok.
+- **Sütun adı normalizasyonu**: Sütun adlarını temizler ve standartlaştırır.
+- **Veri tipi algılama**: Sütun tiplerini otomatik algılar ve dönüştürür.
+- **Hatalı/eksik değer yönetimi**: ERROR, UNKNOWN, boşluk, NaN gibi değerleri standartlaştırır ve eksik verileri yönetir.
+- **Tekrarlananları silme**: Veri bütünlüğü için tekrar eden satırları kaldırır.
+- **Metin standardizasyonu**: Belirtilen sütundaki tüm metinleri küçük harfe çevirir.
+- **Kullanıcıdan parametre alma**: Temizlik seçeneklerini komut satırından belirleyin.
+- **Esnek çıktı**: Temizlenmiş veriyi Excel veya CSV olarak kaydedin, toplu işlerde otomatik çıktı adı.
+- **Temizlik raporu**: Her dosya için yapılan işlemlerin özet raporu ekrana yazdırılır.
+
+## 📦 Kurulum
+
+### Ön Gereksinimler
+*   Python 3.6 veya üzeri
+*   pip (Python paket yükleyici)
+
+### Adımlar
+1.  Depoyu klonlayın (veya betiği indirin)
+    ```bash
+    git clone https://github.com/kullanici_adiniz/NeatData.git
+    cd NeatData
+    ```
+
+2.  Gerekli paketleri yükleyin
+    ```bash
+    pip install pandas openpyxl chardet python-dateutil
+    ```
+
+## 💻 Kullanım
+
+
+Betik komut satırından çalıştırılır ve artık birden fazla dosyayı aynı anda temizleyebilir. Temel kullanım için betiği düzenlemenize gerek yoktur. Gelişmiş kullanıcılar ve geliştiriciler, `modules/` klasörüne yeni modüller ekleyerek ve pipeline yöneticisini yapılandırarak temizlik akışını özelleştirebilir.
+
+**Tek dosya temizleme:**
+```bash
+python clean_data.py --input veri.csv
+```
+
+**Çoklu dosya temizleme:**
+```bash
+python clean_data.py --input veri1.csv veri2.csv veri3.csv
+```
+
+**Çıktı dosya adı belirleme (tek dosya):**
+```bash
+python clean_data.py --input veri.csv --output temizim.xlsx
+```
+
+**Ek seçenekler:**
+- Eksik satırları sil:
+    ```bash
+    python clean_data.py --input veri.csv --dropna
+    ```
+- Eksik değerleri varsayılanla doldur:
+    ```bash
+    python clean_data.py --input veri.csv --fillna 0
+    ```
+- Bir metin sütununu standartlaştır:
+    ```bash
+    python clean_data.py --input veri.csv --textcol isim
+    ```
+
+**Gelişmiş pipeline özelleştirme:**
+- Yeni bir temizlik adımı eklemek için `modules/` klasörüne yeni bir modül oluşturun ve pipeline yöneticisine kaydedin.
+- Adım sırasını değiştirmek veya adım çıkarmak için pipeline yöneticisi yapılandırmasını `clean_data.py` dosyasında düzenleyin.
+
+**Çıktı:**
+- Her girdi dosyası için temizlenmiş bir Excel veya CSV dosyası oluşturulur (varsayılan: `cleaned_<dosyaadı>.xlsx`).
+- Her dosya için yapılan işlemlerin özet raporu ekrana yazdırılır.
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınız, açık kaynak topluluğunu öğrenmek, ilham vermek ve yaratmak için harika bir yer haline getiren şeydir. Yaptığınız her katkı **büyük bir takdirle karşılanır**.
+
+1.  Projeyi Fork'layın
+2.  Özellik Dalınızı Oluşturun (`git checkout -b feature/HarikaOzellik`)
+3.  Değişikliklerinizi Commit'leyin (`git commit -m 'Harika bir özellik ekle'`)
+4.  Dala Push'layın (`git push origin feature/HarikaOzellik`)
+5.  Bir Pull Request açın
+
+## 📝 Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
+
+## 📞 İletişim
+
+Hazar Ute - hazarute@gmail.com
+
+Proje Linki: [https://github.com/hazarute/NeatData](https://github.com/hazarute/NeatData)
+
+## 🙏 Teşekkürler
+
+*   Güçlü veri işleme yetenekleri için [Pandas Kütüphanesi](https://pandas.pydata.org/).
+*   Excel dosyası oluşturmayı sorunsuz hale getirdiği için [Openpyxl](https://openpyxl.readthedocs.io/en/stable/).
