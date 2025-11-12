@@ -1,0 +1,7 @@
+pandas
+openpyxl
+chardet
+python-dateutil
+# GUI için ek paketler (Tkinter Python ile birlikte gelir)
+# PySimpleGUI (opsiyonel, istenirse):
+# PySimpleGUI

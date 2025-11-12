@@ -146,4 +146,10 @@ def main():
             print(f"{input_file} dosyası yüklenemedi.")
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--gui":
+        from neatdata_gui import NeatDataGUI
+        app = NeatDataGUI()
+        app.mainloop()
+    else:
+        main()

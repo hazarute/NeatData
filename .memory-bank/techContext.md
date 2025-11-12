@@ -1,3 +1,4 @@
+
 # Teknik Detaylar (techContext.md)
 
 ## Kullanılan Teknolojiler
@@ -6,21 +7,30 @@
 - openpyxl
 - chardet (encoding tespiti için)
 - python-dateutil (tarih algılama için)
+- Tkinter (GUI için, yerleşik ve ek bağımlılık gerektirmez)
+- Alternatif: PySimpleGUI (GUI için, ek paket ama basit ve hızlı)
+
 
 ## Geliştirme Ortamı Kurulumu
 1. Python 3.6 veya üzeri kurulu olmalı.
 2. Gerekli paketler: `pip install pandas openpyxl chardet python-dateutil`
+3. GUI için ek paket gerekirse: `pip install PySimpleGUI`
+
 
 ## Bağımlılıklar
 - pandas: Veri işleme ve temizleme
 - openpyxl: Excel dosyası oluşturma
 - chardet: Dosya encoding tespiti
 - python-dateutil: Tarih sütunlarını algılama ve dönüştürme
+- Tkinter: GUI için (Python ile birlikte gelir)
+- PySimpleGUI: Alternatif GUI (ekstra paket)
+
 
 ## Teknik Kısıtlamalar
 - Farklı ayraç ve encoding ile gelen dosyalar için otomatik tespit modülü gereklidir.
-- Komut satırı üzerinden çalışır.
+- Hem komut satırı hem GUI üzerinden çalışır.
 - Büyük veri setlerinde bellek kullanımı pandas'a bağlıdır.
+
 
 
 ## Modüller Dosya/Fonksiyon Yapısı
@@ -28,5 +38,6 @@
 - Pipeline yönetimi PipelineManager ile merkezi ve büyüyebilir şekilde sağlanır.
 - Pipeline adımları ve parametreleri config dosyası ile dinamik olarak yönetilir.
 - Hata yönetimi, loglama ve modül ekleme/çıkarma PipelineManager üzerinden yapılır.
+- GUI dosyası kök dizinde yer alacak ve arka planda PipelineManager'ı çağıracak.
 - Kullanıcı ve geliştirici için pipeline özelleştirme ve modül ekleme/çıkarma dokümantasyonu hazırlanacaktır.
 - Yeni stratejik odak: Bellek Bankası ve dokümantasyonun yeni mimariye göre güncellenmesi.

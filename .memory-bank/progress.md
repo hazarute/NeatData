@@ -1,5 +1,15 @@
+
+
 ## Yapılacaklar (TO-DO)
 
+
+## Tamamlananlar (DONE)
+[X] Hafif ve kolay entegre edilebilen bir GUI kütüphanesi seçildi (Tkinter)
+[X] GUI tasarımı ve temel bileşenler planlandı
+[X] PipelineManager ile tam uyumlu, modüler bir GUI geliştirildi
+[X] Ana script hem CLI hem GUI modunda çalışacak şekilde güncellendi
+[X] Ek paketler requirements.txt'ye eklendi
+[X] GUI için basit dokümantasyon hazırlandı (docs/neatdata_gui_kullanim.md)
 
 [X] Uygulama test edildi: dirty_cafe_sales.csv, messy_HR_data.csv, messy_IMDB_dataset.csv ve diğer dosyalar başarıyla işlendi. Tüm hata/eksik/boş değerler (ERROR, UNKNOWN, N/A, null, -, ?, boşluk) güvenilir şekilde temizlenip 'TEMIZ' ile dolduruldu. Temizlik raporları ve çıktı dosyaları incelendi, sonuçlar başarılı.
 
