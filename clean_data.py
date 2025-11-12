@@ -34,7 +34,22 @@ def read_data(filename, encoding=None, delimiter=None):
                 encoding_auto, delimiter_auto = detect_encoding_and_delimiter(filename)
                 encoding = encoding or encoding_auto
                 delimiter = delimiter or delimiter_auto
-            df = pd.read_csv(filename, encoding=encoding, sep=delimiter, engine="python", on_bad_lines='skip')
+            bad_lines = []
+            def log_bad_line(bad_line):
+                bad_lines.append(bad_line)
+            df = pd.read_csv(
+                filename,
+                encoding=encoding,
+                sep=delimiter,
+                engine="python",
+                on_bad_lines=log_bad_line
+            )
+            if bad_lines:
+                with open("bad_lines.csv", "a", encoding=encoding) as f:
+                    writer = csv.writer(f)
+                    for line in bad_lines:
+                        writer.writerow(line)
+                print(f"{len(bad_lines)} satır bad_lines.csv dosyasına loglandı.")
             print(f"{filename} başarıyla okundu. Satır sayısı: {len(df)}")
             return df
         elif ext in [".xlsx", ".xlsm", ".xls"]:
@@ -62,36 +77,30 @@ def print_report(rapor):
 def temizlik_pipeline(df, args, rapor):
     config_path = "modules/pipeline_config.toml"
     manager = PipelineManager(config_path=config_path)
-    # Parametreleri pipeline adımlarına ekle
-    # Örnek: args.textcol, args.dropna, args.fillna gibi argümanlar config ile birleştirilebilir
-    # Şimdilik config dosyasındaki adımlar çalıştırılır
+    # CLI argümanlarını pipeline'a adım olarak ekle
+    if args.dropna:
+        from modules.handle_missing_values import process as handle_missing_process
+        manager.add_step(handle_missing_process, {"method": "drop"})
+    elif args.fillna is not None:
+        from modules.handle_missing_values import process as handle_missing_process
+        manager.add_step(handle_missing_process, {"method": "fill", "fill_value": args.fillna})
+    if args.textcol:
+        from modules.standardize_text_column import process as standardize_text_process
+        manager.add_step(standardize_text_process, {"column": args.textcol})
+    from modules.remove_duplicates_report import process as remove_duplicates_process
+    manager.add_step(remove_duplicates_process)
+    # Pipeline'ı çalıştır
+    before = len(df)
     df = manager.run(df)
-    # Tekrar silinen satır sayısı
-    # remove_duplicates_report modülü artık process arayüzüne sahip
-    tekrar_silinen = None
-    try:
-        from modules.remove_duplicates_report import process as remove_duplicates_process
-        before = len(df)
-        df = remove_duplicates_process(df)
-        tekrar_silinen = before - len(df)
-    except Exception:
-        tekrar_silinen = "-"
+    tekrar_silinen = before - len(df)
     rapor['tekrar_silinen'] = tekrar_silinen
     # Eksik değerleri yönet
     eksik_silinen = 0
     if args.dropna:
-        before = len(df)
-        from modules.handle_missing_values import process as handle_missing_process
-        df = handle_missing_process(df, method="drop")
-        eksik_silinen = before - len(df)
+        eksik_silinen = "(pipeline ile silindi)"
     elif args.fillna is not None:
-        from modules.handle_missing_values import process as handle_missing_process
-        df = handle_missing_process(df, method="fill", fill_value=args.fillna)
+        eksik_silinen = "(pipeline ile dolduruldu)"
     rapor['eksik_silinen'] = eksik_silinen
-    # Metin standartlaştırma
-    if args.textcol:
-        from modules.standardize_text_column import process as standardize_text_process
-        df = standardize_text_process(df, column=args.textcol)
     return df
 
 def main():

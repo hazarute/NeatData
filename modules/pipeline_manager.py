@@ -75,9 +75,6 @@ class PipelineManager:
 	def set_steps(self, steps):
 		self.steps = steps
 		self.logger.info("Pipeline adımları güncellendi.")
-	def set_steps(self, steps):
-		self.steps = steps
-		self.logger.info("Pipeline adımları güncellendi.")
 
 # Örnek modül arayüzü: Tüm modüller process(df, **kwargs) şeklinde olmalı
 # def process(df, **kwargs):

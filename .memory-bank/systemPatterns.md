@@ -15,12 +15,8 @@
 
 
 ## Tasarım Desenleri
-- Pipeline yönetimi PipelineManager sınıfı ile merkezi ve büyüyebilir bir yapıda sağlanır.
-- Her temizlik modülü process(df, **kwargs) arayüzüne sahiptir.
-- Pipeline adımları ve parametreleri config dosyası ile dinamik olarak yönetilir.
-- Hata yönetimi ve loglama PipelineManager üzerinden merkezi olarak yapılır.
-- Modül ekleme/çıkarma ve pipeline özelleştirme dokümantasyon ile desteklenir.
-- Bellek Bankası ve dokümantasyon yeni mimariye göre güncellenmiştir.
+
+Yeni mimaride hibrit modül çağrıları kaldırılmıştır. Tüm CLI argümanları pipeline'a adım olarak eklenir ve temizlik akışı PipelineManager üzerinden merkezi şekilde yönetilir. Hata loglama ile atlanan satırlar bad_lines.csv dosyasına kaydedilir. Kod temizliği ve sürdürülebilirlik ön plandadır.
 
 ## Bileşenler Arası İlişkiler
 - Tüm işlemler pandas DataFrame üzerinde gerçekleşir.

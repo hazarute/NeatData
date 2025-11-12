@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status](https.img.shields.io/badge/status-active-success.svg)]()
+[![Status](https//img.shields.io/badge/status-active-success.svg)]()
 
 A simple yet powerful Python script to clean and standardize messy CSV files, saving the output to a pristine Excel file.
 
@@ -43,6 +43,12 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 - **Flexible output**: Save cleaned data as Excel or CSV, with automatic output naming for batch jobs.
 - **Cleaning report**: For each file, a summary of all cleaning actions and changes is printed.
 
+**New in latest version:**
+- All CLI cleaning options (e.g. --dropna, --fillna, --textcol) are now added as pipeline steps and managed centrally by PipelineManager. No hybrid/manual calls.
+- Skipped/bad lines during CSV reading are logged to bad_lines.csv for transparency.
+- PipelineManager orchestrates all cleaning steps; config and CLI options are merged for full control.
+- Codebase refactored for maintainability (duplicate functions removed).
+
 ## 📦 Installation
 
 ### Prerequisites
@@ -52,7 +58,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 ### Steps
 1.  Clone the repository (or download the script)
     ```bash
-    git clone https://github.com/your_username/NeatData.git
+    git clone https://github.com/hazarute/NeatData.git
     cd NeatData
     ```
 
@@ -64,7 +70,8 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 ## 💻 Usage
 
 
-The script is run from the command line and now supports cleaning multiple files at once. You do **not** need to edit the script for basic usage. Advanced users and developers can customize the cleaning pipeline by adding/removing modules in the `modules/` folder and configuring the pipeline manager.
+
+The script is run from the command line and now supports cleaning multiple files at once. All CLI cleaning options are automatically added as pipeline steps and managed centrally—no manual module calls. You do **not** need to edit the script for basic usage. Advanced users and developers can customize the cleaning pipeline by adding/removing modules in the `modules/` folder and configuring the pipeline manager or config file.
 
 **Basic single file cleaning:**
 ```bash
@@ -95,9 +102,14 @@ python clean_data.py --input data.csv --output my_cleaned.xlsx
     python clean_data.py --input data.csv --textcol name
     ```
 
+**Note:** All CLI options above are now added as pipeline steps and executed in order by PipelineManager. No hybrid/manual calls.
+
+**Error Handling:**
+Any skipped/bad lines during CSV reading are automatically logged to bad_lines.csv for review.
+
 **Advanced pipeline customization:**
-- To add a new cleaning step, create a new module in the `modules/` folder and register it in the pipeline manager.
-- To change the order or remove steps, edit the pipeline manager configuration in `clean_data.py`.
+- To add a new cleaning step, create a new module in the `modules/` folder and register it in the pipeline manager or config file.
+- To change the order or remove steps, edit the pipeline manager configuration or use CLI options; all steps are orchestrated centrally.
 
 **Output:**
 - For each input file, a cleaned Excel or CSV file is created (default: `cleaned_<filename>.xlsx`).
@@ -134,9 +146,15 @@ Proje Linki: [https://github.com/hazarute/NeatData](https://github.com/hazarute/
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
 [![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Durum](https.img.shields.io/badge/durum-aktif-başarılı.svg)]()
+[![Durum](https//img.shields.io/badge/durum-aktif-başarılı.svg)]()
 
 Dağınık CSV dosyalarını temizleyen, standartlaştıran ve çıktıyı temiz bir Excel/CSV dosyası olarak kaydeden, çoklu dosya desteği ve otomatik ayraç/encoding tespiti içeren güçlü bir Python betiği.
+
+**Son güncellemeler:**
+- Tüm CLI temizlik seçenekleri pipeline adımı olarak merkezi şekilde ekleniyor ve yönetiliyor.
+- Hibrit/manuel modül çağrıları kaldırıldı; tüm akış PipelineManager üzerinden.
+- CSV okuma sırasında atlanan satırlar bad_lines.csv dosyasına loglanıyor.
+- Kod tabanı sürdürülebilirlik için temizlendi (tekrarlanan fonksiyonlar kaldırıldı).
 
 ---
 
@@ -173,6 +191,12 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 - **Esnek çıktı**: Temizlenmiş veriyi Excel veya CSV olarak kaydedin, toplu işlerde otomatik çıktı adı.
 - **Temizlik raporu**: Her dosya için yapılan işlemlerin özet raporu ekrana yazdırılır.
 
+**Yeni:**
+- Tüm CLI temizlik seçenekleri pipeline adımı olarak merkezi şekilde ekleniyor ve yönetiliyor.
+- Hibrit/manuel modül çağrıları kaldırıldı; tüm akış PipelineManager üzerinden.
+- CSV okuma sırasında atlanan satırlar bad_lines.csv dosyasına loglanıyor.
+- Kod tabanı sürdürülebilirlik için temizlendi (tekrarlanan fonksiyonlar kaldırıldı).
+
 ## 📦 Kurulum
 
 ### Ön Gereksinimler
@@ -194,7 +218,8 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 ## 💻 Kullanım
 
 
-Betik komut satırından çalıştırılır ve artık birden fazla dosyayı aynı anda temizleyebilir. Temel kullanım için betiği düzenlemenize gerek yoktur. Gelişmiş kullanıcılar ve geliştiriciler, `modules/` klasörüne yeni modüller ekleyerek ve pipeline yöneticisini yapılandırarak temizlik akışını özelleştirebilir.
+
+Betik komut satırından çalıştırılır ve artık birden fazla dosyayı aynı anda temizleyebilir. Tüm CLI temizlik seçenekleri pipeline adımı olarak merkezi şekilde ekleniyor ve yönetiliyor—hibrit/manuel modül çağrısı yok. Temel kullanım için betiği düzenlemenize gerek yoktur. Gelişmiş kullanıcılar ve geliştiriciler, `modules/` klasörüne yeni modüller ekleyerek ve pipeline yöneticisini veya config dosyasını yapılandırarak temizlik akışını özelleştirebilir.
 
 **Tek dosya temizleme:**
 ```bash
@@ -225,9 +250,14 @@ python clean_data.py --input veri.csv --output temizim.xlsx
     python clean_data.py --input veri.csv --textcol isim
     ```
 
+**Not:** Tüm CLI seçenekleri pipeline adımı olarak eklenir ve PipelineManager tarafından sıralı şekilde çalıştırılır. Hibrit/manuel çağrı yok.
+
+**Hata Yönetimi:**
+CSV okuma sırasında atlanan satırlar otomatik olarak bad_lines.csv dosyasına loglanır.
+
 **Gelişmiş pipeline özelleştirme:**
-- Yeni bir temizlik adımı eklemek için `modules/` klasörüne yeni bir modül oluşturun ve pipeline yöneticisine kaydedin.
-- Adım sırasını değiştirmek veya adım çıkarmak için pipeline yöneticisi yapılandırmasını `clean_data.py` dosyasında düzenleyin.
+- Yeni bir temizlik adımı eklemek için `modules/` klasörüne yeni bir modül oluşturun ve pipeline yöneticisine veya config dosyasına kaydedin.
+- Adım sırasını değiştirmek veya adım çıkarmak için pipeline yöneticisi veya config dosyasını düzenleyin; tüm adımlar merkezi olarak yönetilir.
 
 **Çıktı:**
 - Her girdi dosyası için temizlenmiş bir Excel veya CSV dosyası oluşturulur (varsayılan: `cleaned_<dosyaadı>.xlsx`).

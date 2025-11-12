@@ -33,3 +33,8 @@
 ## Tamamlananlar (DONE)
 
 ## Bilinen Sorunlar (BUGS)
+
+[ ] Hibrit pipeline yapısını kaldır, tüm akışı PipelineManager üzerinden yönet.
+[ ] CLI argümanlarını PipelineManager'a adım olarak ekle.
+[ ] pipeline_manager.py dosyasındaki tekrarlanan set_steps fonksiyonunu sil.
+[ ] read_data fonksiyonunda atlanan satırları bad_lines.csv dosyasına logla.
