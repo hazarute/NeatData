@@ -22,9 +22,11 @@
 - Komut satırı üzerinden çalışır.
 - Büyük veri setlerinde bellek kullanımı pandas'a bağlıdır.
 
-## Modüler Dosya/Fonksiyon Yapısı
 
-- Her temizlik adımı (ör. sütun normalizasyonu, tip dönüşümü, hata yönetimi) artık `modules/` klasöründe ayrı Python dosyası olarak yer alıyor.
-- Ana script (clean_data.py), pipeline yöneticisi ile hangi modüllerin hangi sırayla çalışacağını dinamik olarak belirliyor.
-- Kullanıcı ve geliştirici, pipeline'ı özelleştirebilir, yeni modül ekleyip çıkarabilir.
-- Yeni stratejik odak: Pipeline özelleştirme, modül ekleme/çıkarma örnekleri ve kapsamlı dokümantasyon.
+## Modüller Dosya/Fonksiyon Yapısı
+- Her temizlik adımı (ör. sütun normalizasyonu, tip dönüşümü, hata yönetimi) `modules/` klasöründe ayrı Python dosyası olarak yer alır ve process(df, **kwargs) arayüzüne sahiptir.
+- Pipeline yönetimi PipelineManager ile merkezi ve büyüyebilir şekilde sağlanır.
+- Pipeline adımları ve parametreleri config dosyası ile dinamik olarak yönetilir.
+- Hata yönetimi, loglama ve modül ekleme/çıkarma PipelineManager üzerinden yapılır.
+- Kullanıcı ve geliştirici için pipeline özelleştirme ve modül ekleme/çıkarma dokümantasyonu hazırlanacaktır.
+- Yeni stratejik odak: Bellek Bankası ve dokümantasyonun yeni mimariye göre güncellenmesi.

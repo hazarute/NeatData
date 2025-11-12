@@ -13,13 +13,14 @@
 5. Temizlenmiş veri Excel veya CSV olarak kaydedilir
 6. Temizlik raporu üretilir
 
-## Tasarım Desenleri
 
-- Modüler mimari ve pipeline yönetimi başarıyla uygulandı.
-- Her temizlik adımı ayrı modül/fonksiyon olarak `modules/` klasöründe yer alıyor.
-- Pipeline yöneticisi ile adımların sırası ve uygulanacak modüller dinamik olarak kontrol edilebiliyor.
-- Kullanıcı ve geliştirici, pipeline'ı özelleştirebilir, yeni modül ekleyip çıkarabilir.
-- Yeni stratejik odak: Pipeline özelleştirme, modül ekleme/çıkarma örnekleri ve kapsamlı dokümantasyon.
+## Tasarım Desenleri
+- Pipeline yönetimi PipelineManager sınıfı ile merkezi ve büyüyebilir bir yapıda sağlanır.
+- Her temizlik modülü process(df, **kwargs) arayüzüne sahiptir.
+- Pipeline adımları ve parametreleri config dosyası ile dinamik olarak yönetilir.
+- Hata yönetimi ve loglama PipelineManager üzerinden merkezi olarak yapılır.
+- Modül ekleme/çıkarma ve pipeline özelleştirme dokümantasyon ile desteklenir.
+- Bellek Bankası ve dokümantasyon yeni mimariye göre güncellenmiştir.
 
 ## Bileşenler Arası İlişkiler
 - Tüm işlemler pandas DataFrame üzerinde gerçekleşir.

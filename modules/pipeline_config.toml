@@ -1,0 +1,39 @@
+# Pipeline Configuration Example
+# Bu dosya, pipeline adımlarını ve her adım için parametreleri tanımlar.
+
+
+
+
+[pipeline]
+
+[[pipeline.steps]]
+module = "stringify_all_cells"
+params = {}
+
+[[pipeline.steps]]
+module = "normalize_column_names"
+params = {}
+
+[[pipeline.steps]]
+module = "replace_error_values"
+error_values = ["ERROR", "UNKNOWN", "N/A", "null", "-", "?", "", " "]
+params = { error_values = ["ERROR", "UNKNOWN", "N/A", "null", "-", "?", "", " "] }
+
+[[pipeline.steps]]
+module = "auto_convert_types"
+params = {}
+
+[[pipeline.steps]]
+module = "remove_duplicates_report"
+params = {}
+
+[[pipeline.steps]]
+module = "handle_missing_values"
+params = { method = "fill", fill_value = "TEMIZ" }
+
+[[pipeline.steps]]
+module = "standardize_text_column"
+params = { column = "product" }
+
+# Her adımda kullanılacak modül adı ve parametreler burada tanımlanır.
+# Geliştirici veya kullanıcı, pipeline'ı bu dosyadan yönetebilir.

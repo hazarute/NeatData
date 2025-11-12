@@ -1,6 +1,7 @@
 import pandas as pd
 
-def auto_convert_types(df):
+
+def process(df, **kwargs):
     """Sütunların veri tiplerini otomatik algılar ve dönüştürür."""
     for col in df.columns:
         try:

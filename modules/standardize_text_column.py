@@ -1,10 +1,11 @@
 import pandas as pd
 
-def standardize_text_column(df, column):
+
+def process(df, column=None, **kwargs):
     """Belirtilen sütundaki tüm metinleri küçük harfe çevirir."""
-    if column in df.columns:
+    if column and column in df.columns:
         df[column] = df[column].astype(str).str.lower()
         print(f"'{column}' sütunundaki metinler küçük harfe çevrildi.")
-    else:
+    elif column:
         print(f"Uyarı: '{column}' sütunu bulunamadı.")
     return df

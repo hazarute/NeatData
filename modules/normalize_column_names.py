@@ -1,7 +1,8 @@
 import re
 import pandas as pd
 
-def normalize_column_names(df):
+
+def process(df, **kwargs):
     """Sütun adlarını küçük harfe çevirir, boşluk ve özel karakterleri alt çizgiye dönüştürür."""
     new_columns = []
     for col in df.columns:

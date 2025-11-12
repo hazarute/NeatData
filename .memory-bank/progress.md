@@ -1,9 +1,7 @@
-# İlerleme Durumu (progress.md)
-
-
 ## Yapılacaklar (TO-DO)
 
-[X] Modüler mimari ve pipeline yönetimi: Tüm temizlik adımlarını ayrı modüllere/fonksiyonlara ayır, pipeline yönetimini uygula, örnek modül ekleme/çıkarma dokümantasyonu hazırla.
+
+[X] Uygulama test edildi: dirty_cafe_sales.csv, messy_HR_data.csv, messy_IMDB_dataset.csv ve diğer dosyalar başarıyla işlendi. Tüm hata/eksik/boş değerler (ERROR, UNKNOWN, N/A, null, -, ?, boşluk) güvenilir şekilde temizlenip 'TEMIZ' ile dolduruldu. Temizlik raporları ve çıktı dosyaları incelendi, sonuçlar başarılı.
 
 
 ## Tamamlananlar (DONE)
@@ -20,6 +18,12 @@
 [X] Kullanıcıdan parametre alma ve temizlik seçeneklerini belirleme akışını ekle
 [X] Temizlik raporu üreten fonksiyonu ekle
 [X] Çoklu dosya ve farklı veri setleri için esnek temizlik akışı oluştur
+[X] Bellek Bankası ve dokümantasyonu yeni mimariye göre güncelle
+[X] pipeline_manager.py dosyasını geliştirerek merkezi pipeline yönetimi sağla
+[X] Pipeline adımlarını config dosyası veya arayüz ile dinamik olarak yönet
+[X] Hata yönetimi ve loglama desteği ekle
+[X] Modül arayüzü (process(df, **kwargs)) standardını uygula
+[X] Uygulama test edildi ve tüm dosyalar başarıyla işlendi. Temizlik raporları ve çıktı dosyaları oluşturuldu.
 
 
 ## Bilinen Sorunlar (BUGS)
