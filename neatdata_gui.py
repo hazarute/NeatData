@@ -1,157 +1,222 @@
+import customtkinter as ctk
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog
+from pathlib import Path
+import threading
 
-class NeatDataGUI(tk.Tk):
-	def __init__(self):
-		super().__init__()
-		self.title('NeatData - CSV Cleaner')
-		self.geometry('700x500')
-		self.create_widgets()
+from modules.data_loader import DataLoader
+from modules.pipeline_manager import PipelineManager
+from modules.report_generator import generate_gui_report
 
-	def create_widgets(self):
-		# Dosya seçimi
-		self.file_label = tk.Label(self, text='CSV Dosyası Seç:')
-		self.file_label.pack(pady=5)
-		self.file_button = tk.Button(self, text='Dosya Seç', command=self.select_file)
-		self.file_button.pack(pady=5)
-		self.selected_file = tk.StringVar()
-		self.file_entry = tk.Entry(self, textvariable=self.selected_file, width=60)
-		self.file_entry.pack(pady=5)
 
-		# Temizleme seçenekleri paneli (örnek)
-		self.options_frame = tk.LabelFrame(self, text='Temizleme Seçenekleri')
-		self.options_frame.pack(fill='x', padx=10, pady=10)
-		self.dropna_var = tk.BooleanVar()
-		self.dropna_check = tk.Checkbutton(self.options_frame, text='Eksik Satırları Sil (--dropna)', variable=self.dropna_var)
-		self.dropna_check.pack(anchor='w')
-		self.fillna_var = tk.BooleanVar()
-		self.fillna_check = tk.Checkbutton(self.options_frame, text='Eksik Değerleri Doldur (--fillna)', variable=self.fillna_var)
-		self.fillna_check.pack(anchor='w')
-		self.textcol_var = tk.StringVar()
-		self.textcol_label = tk.Label(self.options_frame, text='Metin Sütunu (--textcol):')
-		self.textcol_label.pack(anchor='w')
-		self.textcol_entry = tk.Entry(self.options_frame, textvariable=self.textcol_var)
-		self.textcol_entry.pack(anchor='w')
+ctk.set_appearance_mode("Dark")
+ctk.set_default_color_theme("blue")
 
-		# İlerleme çubuğu
-		self.progress = tk.DoubleVar()
-		self.progress_bar = tk.Scale(self, variable=self.progress, from_=0, to=100, orient='horizontal', length=400, label='İlerleme')
-		self.progress_bar.pack(pady=10)
 
-		# Çıktı ayarları
-		self.output_frame = tk.LabelFrame(self, text='Çıktı Ayarları')
-		self.output_frame.pack(fill='x', padx=10, pady=10)
-		self.output_format = tk.StringVar(value='Excel')
-		self.excel_radio = tk.Radiobutton(self.output_frame, text='Excel', variable=self.output_format, value='Excel')
-		self.excel_radio.pack(side='left', padx=5)
-		self.csv_radio = tk.Radiobutton(self.output_frame, text='CSV', variable=self.output_format, value='CSV')
-		self.csv_radio.pack(side='left', padx=5)
-		self.output_dir = tk.StringVar()
-		self.output_dir_button = tk.Button(self.output_frame, text='Çıktı Dizini Seç', command=self.select_output_dir)
-		self.output_dir_button.pack(side='left', padx=5)
-		self.output_dir_entry = tk.Entry(self.output_frame, textvariable=self.output_dir, width=40)
-		self.output_dir_entry.pack(side='left', padx=5)
+class NeatDataGUI(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+        self.title("NeatData - Veri Temizleme Asistanı")
+        self.geometry("820x900")
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(5, weight=1)
 
-		# Başlat/Durdur butonları
-		self.start_button = tk.Button(self, text='Temizlemeyi Başlat', command=self.run_cleaning)
-		self.start_button.pack(pady=10)
-		self.stop_button = tk.Button(self, text='Durdur', command=self.stop_cleaning)
-		self.stop_button.pack(pady=5)
+        self.pipeline_manager = PipelineManager()
+        self.data_loader = DataLoader()
+        self.core_module_vars = {}
+        self.custom_module_vars = {}
+        self.custom_refresh_job = None
 
-		# Konsol/log alanı
-		self.log_text = tk.Text(self, height=8, width=80)
-		self.log_text.pack(pady=10)
+        self._build_header()
+        self._build_file_picker()
+        self._build_module_panels()
+        self._build_output_panel()
+        self._build_actions()
+        self._build_log_box()
 
-	def select_file(self):
-		file_path = filedialog.askopenfilename(filetypes=[('CSV Files', '*.csv')])
-		if file_path:
-			self.selected_file.set(file_path)
+        self.log_message("NeatData Hazır. Lütfen bir dosya seçin.")
+        self._schedule_custom_refresh()
 
-	def select_output_dir(self):
-		dir_path = filedialog.askdirectory()
-		if dir_path:
-			self.output_dir.set(dir_path)
+    def _build_header(self):
+        header = ctk.CTkFrame(self, corner_radius=0, fg_color="transparent")
+        header.grid(row=0, column=0, padx=20, pady=(20, 10), sticky="ew")
+        title = ctk.CTkLabel(header, text="NeatData 🧹", font=ctk.CTkFont(size=26, weight="bold"))
+        title.pack(side="left")
+        subtitle = ctk.CTkLabel(header, text="Dinamik Plugin Pipeline", text_color="gray")
+        subtitle.pack(side="left", padx=12)
 
-	def run_cleaning(self):
-		import threading
-		self.log_text.insert(tk.END, 'Temizleme işlemi başlatıldı...\n')
-		def process():
-			import os
-			import pandas as pd
-			from modules.pipeline_manager import PipelineManager
-			# Dosya yolu
-			file_path = self.selected_file.get()
-			if not file_path:
-				self.log_text.insert(tk.END, 'Lütfen bir CSV dosyası seçin.\n')
-				return
-			try:
-				# Dosya okuma
-				ext = os.path.splitext(file_path)[-1].lower()
-				if ext == ".csv":
-					import chardet, csv
-					def detect_encoding_and_delimiter(filename, sample_size=4096):
-						with open(filename, 'rb') as f:
-							raw = f.read(sample_size)
-							result = chardet.detect(raw)
-							encoding = result['encoding']
-						with open(filename, 'r', encoding=encoding, errors='replace') as f:
-							sample = f.read(sample_size)
-							sniffer = csv.Sniffer()
-							try:
-								dialect = sniffer.sniff(sample)
-								delimiter = dialect.delimiter
-							except Exception:
-								delimiter = ','
-						return encoding, delimiter
-					encoding, delimiter = detect_encoding_and_delimiter(file_path)
-					df = pd.read_csv(file_path, encoding=encoding, sep=delimiter)
-				elif ext in [".xlsx", ".xlsm", ".xls"]:
-					df = pd.read_excel(file_path)
-				else:
-					self.log_text.insert(tk.END, f"Desteklenmeyen dosya formatı: {ext}\n")
-					return
-				self.log_text.insert(tk.END, f"{file_path} başarıyla okundu. Satır sayısı: {len(df)}\n")
-				# PipelineManager ile temizlik
-				config_path = "modules/pipeline_config.toml"
-				manager = PipelineManager(config_path=config_path)
-				# Seçenekler
-				if self.dropna_var.get():
-					from modules.handle_missing_values import process as handle_missing_process
-					manager.add_step(handle_missing_process, {"method": "drop"})
-				elif self.fillna_var.get():
-					from modules.handle_missing_values import process as handle_missing_process
-					fill_value = self.textcol_var.get() if self.textcol_var.get() else ""
-					manager.add_step(handle_missing_process, {"method": "fill", "fill_value": fill_value})
-				if self.textcol_var.get():
-					from modules.standardize_text_column import process as standardize_text_process
-					manager.add_step(standardize_text_process, {"column": self.textcol_var.get()})
-				from modules.remove_duplicates_report import process as remove_duplicates_process
-				manager.add_step(remove_duplicates_process)
-				# Temizlik işlemi
-				before = len(df)
-				df = manager.run(df)
-				tekrar_silinen = before - len(df)
-				self.log_text.insert(tk.END, f"Tekrar eden satır silinen: {tekrar_silinen}\n")
-				# Çıktı dosyası
-				output_dir = self.output_dir.get() or os.path.dirname(file_path)
-				input_base = os.path.splitext(os.path.basename(file_path))[0].replace(' ', '_')
-				output_format = self.output_format.get()
-				if output_format == "Excel":
-					output_file = os.path.join(output_dir, f"cleaned_{input_base}.xlsx")
-					from modules.save_to_excel import process as save_to_excel_process
-					save_to_excel_process(df, output_file=output_file)
-				else:
-					output_file = os.path.join(output_dir, f"cleaned_{input_base}.csv")
-					df.to_csv(output_file, index=False)
-				self.log_text.insert(tk.END, f"Temizlenmiş veri '{output_file}' dosyasına kaydedildi.\n")
-				self.progress.set(100)
-			except Exception as e:
-				self.log_text.insert(tk.END, f"Hata: {e}\n")
-		threading.Thread(target=process).start()
+    def _build_file_picker(self):
+        file_frame = ctk.CTkFrame(self)
+        file_frame.grid(row=1, column=0, padx=20, pady=10, sticky="ew")
+        file_frame.grid_columnconfigure(0, weight=1)
+        label = ctk.CTkLabel(file_frame, text="Girdi Dosyası", font=ctk.CTkFont(size=15, weight="bold"))
+        label.grid(row=0, column=0, padx=15, pady=(15, 4), sticky="w")
+        self.entry_file = ctk.CTkEntry(file_frame, placeholder_text="Henüz dosya seçilmedi...")
+        self.entry_file.grid(row=1, column=0, padx=15, pady=(0, 15), sticky="ew")
+        browse = ctk.CTkButton(file_frame, text="Dosya Seç", command=self.select_file, width=120)
+        browse.grid(row=1, column=1, padx=15, pady=(0, 15))
 
-	def stop_cleaning(self):
-		self.log_text.insert(tk.END, 'İşlem durduruldu.\n')
+    def _build_module_panels(self):
+        container = ctk.CTkFrame(self, fg_color="transparent")
+        container.grid(row=2, column=0, padx=20, pady=5, sticky="nsew")
+        container.grid_columnconfigure((0, 1), weight=1)
 
-if __name__ == '__main__':
-	app = NeatDataGUI()
-	app.mainloop()
+        # Core panel
+        core_frame = ctk.CTkFrame(container)
+        core_frame.grid(row=0, column=0, padx=(0, 10), pady=5, sticky="nsew")
+        core_label = ctk.CTkLabel(core_frame, text="Core Modüller", font=ctk.CTkFont(weight="bold"))
+        core_label.pack(anchor="w", padx=12, pady=(12, 6))
+        for descriptor in self.pipeline_manager.available_core_modules().values():
+            var = ctk.BooleanVar(value=True)
+            switch = ctk.CTkSwitch(core_frame, text=descriptor.name, variable=var)
+            switch.pack(anchor="w", padx=16, pady=4)
+            self.core_module_vars[descriptor.key] = var
+
+        # Custom panel
+        custom_frame = ctk.CTkFrame(container)
+        custom_frame.grid(row=0, column=1, padx=(10, 0), pady=5, sticky="nsew")
+        header = ctk.CTkFrame(custom_frame, fg_color="transparent")
+        header.pack(fill="x", padx=12, pady=(12, 6))
+        label = ctk.CTkLabel(header, text="Custom Plugin'ler", font=ctk.CTkFont(weight="bold"))
+        label.pack(side="left")
+        refresh_btn = ctk.CTkButton(header, text="Yenile", command=lambda: self.refresh_custom_modules(force=True), width=70)
+        refresh_btn.pack(side="right")
+        self.custom_scroll = ctk.CTkScrollableFrame(custom_frame, label_text="plugins", height=260)
+        self.custom_scroll.pack(fill="both", expand=True, padx=12, pady=(0, 12))
+        self.refresh_custom_modules(force=True)
+
+    def _build_output_panel(self):
+        output_frame = ctk.CTkFrame(self)
+        output_frame.grid(row=3, column=0, padx=20, pady=5, sticky="ew")
+        output_frame.grid_columnconfigure(0, weight=1)
+        label = ctk.CTkLabel(output_frame, text="Çıktı Ayarları", font=ctk.CTkFont(weight="bold"))
+        label.grid(row=0, column=0, padx=15, pady=(15, 5), sticky="w")
+        self.seg_output_type = ctk.CTkSegmentedButton(output_frame, values=["Excel (.xlsx)", "CSV (.csv)"])
+        self.seg_output_type.set("Excel (.xlsx)")
+        self.seg_output_type.grid(row=1, column=0, padx=15, pady=5, sticky="ew")
+        self.entry_output_dir = ctk.CTkEntry(output_frame, placeholder_text="Çıktı Klasörü (opsiyonel)")
+        self.entry_output_dir.grid(row=2, column=0, padx=15, pady=(5, 10), sticky="ew")
+        select_dir = ctk.CTkButton(output_frame, text="Klasör Seç", command=self.select_output_dir)
+        select_dir.grid(row=2, column=1, padx=15, pady=(5, 10))
+
+    def _build_actions(self):
+        action_frame = ctk.CTkFrame(self, fg_color="transparent")
+        action_frame.grid(row=4, column=0, padx=20, pady=10, sticky="ew")
+        self.progress_bar = ctk.CTkProgressBar(action_frame)
+        self.progress_bar.pack(fill="x", pady=(0, 8))
+        self.progress_bar.set(0)
+        btn_frame = ctk.CTkFrame(action_frame, fg_color="transparent")
+        btn_frame.pack(fill="x")
+        stop_btn = ctk.CTkButton(btn_frame, text="Durdur", command=self.stop_cleaning, width=90, fg_color="#D32F2F", hover_color="#B71C1C")
+        stop_btn.pack(side="right", padx=(0, 10))
+        start_btn = ctk.CTkButton(btn_frame, text="TEMİZLEMEYİ BAŞLAT", command=self.start_cleaning, height=40)
+        start_btn.pack(side="right")
+
+    def _build_log_box(self):
+        self.log_box = ctk.CTkTextbox(self, state="disabled", font=("Consolas", 12))
+        self.log_box.grid(row=5, column=0, padx=20, pady=(0, 20), sticky="nsew")
+
+    def select_file(self):
+        file_path = filedialog.askopenfilename(filetypes=[("Veri Dosyaları", "*.csv *.xlsx *.xlsm *.xls")])
+        if file_path:
+            self.entry_file.delete(0, tk.END)
+            self.entry_file.insert(0, file_path)
+            self.log_message(f"Dosya seçildi: {file_path}")
+
+    def select_output_dir(self):
+        dir_path = filedialog.askdirectory()
+        if dir_path:
+            self.entry_output_dir.delete(0, tk.END)
+            self.entry_output_dir.insert(0, dir_path)
+
+    def log_message(self, message: str):
+        self.log_box.configure(state="normal")
+        self.log_box.insert("end", f">> {message}\n")
+        self.log_box.see("end")
+        self.log_box.configure(state="disabled")
+
+    def refresh_custom_modules(self, force: bool = False):
+        modules = self.pipeline_manager.available_custom_modules(refresh=force)
+        current_keys = set(self.custom_module_vars.keys())
+        if not force and set(modules.keys()) == current_keys:
+            return
+        for widget in self.custom_scroll.winfo_children():
+            widget.destroy()
+        self.custom_module_vars.clear()
+        if not modules:
+            empty_label = ctk.CTkLabel(self.custom_scroll, text="Henüz eklenti yok.", text_color="gray")
+            empty_label.pack(anchor="w", padx=10, pady=6)
+            return
+        for descriptor in modules.values():
+            var = ctk.BooleanVar(value=False)
+            checkbox = ctk.CTkCheckBox(self.custom_scroll, text=descriptor.name, variable=var)
+            checkbox.pack(anchor="w", padx=10, pady=4)
+            self.custom_module_vars[descriptor.key] = var
+
+    def _schedule_custom_refresh(self):
+        self.refresh_custom_modules()
+        self.custom_refresh_job = self.after(5000, self._schedule_custom_refresh)
+
+    def start_cleaning(self):
+        thread = threading.Thread(target=self._run_pipeline, daemon=True)
+        thread.start()
+
+    def _run_pipeline(self):
+        self.progress_bar.set(0)
+        file_path = self.entry_file.get()
+        if not file_path:
+            self.log_message("Lütfen bir veri dosyası seçin.")
+            return
+        try:
+            dataframe = self.data_loader.load(file_path)
+        except Exception as exc:  # pylint: disable=broad-except
+            self.log_message(f"Dosya okunamadı: {exc}")
+            return
+
+        self.log_message(f"{file_path} okundu (satır: {len(dataframe)}).")
+
+        core_selection = [key for key, var in self.core_module_vars.items() if var.get()]
+        custom_selection = [key for key, var in self.custom_module_vars.items() if var.get()]
+        self.pipeline_manager.build_pipeline(core_keys=core_selection or None, custom_keys=custom_selection or None)
+
+        try:
+            cleaned = self.pipeline_manager.run(dataframe)
+        except Exception as exc:  # pylint: disable=broad-except
+            self.log_message(f"Pipeline hatası: {exc}")
+            return
+
+        self.progress_bar.set(0.7)
+        output_dir = Path(self.entry_output_dir.get() or Path(file_path).parent)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        suffix = ".xlsx" if "Excel" in self.seg_output_type.get() else ".csv"
+        output_path = output_dir / f"cleaned_{Path(file_path).stem}{suffix}"
+
+        if suffix == ".xlsx":
+            from modules.save_to_excel import process as save_to_excel_process
+
+            save_to_excel_process(cleaned, output_file=str(output_path))
+        else:
+            cleaned.to_csv(output_path, index=False)
+
+        self.progress_bar.set(1)
+        self.log_message(f"Çıktı kaydedildi: {output_path}")
+
+        report = {
+            "dosya": file_path,
+            "satir_sayisi_ilk": len(dataframe),
+            "satir_sayisi_son": len(cleaned),
+            "tekrar_silinen": len(dataframe) - len(cleaned),
+            "eksik_silinen": "Pipeline tarafından yönetildi",
+            "hatalar": [],
+        }
+        generate_gui_report(report, log_callback=self.log_message)
+
+    def stop_cleaning(self):
+        self.progress_bar.set(0)
+        self.log_message("İşlem durduruldu. Yeniden başlatmak için TEMİZLEMEYİ BAŞLAT butonunu kullanın.")
+
+
+if __name__ == "__main__":
+    app = NeatDataGUI()
+    app.mainloop()
+

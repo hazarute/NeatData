@@ -1,6 +1,6 @@
 # NeatData - CSV Data Cleaner 🧹
 
-[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status](https//img.shields.io/badge/status-active-success.svg)]()
 
@@ -27,9 +27,10 @@ This project provides a robust, extensible, and fully modular command-line tool 
 It automates tedious tasks like removing duplicates, handling missing values, standardizing text, and more. The modular design makes it easy to extend the tool with new cleaning steps or custom workflows.
 
 ### Built With
-*   [Python](https://www.python.org/)
+*   [Python](https://www.python.org/) (minimum supported: 3.8+)
 *   [Pandas](https://pandas.pydata.org/)
 *   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+*   [CustomTkinter](https://customtkinter.tomschimansky.com/) (for modern GUI)
 
 ## 🚀 Features
 
@@ -49,7 +50,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 
 **New in latest version:**
 - All CLI and GUI cleaning options (e.g. --dropna, --fillna, --textcol) are now added as pipeline steps and managed centrally by PipelineManager. No hybrid/manual calls.
-- Simple GUI added: Easily select files, configure cleaning options, and start cleaning with a click.
+- Modern GUI with CustomTkinter: Dark theme, modern controls (switches, segmented buttons), rounded corners, spacious layout for better UX.
 - Skipped/bad lines during CSV reading are logged to bad_lines.csv for transparency.
 - PipelineManager orchestrates all cleaning steps; config, CLI, and GUI options are merged for full control.
 - Codebase refactored for maintainability (duplicate functions removed).
@@ -57,7 +58,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 ## 📦 Installation
 
 ### Prerequisites
-*   Python 3.6 or higher
+*   Python 3.8 or higher
 *   pip (Python package installer)
 
 ### Steps
@@ -69,7 +70,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 
 2.  Install required packages
     ```bash
-    pip install pandas openpyxl chardet python-dateutil
+    pip install pandas openpyxl chardet python-dateutil customtkinter
     ```
 
 ## 💻 Usage
@@ -78,7 +79,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 The script is run from the command line and now supports cleaning multiple files at once. All CLI cleaning options are automatically added as pipeline steps and managed centrally—no manual module calls. You do **not** need to edit the script for basic usage. Advanced users and developers can customize the cleaning pipeline by adding/removing modules in the `modules/` folder and configuring the pipeline manager or config file.
 
 ### Graphical User Interface (GUI)
-For non-technical users, NeatData now provides a simple GUI:
+For non-technical users, NeatData now provides a modern GUI built with CustomTkinter:
 ```bash
 python clean_data.py --gui
 ```
@@ -87,12 +88,14 @@ Or run directly:
 python neatdata_gui.py
 ```
 Features:
-- File selection (single/multiple)
-- Cleaning options panel (dropna, fillna, textcol, etc.)
-- Progress bar and status indicator
+- Modern dark theme with rounded corners and spacious layout
+- File selection (single/multiple) with drag-and-drop support
+- Module selection panel with checkboxes (choose which cleaning steps to run)
+- Cleaning options panel with modern controls (switches, segmented buttons for dropna/fillna, textcol, etc.)
+- Real-time progress bar and status indicator
 - Output settings (Excel/CSV, output directory)
 - Start/Stop buttons
-- Console-like log area for feedback
+- Console-like log area with detailed reports and error messages
 
 **Basic single file cleaning:**
 ```bash
@@ -110,6 +113,10 @@ python clean_data.py --input data.csv --output my_cleaned.xlsx
 ```
 
 **Custom options:**
+- Run only selected modules:
+    ```bash
+    python clean_data.py --input data.csv --modules "standardize_headers,handle_missing"
+    ```
 - Drop rows with missing values:
     ```bash
     python clean_data.py --input data.csv --dropna
@@ -128,7 +135,16 @@ python clean_data.py --input data.csv --output my_cleaned.xlsx
 **Error Handling:**
 Any skipped/bad lines during CSV reading are automatically logged to bad_lines.csv for review.
 
-**Advanced pipeline customization:**
+- **Advanced pipeline customization:**
+- **Available Modules (core module keys / files):**
+    - `standardize_headers` — `modules/core/standardize_headers.py`
+    - `drop_duplicates` — `modules/core/drop_duplicates.py`
+    - `handle_missing` — `modules/core/handle_missing.py`
+    - `trim_spaces` — `modules/core/trim_spaces.py`
+    - `convert_types` — `modules/core/convert_types.py`
+  
+    Note: When using `--modules` or the GUI module selection, provide the module *keys* above (for example: `--modules "standardize_headers,handle_missing"`). Some documentation and examples may use friendly names; the pipeline resolves modules by their `META['key']` value.
+- To run only selected modules: Use --modules "module1,module2" (e.g., --modules "standardize_headers,handle_missing")
 - To add a new cleaning step, create a new module in the `modules/` folder and register it in the pipeline manager or config file.
 - To change the order or remove steps, edit the pipeline manager configuration or use CLI options; all steps are orchestrated centrally.
 
@@ -166,7 +182,7 @@ Proje Linki: [https://github.com/hazarute/NeatData](https://github.com/hazarute/
 
 # 🧹 NeatData - CSV Veri Temizleyici 🧹
 
-[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Durum](https//img.shields.io/badge/durum-aktif-başarılı.svg)]()
 
@@ -175,7 +191,7 @@ Dağınık CSV dosyalarını temizleyen, standartlaştıran ve çıktıyı temiz
 
 **Son güncellemeler:**
 - Tüm CLI ve GUI temizlik seçenekleri pipeline adımı olarak merkezi şekilde ekleniyor ve yönetiliyor.
-- Basit GUI eklendi: Dosya seçimi, temizlik seçenekleri paneli, ilerleme çubuğu, çıktı ayarları, başlat/durdur butonları ve log alanı ile teknik bilgi gerektirmeden temizlik işlemi yapılabilir.
+- CustomTkinter ile modern GUI: Koyu tema, modern kontroller (anahtarlar, bölümlü butonlar), yuvarlatılmış köşeler, ferah düzen ile daha iyi UX.
 - Hibrit/manuel modül çağrıları kaldırıldı; tüm akış PipelineManager üzerinden.
 - CSV okuma sırasında atlanan satırlar bad_lines.csv dosyasına loglanıyor.
 - Kod tabanı sürdürülebilirlik için temizlendi (tekrarlanan fonksiyonlar kaldırıldı).
@@ -198,6 +214,7 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 *   [Python](https://www.python.org/)
 *   [Pandas](https://pandas.pydata.org/)
 *   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+*   [CustomTkinter](https://customtkinter.tomschimansky.com/) (modern GUI için)
 
 
 ## 🚀 Özellikler
@@ -214,7 +231,7 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 - **Kullanıcıdan parametre alma**: Temizlik seçeneklerini komut satırından veya GUI üzerinden belirleyin.
 - **Esnek çıktı**: Temizlenmiş veriyi Excel veya CSV olarak kaydedin, toplu işlerde otomatik çıktı adı.
 - **Temizlik raporu**: Her dosya için yapılan işlemlerin özet raporu ekrana veya GUI log alanına yazdırılır.
-- **Basit GUI**: Dosya seçimi, temizlik seçenekleri paneli, ilerleme çubuğu, çıktı ayarları, başlat/durdur butonları ve log alanı ile teknik bilgi gerektirmeden temizlik işlemi yapılabilir.
+- **Modern GUI**: CustomTkinter ile koyu tema, yuvarlatılmış köşeler, ferah düzen, modern kontroller (anahtarlar, bölümlü butonlar), sürükle-bırak dosya seçimi, gerçek zamanlı ilerleme çubuğu, log alanı ile teknik bilgi gerektirmeden temizlik işlemi yapılabilir.
 
 **Yeni:**
 - Tüm CLI temizlik seçenekleri pipeline adımı olarak merkezi şekilde ekleniyor ve yönetiliyor.
@@ -225,8 +242,8 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 ## 📦 Kurulum
 
 ### Ön Gereksinimler
-*   Python 3.6 veya üzeri
-*   pip (Python paket yükleyici)
+*   Python 3.8 veya üzeri
+*   `pip` (Python paket yükleyici)
 
 ### Adımlar
 1.  Depoyu klonlayın (veya betiği indirin)
@@ -237,7 +254,7 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 
 2.  Gerekli paketleri yükleyin
     ```bash
-    pip install pandas openpyxl chardet python-dateutil
+    pip install pandas openpyxl chardet python-dateutil customtkinter
     ```
 
 ## 💻 Kullanım
@@ -263,6 +280,10 @@ python clean_data.py --input veri.csv --output temizim.xlsx
 
 
 **Ek seçenekler:**
+- Sadece seçili modülleri çalıştır:
+    ```bash
+    python clean_data.py --input veri.csv --modules "standardize_headers,handle_missing"
+    ```
 - Eksik satırları sil:
     ```bash
     python clean_data.py --input veri.csv --dropna
@@ -279,6 +300,15 @@ python clean_data.py --input veri.csv --output temizim.xlsx
     ```bash
     python clean_data.py --gui
     ```
+    Özellikler:
+    - Modern koyu tema ile yuvarlatılmış köşeler ve ferah düzen
+    - Sürükle-bırak ile dosya seçimi (tekli/çoklu)
+    - Modül seçimi paneli (çalıştırılacak adımları seçmek için checkbox'lar)
+    - Temizlik seçenekleri paneli (modern kontroller ile dropna/fillna, textcol vb.)
+    - Gerçek zamanlı ilerleme çubuğu ve durum göstergesi
+    - Çıktı ayarları (Excel/CSV, çıktı dizini)
+    - Başlat/Durdur butonları
+    - Konsol benzeri log alanı için detaylı raporlar ve hata mesajları
 
 **Not:** Tüm CLI seçenekleri pipeline adımı olarak eklenir ve PipelineManager tarafından sıralı şekilde çalıştırılır. Hibrit/manuel çağrı yok.
 
@@ -286,6 +316,14 @@ python clean_data.py --input veri.csv --output temizim.xlsx
 CSV okuma sırasında atlanan satırlar otomatik olarak bad_lines.csv dosyasına loglanır.
 
 **Gelişmiş pipeline özelleştirme:**
+- **Mevcut Modüller (core module keys / dosyalar):**
+    - `standardize_headers` — `modules/core/standardize_headers.py`
+    - `drop_duplicates` — `modules/core/drop_duplicates.py`
+    - `handle_missing` — `modules/core/handle_missing.py`
+    - `trim_spaces` — `modules/core/trim_spaces.py`
+    - `convert_types` — `modules/core/convert_types.py`
+
+    Not: `--modules` veya GUI modül seçimlerinde yukarıdaki *module key* değerlerini kullanın (ör. `--modules "standardize_headers,handle_missing"`). Bazı belgelerde dostane isimler görülebilir; pipeline modülleri `META['key']` ile çözülür.
 - Yeni bir temizlik adımı eklemek için `modules/` klasörüne yeni bir modül oluşturun ve pipeline yöneticisine veya config dosyasına kaydedin.
 - Adım sırasını değiştirmek veya adım çıkarmak için pipeline yöneticisi veya config dosyasını düzenleyin; tüm adımlar merkezi olarak yönetilir.
 

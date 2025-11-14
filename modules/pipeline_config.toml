@@ -16,12 +16,15 @@ params = {}
 
 [[pipeline.steps]]
 module = "replace_error_values"
-error_values = ["ERROR", "UNKNOWN", "N/A", "null", "-", "?", "", " "]
-params = { error_values = ["ERROR", "UNKNOWN", "N/A", "null", "-", "?", "", " "] }
+params = { error_values = ["ERROR", "UNKNOWN", "N/A", "null", "NAN", "NaN", "-", "?", "", " "] }
 
 [[pipeline.steps]]
 module = "auto_convert_types"
 params = {}
+
+[[pipeline.steps]]
+module = "clean_age"
+params = { column = "age", fill_invalid = 0 }
 
 [[pipeline.steps]]
 module = "remove_duplicates_report"
@@ -29,11 +32,20 @@ params = {}
 
 [[pipeline.steps]]
 module = "handle_missing_values"
-params = { method = "fill", fill_value = "TEMIZ" }
+params = { method = "drop" }
 
 [[pipeline.steps]]
 module = "standardize_text_column"
-params = { column = "product" }
+params = { columns = ["department", "name"] }
 
-# Her adımda kullanılacak modül adı ve parametreler burada tanımlanır.
-# Geliştirici veya kullanıcı, pipeline'ı bu dosyadan yönetebilir.
+[[pipeline.steps]]
+module = "clean_currency"
+params = { column = "salary", fill_invalid = 0 }
+
+[[pipeline.steps]]
+module = "clean_phone_format"
+params = { column = "phone_number" }
+
+[[pipeline.steps]]
+module = "clean_dates"
+params = { column = "joining_date" }

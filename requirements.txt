@@ -2,6 +2,9 @@ pandas
 openpyxl
 chardet
 python-dateutil
+word2number
+# Optional / GUI
+customtkinter
 # GUI için ek paketler (Tkinter Python ile birlikte gelir)
 # PySimpleGUI (opsiyonel, istenirse):
 # PySimpleGUI

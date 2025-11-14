@@ -3,33 +3,21 @@
 # Aktif Bağlam (activeContext.md)
 
 ## Mevcut Çalışma Odağı
-Tüm planlanan görevler başarıyla tamamlandı. NeatData artık hem CLI hem GUI modunda çalışabilen, modüler ve kullanıcı dostu bir CSV temizleme aracı olarak hazır. GUI entegrasyonu ile dosya seçimi, temizlik seçenekleri, ilerleme ve çıktı ayarları görsel olarak sunuluyor. Arka planda PipelineManager kullanılmakta. Kodda backward compatibility ve performans öncelikli olarak korundu.
+Modüler mimari yeniden kuruldu: core ve custom modüller ayrıldı, dinamik plugin sistemi devrede. Şu an yeni plugin gereksinimlerini toplama ve core modülleri genişletme aşamasındayız.
 
+## Kararlar
+- `modules/core/` altında beş temel modül (standardize_headers, drop_duplicates, handle_missing, trim_spaces, convert_types) sıfırdan yazıldı ve META+process arayüzünü takip ediyor.
+- `modules/custom/` plugin klasörü tanımlandı; PipelineManager bu klasörü dinamik olarak tarıyor.
+- PipelineManager yeniden yazıldı; ModuleDescriptor/PipelineStep veri sınıfları ve `build_pipeline` akışı ile core/custom seçimleri destekleniyor.
+- DataLoader sınıfı CSV/XLSX okuma, encoding/delimiter tespiti ve bad_lines loglamasını yönetiyor.
+- CLI yeni argümanlarla plugin mimarisine bağlandı.
+- GUI tamamen yenilendi: sol panelde core Switch'ler, sağ panelde otomatik yenilenen custom ScrollableFrame yer alıyor; CustomTkinter arayüz pipeline seçimini PipelineManager’a iletiyor.
 
-- PipelineManager artık hem config dosyasından hem de CLI argümanlarından gelen adımları merkezi olarak yönetiyor.
-- Hibrit modül çağrıları kaldırılıyor, tüm akış tek merkezden yönetiliyor.
-- Hata yönetimi: on_bad_lines ile atlanan satırlar bad_lines.csv dosyasına loglanacak.
-- Kod temizliği: pipeline_manager.py'deki tekrarlanan set_steps fonksiyonu kaldırılacak.
-- Mimari sürdürülebilirlik ve test edilebilirlik güçlendiriliyor.
-- GUI entegrasyonu ile dosya seçimi, temizlik seçenekleri ve çıktı ayarları görsel olarak sunulacak. GUI dosyası kök dizinde yer alacak ve arka planda PipelineManager'ı çağıracak.
-## Aktif Kararlar ve Gerekçeler
-- PipelineManager hem config dosyasından hem de CLI/GUI argümanlarından gelen adımları merkezi olarak yönetiyor.
-- Tüm temizlik adımları modüler ve genişletilebilir şekilde organize edildi.
-- GUI entegrasyonu ile dosya seçimi, temizlik seçenekleri ve çıktı ayarları görsel olarak sunuluyor.
-- Kod tabanı backward compatibility ve sürdürülebilirlik prensiplerine göre güncellendi.
-- requirements.txt ve dokümantasyon güncellendi.
-- PipelineManager artık hem config dosyasından hem de CLI argümanlarından gelen adımları merkezi olarak yönetiyor.
-- Hibrit modül çağrıları kaldırılıyor, tüm akış tek merkezden yönetiliyor.
-- Hata yönetimi: on_bad_lines ile atlanan satırlar bad_lines.csv dosyasına loglanacak.
-- Kod temizliği: pipeline_manager.py'deki tekrarlanan set_steps fonksiyonu kaldırılacak.
-- Mimari sürdürülebilirlik ve test edilebilirlik güçlendiriliyor.
-- GUI entegrasyonu ile dosya seçimi, temizlik seçenekleri ve çıktı ayarları görsel olarak sunulacak. GUI dosyası kök dizinde yer alacak ve arka planda PipelineManager'ı çağıracak.
+## Stratejik Sonraki Yön
+- Kurumsal ekiplerden gelecek özel plugin ihtiyaçlarını toplamak.
+- Core seti genişletme ve plugin metadata/parametre yapılandırmasını esnekleştirme.
 
-
-## Öğrenilenler ve İçgörüler
-
-Tüm mimari ve modüller, hem teknik hem de kullanıcı dostu gereksinimleri karşılayacak şekilde güncellendi. GUI ile teknik bilgisi olmayan kullanıcılar için erişilebilirlik ve kullanım kolaylığı artırıldı.
-
-Stratejik Sonraki Yön:
-- Yeni modül veya özellik talepleri geldikçe, hem CLI hem GUI tarafında genişletme ve iyileştirme yapılabilir.
-- Kullanıcıdan gelecek geri bildirimlere göre arayüz ve fonksiyonellik geliştirilebilir.
+## Son Yapılan Değişiklikler (kısa)
+- PipelineManager: `build_pipeline` davranışı düzeltildi; boş seçim artık hiçbir core modülünün çalışmamasını sağlar.
+- `handle_missing` modülü varsayılan olarak no-op olacak şekilde güncellendi; bir işlem yapılması için `columns` parametresi gerekmektedir.
+- `fix_cafe_business_logic` modülü güvenli hale getirildi; hatalı kayıtlar `deleted_records_log.csv` ile loglanıyor ve `process` alias'ı eklendi.

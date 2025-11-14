@@ -2,19 +2,21 @@
 # Teknik Detaylar (techContext.md)
 
 ## Kullanılan Teknolojiler
-- Python 3.6+
+- Python 3.8+
 - pandas
 - openpyxl
 - chardet (encoding tespiti için)
 - python-dateutil (tarih algılama için)
-- Tkinter (GUI için, yerleşik ve ek bağımlılık gerektirmez)
-- Alternatif: PySimpleGUI (GUI için, ek paket ama basit ve hızlı)
+- CustomTkinter (modern GUI)
+
+## Notlar
+- Minimum Python sürümü proje içinde 3.8+ olarak kullanılmaktadır; README dosyası ve kurulum adımları bu sürüme göre güncellendi.
+- `customtkinter` GUI için gereklidir — requirements listesinde opsiyonel olarak belirtildi.
 
 
 ## Geliştirme Ortamı Kurulumu
 1. Python 3.6 veya üzeri kurulu olmalı.
-2. Gerekli paketler: `pip install pandas openpyxl chardet python-dateutil`
-3. GUI için ek paket gerekirse: `pip install PySimpleGUI`
+2. Gerekli paketler: `pip install pandas openpyxl chardet python-dateutil customtkinter`
 
 
 ## Bağımlılıklar
@@ -22,22 +24,20 @@
 - openpyxl: Excel dosyası oluşturma
 - chardet: Dosya encoding tespiti
 - python-dateutil: Tarih sütunlarını algılama ve dönüştürme
-- Tkinter: GUI için (Python ile birlikte gelir)
-- PySimpleGUI: Alternatif GUI (ekstra paket)
+- CustomTkinter: Modern GUI için (pip ile kurulur)
 
 
 ## Teknik Kısıtlamalar
 - Farklı ayraç ve encoding ile gelen dosyalar için otomatik tespit modülü gereklidir.
-- Hem komut satırı hem GUI üzerinden çalışır.
+- Hem komut satırı hem modern GUI üzerinden çalışır.
 - Büyük veri setlerinde bellek kullanımı pandas'a bağlıdır.
 
 
 
 ## Modüller Dosya/Fonksiyon Yapısı
-- Her temizlik adımı (ör. sütun normalizasyonu, tip dönüşümü, hata yönetimi) `modules/` klasöründe ayrı Python dosyası olarak yer alır ve process(df, **kwargs) arayüzüne sahiptir.
-- Pipeline yönetimi PipelineManager ile merkezi ve büyüyebilir şekilde sağlanır.
-- Pipeline adımları ve parametreleri config dosyası ile dinamik olarak yönetilir.
-- Hata yönetimi, loglama ve modül ekleme/çıkarma PipelineManager üzerinden yapılır.
-- GUI dosyası kök dizinde yer alacak ve arka planda PipelineManager'ı çağıracak.
-- Kullanıcı ve geliştirici için pipeline özelleştirme ve modül ekleme/çıkarma dokümantasyonu hazırlanacaktır.
-- Yeni stratejik odak: Bellek Bankası ve dokümantasyonun yeni mimariye göre güncellenmesi.
+- Core temizlik adımları `modules/core/*.py` altında yer alır; her dosya `META` (key, name, description, defaults) ve `process(df, **kwargs)` fonksiyonunu expose eder.
+- Custom plugin’ler `modules/custom/*.py` klasörüne bırakılır; PipelineManager bu dosyaları otomatik keşfeder.
+- `modules/pipeline_manager.py` dinamik import ile core/custom modülleri `ModuleDescriptor` objelerine dönüştürür, pipeline adımlarını `PipelineStep` ile yönetir.
+- `modules/data_loader.py` içindeki `DataLoader` sınıfı encoding/delimiter tespiti yapar, CSV/XLSX okur, hatalı satırları `bad_lines.csv` dosyasına yazar.
+- CLI (`modules/cli_handler.py`) yeni argümanlarla ( `--core-modules`, `--custom-modules`, `--handle-missing-strategy`, `--convert-columns`) pipeline’ı kurar.
+- GUI (`neatdata_gui.py`) CustomTkinter tabanlı modern arayüz sağlar, core Switch + custom ScrollableFrame bileşenleriyle plugin seçimi yapar ve her 5 saniyede custom klasörünü yeniden tarar.
