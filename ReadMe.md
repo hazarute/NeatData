@@ -1,3 +1,4 @@
+ 
 # NeatData - CSV Data Cleaner 🧹
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
@@ -31,6 +32,7 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 *   [Pandas](https://pandas.pydata.org/)
 *   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 *   [CustomTkinter](https://customtkinter.tomschimansky.com/) (for modern GUI)
+*   Optional: `ftfy` (better mojibake fixes) and `Unidecode` (ASCII transliteration)
 
 ## 🚀 Features
 
@@ -54,6 +56,9 @@ It automates tedious tasks like removing duplicates, handling missing values, st
 - Skipped/bad lines during CSV reading are logged to bad_lines.csv for transparency.
 - PipelineManager orchestrates all cleaning steps; config, CLI, and GUI options are merged for full control.
 - Codebase refactored for maintainability (duplicate functions removed).
+ - `text_normalize` core helper added (NBSP, zero-width, smart quotes, mojibake fixes - `ftfy` optional; transliteration via `Unidecode` optional).
+ - `clean_hepsiburada_scrape` plugin refactored to call `text_normalize` for general normalization.
+ - Unit tests added for `text_normalize` (see `tests/test_text_normalize.py`). Run with `pytest -q`.
 
 ## 📦 Installation
 
@@ -72,28 +77,30 @@ It automates tedious tasks like removing duplicates, handling missing values, st
     ```bash
     pip install pandas openpyxl chardet python-dateutil customtkinter
     ```
+    
+    Opsiyonel (dağınık scrape metinleri için önerilir):
+
+    ```powershell
+    pip install ftfy unidecode
+    ```
+
+Optional (recommended for messy scraped text normalization):
+
+```powershell
+pip install ftfy unidecode
+```
+
+Optional: for running unit tests in the repo
+```powershell
+pip install pytest
+pytest -q
+```
 
 ## 💻 Usage
 
-### Command Line (CLI)
-The script is run from the command line and now supports cleaning multiple files at once. All CLI cleaning options are automatically added as pipeline steps and managed centrally—no manual module calls. You do **not** need to edit the script for basic usage. Advanced users and developers can customize the cleaning pipeline by adding/removing modules in the `modules/` folder and configuring the pipeline manager or config file.
-
-### Graphical User Interface (GUI)
-For non-technical users, NeatData now provides a modern GUI built with CustomTkinter:
-```bash
-python clean_data.py --gui
-```
-Or run directly:
-```bash
-python neatdata_gui.py
-```
 Features:
 - Modern dark theme with rounded corners and spacious layout
-- File selection (single/multiple) with drag-and-drop support
-- Module selection panel with checkboxes (choose which cleaning steps to run)
-- Cleaning options panel with modern controls (switches, segmented buttons for dropna/fillna, textcol, etc.)
-- Real-time progress bar and status indicator
-- Output settings (Excel/CSV, output directory)
+ 
 - Start/Stop buttons
 - Console-like log area with detailed reports and error messages
 
@@ -142,6 +149,7 @@ Any skipped/bad lines during CSV reading are automatically logged to bad_lines.c
     - `handle_missing` — `modules/core/handle_missing.py`
     - `trim_spaces` — `modules/core/trim_spaces.py`
     - `convert_types` — `modules/core/convert_types.py`
+    - `text_normalize` — `modules/core/text_normalize.py` (general text normalization: NBSP removal, smart quotes, zero-width removal; optional mojibake fixes with `ftfy`; optional ASCII transliteration with `Unidecode`)
   
     Note: When using `--modules` or the GUI module selection, provide the module *keys* above (for example: `--modules "standardize_headers,handle_missing"`). Some documentation and examples may use friendly names; the pipeline resolves modules by their `META['key']` value.
 - To run only selected modules: Use --modules "module1,module2" (e.g., --modules "standardize_headers,handle_missing")
@@ -195,6 +203,9 @@ Dağınık CSV dosyalarını temizleyen, standartlaştıran ve çıktıyı temiz
 - Hibrit/manuel modül çağrıları kaldırıldı; tüm akış PipelineManager üzerinden.
 - CSV okuma sırasında atlanan satırlar bad_lines.csv dosyasına loglanıyor.
 - Kod tabanı sürdürülebilirlik için temizlendi (tekrarlanan fonksiyonlar kaldırıldı).
+ - `text_normalize` core helper eklendi: NBSP, zero-width, akıllı tırnak normalizasyonu, opsiyonel `ftfy` mojibake düzeltme ve isteğe bağlı ASCII transliteration (`Unidecode`).
+ - `clean_hepsiburada_scrape` eklenti `text_normalize` ile normalize edecek şekilde refactor edildi (site-özgü temizleme kuraları plugin içinde kalır).
+ - `text_normalize` için birim testleri eklendi (`tests/test_text_normalize.py`). Testleri çalıştırmak için `pytest -q`.
 
 ---
 
@@ -215,6 +226,7 @@ Tekrarlananları kaldırma, eksik değerleri yönetme, metinleri standartlaştı
 *   [Pandas](https://pandas.pydata.org/)
 *   [Openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 *   [CustomTkinter](https://customtkinter.tomschimansky.com/) (modern GUI için)
+*   Opsiyonel: `ftfy` (mojibake düzeltmeleri için) ve `Unidecode` (ASCII transliteration için)
 
 
 ## 🚀 Özellikler

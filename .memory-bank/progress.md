@@ -1,10 +1,16 @@
 ## Yapılacaklar:
-- [ ] Yeni plugin gereksinimlerini mimardan al.
+ - [ ] Yeni plugin gereksinimlerini mimardan al.
+ - [ ] `text_normalize` için ek test vakaları yaz ve CI'ye bağla.
+ - [ ] `normalize_currency` ve `remove_emojis` gibi ek core yardımcıları tasarla.
 
 ## Yeni Bitenler (son değişiklikler):
 [X] PipelineManager `build_pipeline` empty-selection bug fixed (explicit empty list no longer runs all core modules).
 [X] `handle_missing` default strategy changed to `noop` and requires explicit `columns` to operate (prevents accidental mass drop).
 [X] `fix_cafe_business_logic` updated: safer duplicate removal, deleted_records_log.csv with `Reason`, flexible date parsing, and `process` alias added for backwards compatibility.
+[X] `text_normalize` core helper eklendi: NBSP, smart quotes normalization, mojibake fix (opsiyonel ftfy), transliteration (Unidecode opsiyonel). `process()` ve `META` eklendi.
+[X] `clean_hepsiburada_scrape` custom plugin refactor edildi: `clean_text_pipeline` kullanılarak ortak normalizasyon uygulanıyor.
+[X] `requirements.txt` öneri ile opsiyonel paketler `ftfy` ve `Unidecode` eklendi.
+[X] `tests/test_text_normalize.py` birim testleri eklendi (temel test vakaları).
 
 ## Bitenler:
 [X] CLI'ye --modules argümanı ekle (cli_handler.py).
