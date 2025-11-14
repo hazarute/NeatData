@@ -196,7 +196,8 @@ class NeatDataGUI(ctk.CTk):
 
             save_to_excel_process(cleaned, output_file=str(output_path))
         else:
-            cleaned.to_csv(output_path, index=False)
+            # Save CSV using UTF-8 with BOM so Excel (Windows) opens columns reliably
+            cleaned.to_csv(output_path, index=False, encoding="utf-8-sig")
 
         self.progress_bar.set(1)
         self.log_message(f"Çıktı kaydedildi: {output_path}")

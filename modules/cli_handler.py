@@ -65,7 +65,8 @@ def run_pipeline_for_file(input_file: str, args, manager: PipelineManager, loade
 
         save_to_excel_process(cleaned_df, output_file=str(output_path))
     elif output_path.suffix.lower() == ".csv":
-        cleaned_df.to_csv(output_path, index=False)
+        # Save CSV using BOM to keep headers/columns consistent when opened in Excel
+        cleaned_df.to_csv(output_path, index=False, encoding="utf-8-sig")
     else:
         raise ValueError("Çıktı sadece .xlsx veya .csv olabilir")
 
