@@ -1,35 +1,81 @@
-
 # Sistem Mimarisi (systemPatterns.md)
 
 ## Genel Mimari
-- Komut satırı tabanlı Python betiği ve modern CustomTkinter tabanlı GUI
-- Girdi: Farklı ayraç ve encoding ile gelen CSV/XLSX dosyaları (CLI veya GUI üzerinden seçilebilir)
+- Komut satırı tabanlı Python (CLI) ve modern CustomTkinter tabanlı GUI
+- Girdi: Farklı ayraç ve encoding ile gelen CSV/XLSX dosyaları
 - Çıktı: Temizlenmiş Excel veya CSV dosyası, detaylı temizlik raporu
+- **Faz 4 İnovasyonu:** CLI ve GUI ortak `UIState` + `PipelineRunner` altyapısı kullanır
 
-## Temel Akış
-1. CLI/GUI giriş: `modules/cli_handler.py` veya `neatdata_gui.py` üzerinden parametreler alınır. CLI `--core-modules` ve `--custom-modules` argümanlarıyla seçim yapar, GUI’de core modüller Switch, custom plugin’ler dinamik Checkbox olarak sunulur.
-2. Veri okuma: `modules/data_loader.py` içerisindeki `DataLoader` sınıfı encoding/delimiter tespit eder, CSV/XLSX dosyalarını okur ve kötü satırları `bad_lines.csv` dosyasına kaydeder.
-3. Pipeline orchestration: `modules/pipeline_manager.py` core modülleri (`modules/core/*.py`) ve custom plugin’leri (`modules/custom/*.py`) otomatik keşfeder. Her modül `META` bilgisiyle self-describing olur.
-4. Kullanıcı seçimlerine göre `PipelineManager.build_pipeline` adımları oluşturulur ve sırayla çalıştırılır.
-5. Temizlenmiş veri Excel/CSV olarak kaydedilir (`modules/save_to_excel.py` veya `DataFrame.to_csv`), çıktı dizini GUI/CLI ile seçilebilir.
-6. Detaylı rapor `modules/report_generator.py` tarafından üretilir, GUI loguna ve CLI konsoluna yazılır.
+## Temel Akış (Faz 4 - UIState + PipelineRunner)
+1. **Giriş & State Oluşturma:**
+   - CLI: `--input`, `--core-modules`, `--custom-modules`, `--output-dir`, `--output-format` argümanlarıyla `UIState` oluşturur
+   - GUI: Switch/Checkbox seçimleriyle `UIState` oluşturur
+   - UIState: (selected_core_keys, selected_custom_keys, output_type, output_dir, file_path)
 
-## Tasarım Desenleri
+2. **Pipeline Orchestration (`PipelineRunner.run_file`):**
+   - DataLoader: encoding/delimiter tespit, CSV/XLSX okuma, hatalı satırları loglama
+   - Module seçimi: UIState'den core/custom keys PipelineManager'a verilir
+   - Pipeline çalıştırma: Modüller sırayla uygulanır
+   - Error handling: İstisnaları GuiLogger'a gönder
 
-- Core/custom plugin ayrımı, `META` + `process` arayüzü ile gevşek bağlılık sağlar.
-- `PipelineManager` plugin keşfini `importlib.util` ile yapar, modül başına `ModuleDescriptor` üretir, pipeline adımlarını `PipelineStep` veri sınıfı olarak saklar.
-- `DataLoader` sınıfı tek sorumluluk prensibiyle dosya okuma, encoding/delimiter tespiti ve hata kayıtlarını yönetir.
-- GUI, CustomTkinter Switch/ScrollableFrame bileşenleriyle modüler seçim sunar, belirli aralıklarla custom klasörünü yeniden tarar.
+3. **Output & Loglama:**
+   - Temizlenmiş DataFrame Excel/CSV olarak kaydedilir (GuiIO ile path kontrolü)
+   - Detaylı rapor oluşturulur
+   - GuiLogger callback ile raporlama (GUI: textbox + logging.Handler, CLI: stdout)
 
-## Bileşenler Arası İlişkiler
-- Tüm işlemler pandas DataFrame üzerinde gerçekleşir.
-- openpyxl sadece çıktı aşamasında kullanılır.
-- GUI ile CLI arasında entegrasyon modülü olacak (ör. arka planda PipelineManager çağrısı).
-- Yeni modüller: data_loader.py (veri yükleme), report_generator.py (detaylı raporlama), cli_handler.py (CLI işleme, modül seçimi ile pipeline).
-- HR spesifik modüller: clean_currency.py, clean_phone_format.py, clean_dates.py, standardize_text_column.py (genişletilmiş) - PipelineManager config ile yönetilecek.
+## Tasarım Desenleri (Faz 3-4)
+
+- **Shared Infrastructure (UIState + PipelineRunner):** CLI ve GUI aynı state management, pipeline execution kullanır → kod tekrarı azalır, tutarlılık sağlanır
+- **Core/Custom Plugin Pattern:** `META` + `process` arayüzü ile gevşek bağlılık
+- **Dynamic Plugin Discovery:** PipelineManager `importlib.util` ile `modules/core/` ve `modules/custom/` tarar
+- **Centralized Logging:** GuiLogger callback pattern ile GUI/CLI/tests birleştirilir
+- **Component Factories:** GuiHelpers CTkinter bileşen yaratımını merkezileştirir
+
+## Bileşenler Arası İlişkiler (Faz 4 Mimarisi)
+
+- Tüm işlemler pandas DataFrame üzerinde gerçekleşir
+- openpyxl sadece çıktı aşamasında kullanılır
+
+### **Utils Tabakası (`modules/utils/`)** - Shared Infrastructure
+  - `ui_state.py`: State dataclass (UIState) - both GUI/CLI
+  - `gui_logger.py`: Centralized logging (GUI callback + Python logging adapter)
+  - `gui_helpers.py`: CTkinter component factories (file picker, output settings, module panels, action buttons)
+  - `gui_io.py`: File/path operations (normalization, output naming, permission checks)
+  - `pipeline_runner.py`: Pipeline orchestration (run_file, _execute_pipeline, _save_output, _generate_report)
+
+### **Core Modules**
+  - `modules/core/*.py`: Standart veri temizlik (standardize_headers, drop_duplicates, handle_missing, convert_types, text_normalize, trim_spaces)
+  - Each: `META` + `process(df, **kwargs)`
+
+### **Custom Plugins**
+  - `modules/custom/*.py`: Sektör-spesifik (HR: clean_currency, clean_phone_format, clean_dates)
+  - PipelineManager otomatik keşfeder, UIState seçimleri ile yönetilir
+
+### **Pipeline Management**
+  - `pipeline_manager.py`: `ModuleDescriptor`, `PipelineStep`, `build_pipeline()`
+  - `data_loader.py`: Encoding tespit, CSV/XLSX okuma, bad_lines loglama
+
+### **IO & Reporting**
+  - `save_output.py`: Excel/CSV kaydı (sep_preamble, encoding options)
+  - `report_generator.py`: Temizlik raporu (modül bazlı istatistikler)
+
+### **Entry Points**
+  - `cli_handler.py`: CLI (UIState oluştur, PipelineRunner çağır, multi-file loop)
+  - `neatdata_gui.py`: GUI (CustomTkinter, UIState + GuiHelpers, threading)
 
 ## Pipeline Selection Behavior Note
 
-- The pipeline manager previously treated an *empty* module selection as "use all core modules", which caused surprising behavior when users intentionally disabled all core modules via the GUI. This has been corrected: when a caller explicitly passes an empty list for `core_keys` (or the GUI reports no core modules selected), the pipeline will run *no* core modules. If `core_keys` is `None` (unset), the manager will fall back to the default core set.
+- Empty module selection = No modules run (not "use all defaults")
+- If `core_keys` is `None` (unset), manager falls back to default core set
+- Ensures GUI behavior matches user expectations (switching all off → no processing)
 
-This ensures that turning all core switches off in the GUI results in no core processing, which is the expected and least-surprising behavior.
+## Faz 4 Farkları (Eski vs Yeni)
+
+| Özellik | Faz 2-3 | Faz 4 |
+|---------|---------|-------|
+| State Management | Inline (GUI/CLI) | UIState dataclass |
+| Logging | GUI-specific | GuiLogger (unified) |
+| Pipeline Run | GUI thread inline | PipelineRunner class |
+| Code Reuse | Min | Max (shared utils) |
+| CLI args | `--core-modules`, `--custom-modules` | `--core-modules`, `--custom-modules`, `--output-dir`, `--output-format` |
+| Multi-file | Tek dosya | Loop'ta UIState clone |

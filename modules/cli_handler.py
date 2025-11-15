@@ -1,110 +1,168 @@
-import argparse
-from pathlib import Path
-from typing import Dict, List, Optional
+"""CLI Handler: Command-line interface for NeatData pipeline.
 
-from modules.data_loader import DataLoader
+Usage:
+    python -m modules.cli_handler --input data.csv
+    python -m modules.cli_handler --input file1.csv file2.csv --core-modules standardize_headers,drop_duplicates
+"""
+
+import argparse
+from typing import List, Optional
+
+from modules.utils import UIState, PipelineRunner, GuiLogger
 from modules.pipeline_manager import PipelineManager
-from modules.report_generator import print_report
 
 
 def _parse_list_argument(value: Optional[str], *, default_behavior: str) -> Optional[List[str]]:
+    """Parse comma-separated module list or 'all'/'none' keywords.
+    
+    Args:
+        value: Input string (e.g., "module1,module2" or "all" or "none")
+        default_behavior: "all" or "none" - what to return if value is empty
+        
+    Returns:
+        List of module keys, or None for "all", or [] for "none"
+    """
     if not value:
         return None if default_behavior == "all" else []
+    
     lowered = value.lower()
     if lowered == "all":
         return None
     if lowered == "none":
         return []
+    
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
-def _build_overrides(args) -> Dict[str, Dict]:
-    overrides: Dict[str, Dict] = {}
-    if args.handle_missing_strategy or args.handle_missing_fill is not None:
-        overrides["handle_missing"] = {}
-        if args.handle_missing_strategy:
-            overrides["handle_missing"]["strategy"] = args.handle_missing_strategy
-        if args.handle_missing_fill is not None:
-            overrides["handle_missing"]["fill_value"] = args.handle_missing_fill
-    if args.convert_columns:
-        overrides["convert_types"] = {"columns": [col.strip() for col in args.convert_columns.split(",") if col.strip()]}
-    return overrides
-
-
-def run_pipeline_for_file(input_file: str, args, manager: PipelineManager, loader: DataLoader, *, multi_input: bool) -> None:
-    try:
-        df = loader.load(input_file)
-    except Exception as exc:  # pylint: disable=broad-except
-        print(f"Dosya yüklenemedi ({input_file}): {exc}")
-        return
-    report_payload = {"dosya": input_file, "satir_sayisi_ilk": len(df)}
-    overrides = _build_overrides(args)
-    if "handle_missing" in overrides:
-        report_payload["eksik_silinen"] = overrides["handle_missing"].get("strategy", "custom")
-    else:
-        report_payload["eksik_silinen"] = "varsayılan"
-
-    core_keys = _parse_list_argument(args.core_modules, default_behavior="all")
-    custom_keys = _parse_list_argument(args.custom_modules, default_behavior="none")
-    if custom_keys is None and args.custom_modules:
-        custom_keys = list(manager.available_custom_modules().keys()) or []
-
-    manager.build_pipeline(
-        core_keys=core_keys,
-        custom_keys=custom_keys,
-        param_overrides=overrides,
-    )
-
-    cleaned_df = manager.run(df)
-    report_payload["satir_sayisi_son"] = len(cleaned_df)
-    report_payload["tekrar_silinen"] = report_payload["satir_sayisi_ilk"] - len(cleaned_df)
-    output_path = _resolve_output_path(input_file, args.output, multi_input)
-
-    from modules.save_output import save_csv, save_excel
-
-    if output_path.suffix.lower() == ".xlsx":
-        save_excel(cleaned_df, output_path)
-    elif output_path.suffix.lower() == ".csv":
-        # Save CSV using helper and also create an Excel copy for CLI convenience
-        save_csv(cleaned_df, output_path, sep_preamble=True, encoding="utf-8-sig", create_excel_copy=True)
-    else:
-        raise ValueError("Çıktı sadece .xlsx veya .csv olabilir")
-
-    print(f"Temizlenmiş veri '{output_path}' dosyasına kaydedildi.")
-    print_report(report_payload)
-
-
-def _resolve_output_path(input_file: str, output_argument: Optional[str], multi_input: bool) -> Path:
-    input_base = Path(input_file)
-    if not output_argument:
-        return input_base.with_name(f"cleaned_{input_base.stem}.xlsx")
-
-    output_path = Path(output_argument)
-    if multi_input:
-        suffix = output_path.suffix or ".xlsx"
-        stem = output_path.stem
-        return output_path.with_name(f"{stem}_{input_base.stem}{suffix}")
-
-    if output_path.suffix:
-        return output_path
-    return output_path.with_suffix(".xlsx")
+def run_pipeline_for_file(input_file: str, state: UIState, runner: PipelineRunner) -> bool:
+    """Execute pipeline for a single file using UIState and PipelineRunner.
+    
+    Args:
+        input_file: Path to input file
+        state: UIState with module selection and output settings
+        runner: PipelineRunner for orchestration
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    state.file_path = input_file
+    return runner.run_file(state, progress_callback=None)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NeatData - CSV Veri Temizleyici")
-    parser.add_argument("--input", type=str, nargs="+", required=True, help="Bir veya birden fazla girdi dosyası")
-    parser.add_argument("--output", type=str, default=None, help="Çıktı dosya adı (varsayılan cleaned_<ad>.xlsx)")
-    parser.add_argument("--core-modules", dest="core_modules", type=str, default="all", help="Çalıştırılacak core modüller (virgülle ayrılmış) veya 'all'")
-    parser.add_argument("--custom-modules", dest="custom_modules", type=str, default=None, help="Çalıştırılacak custom plugin anahtarları")
-    parser.add_argument("--handle-missing-strategy", choices=["drop", "fill", "ffill", "bfill"], default=None, help="handle_missing stratejisi")
-    parser.add_argument("--handle-missing-fill", dest="handle_missing_fill", default=None, help="fill stratejisi seçildiğinde kullanılacak değer")
-    parser.add_argument("--convert-columns", type=str, default=None, help="convert_types modülüne aktarılacak sütun listesi")
+    """Main CLI entry point."""
+    parser = argparse.ArgumentParser(
+        description="NeatData - CSV Veri Temizleyici (CLI)",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Örnekler:
+  # Tek dosya, tüm core modülleriyle (varsayılan)
+  python -m modules.cli_handler --input data.csv
+  
+  # Birden fazla dosya, belirli modüllerle
+  python -m modules.cli_handler --input data1.csv data2.csv \\
+    --core-modules standardize_headers,drop_duplicates \\
+    --custom-modules fix_cafe,clean_hepsiburada
+  
+  # Hiç core modülü çalıştırma (sadece custom)
+  python -m modules.cli_handler --input data.csv \\
+    --core-modules none --custom-modules my_plugin
+  
+  # CSV çıktısı, özel klasöre
+  python -m modules.cli_handler --input data.csv \\
+    --output-dir /tmp/cleaned --output-format csv
+        """
+    )
+    
+    parser.add_argument(
+        "--input",
+        type=str,
+        nargs="+",
+        required=True,
+        help="Bir veya birden fazla girdi dosyası (örn: file1.csv file2.csv)"
+    )
+    parser.add_argument(
+        "--output-dir",
+        dest="output_dir",
+        type=str,
+        default=None,
+        help="Çıktı klasörü (varsayılan: girdinin bulunduğu klasör)"
+    )
+    parser.add_argument(
+        "--core-modules",
+        dest="core_modules",
+        type=str,
+        default="all",
+        help="Core modüller: 'all', 'none', veya virgülle ayrılmış liste (varsayılan: all)"
+    )
+    parser.add_argument(
+        "--custom-modules",
+        dest="custom_modules",
+        type=str,
+        default="none",
+        help="Custom plugin'ler: 'all', 'none', veya virgülle ayrılmış anahtarlar (varsayılan: none)"
+    )
+    parser.add_argument(
+        "--output-format",
+        dest="output_format",
+        choices=["xlsx", "csv"],
+        default="xlsx",
+        help="Çıktı formatı (varsayılan: xlsx)"
+    )
+    
     args = parser.parse_args()
-
+    
+    # Setup logger (no GUI callback for CLI)
+    logger = GuiLogger()
+    
+    # Create pipeline runner
+    runner = PipelineRunner(logger=logger)
+    
+    # Get available modules
     manager = PipelineManager()
-    loader = DataLoader()
-
-    multi_input = len(args.input) > 1
+    all_core_keys = list(manager.available_core_modules().keys())
+    all_custom_keys = list(manager.available_custom_modules().keys())
+    
+    # Parse module selections
+    core_keys = _parse_list_argument(args.core_modules, default_behavior="all")
+    if core_keys is None:
+        core_keys = all_core_keys  # "all" → use all available
+    
+    custom_keys = _parse_list_argument(args.custom_modules, default_behavior="none")
+    if custom_keys is None:
+        custom_keys = all_custom_keys  # "all" → use all available
+    
+    # Create state template for all files
+    template_state = UIState()
+    template_state.selected_core_keys = core_keys
+    template_state.selected_custom_keys = custom_keys
+    template_state.output_type = args.output_format
+    template_state.output_dir = args.output_dir
+    
+    # Process each input file
+    logger.info(f"🎯 {len(args.input)} dosya işlenecek")
+    logger.info(f"   Core: {core_keys or '(yok)'}")
+    logger.info(f"   Custom: {custom_keys or '(yok)'}")
+    
+    success_count = 0
+    
     for input_file in args.input:
-        print(f"\n--- {input_file} dosyası işleniyor ---")
-        run_pipeline_for_file(input_file, args, manager, loader, multi_input=multi_input)
+        # Clone state for each file
+        state = UIState(
+            selected_core_keys=template_state.selected_core_keys.copy(),
+            selected_custom_keys=template_state.selected_custom_keys.copy(),
+            output_type=template_state.output_type,
+            output_dir=template_state.output_dir,
+            file_path=input_file
+        )
+        
+        if run_pipeline_for_file(input_file, state, runner):
+            success_count += 1
+    
+    # Summary
+    logger.info(f"\n{'='*70}")
+    logger.info(f"✅ {success_count}/{len(args.input)} dosya başarıyla temizlendi")
+
+
+if __name__ == "__main__":
+    main()
