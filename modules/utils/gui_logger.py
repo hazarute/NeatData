@@ -82,3 +82,23 @@ class GuiLogger:
     def debug(self, message: str):
         """Log debug message."""
         self.log(message, logging.DEBUG)
+    
+    def section_header(self, title: str) -> None:
+        """Log a formatted section header."""
+        self.info("")
+        self.info(f"--- {title} ---")
+    
+    def section_footer(self) -> None:
+        """Log a formatted section footer."""
+        self.info("--------------------------------")
+        self.info("")
+    
+    def batch_summary(self, title: str) -> None:
+        """Log a formatted batch summary header."""
+        self.info("")
+        self.info(f"=== {title} ===")
+    
+    def batch_summary_footer(self) -> None:
+        """Log a formatted batch summary footer."""
+        self.info("===========================")
+        self.info("")
