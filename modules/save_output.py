@@ -4,8 +4,6 @@ from typing import Optional
 
 import pandas as pd
 
-from .save_to_excel import process as _save_to_excel
-
 
 def save_csv(df: pd.DataFrame, output_file: str | Path, *, sep_preamble: bool = True, encoding: str = "utf-8-sig", create_excel_copy: bool = False) -> Path:
     """Save DataFrame to CSV with BOM and optional 'sep=,' preamble.
@@ -23,7 +21,7 @@ def save_csv(df: pd.DataFrame, output_file: str | Path, *, sep_preamble: bool = 
     if create_excel_copy:
         try:
             xlsx_path = outp.with_suffix(".xlsx")
-            _save_to_excel(df, output_file=str(xlsx_path))
+            save_excel(df, xlsx_path)
         except Exception:
             # swallow errors to keep CSV write as primary
             pass
@@ -32,10 +30,22 @@ def save_csv(df: pd.DataFrame, output_file: str | Path, *, sep_preamble: bool = 
 
 
 def save_excel(df: pd.DataFrame, output_file: str | Path, **kwargs) -> Path:
-    """Save DataFrame to Excel using existing helper. Returns Path to written file."""
+    """Save DataFrame to Excel. This is the canonical implementation for Excel output.
+
+    This function replaces the prior implementation in `save_to_excel.py` so
+    that all output I/O is managed from a single module. It still uses
+    `pandas.DataFrame.to_excel` directly and returns the written Path.
+    """
     outp = Path(output_file)
     outp.parent.mkdir(parents=True, exist_ok=True)
-    _save_to_excel(df, output_file=str(outp), **kwargs)
+    try:
+        df.to_excel(str(outp), index=False, **kwargs)
+    except Exception as e:
+        # Keep behavior simple: log to stdout and re-raise so callers can decide
+        # (CLI/GUI may handle exceptions differently). Raising helps tests detect
+        # failures instead of silently continuing.
+        print(f"Excel'e kaydetme hatası: {e}")
+        raise
     return outp
 
 
