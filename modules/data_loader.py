@@ -67,6 +67,30 @@ class DataLoader:
                 engine="python",
                 on_bad_lines=_capture_bad_lines,
             )
+            # Heuristic fallback: if we ended up with a single-column frame
+            # and that column name or first row contains commas, it's likely
+            # the delimiter detection was wrong. Try re-reading with comma.
+            if frame.shape[1] == 1 and delimiter != ',':
+                first_col = str(frame.columns[0])
+                first_val = ''
+                try:
+                    first_val = str(frame.iloc[0, 0]) if len(frame) > 0 else ''
+                except Exception:
+                    first_val = ''
+                if (',' in first_col) or (',' in first_val):
+                    self.logger.info("Tek sütun tespit edildi; comma olarak yeniden deneme yapılıyor.")
+                    try:
+                        frame = pd.read_csv(
+                            file_path,
+                            encoding=encoding,
+                            sep=',',
+                            engine='python',
+                            on_bad_lines=_capture_bad_lines,
+                            quotechar='"',
+                        )
+                    except Exception:
+                        # if fallback fails, keep original frame and continue
+                        self.logger.debug("Comma fallback read başarısız oldu; orijinal okuma korunuyor.")
             if bad_lines:
                 self._append_bad_lines(bad_lines, encoding)
                 self.logger.warning("%s satır bad_lines.csv dosyasına kaydedildi.", len(bad_lines))

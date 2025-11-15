@@ -12,6 +12,16 @@
 [X] `requirements.txt` öneri ile opsiyonel paketler `ftfy` ve `Unidecode` eklendi.
 [X] `tests/test_text_normalize.py` birim testleri eklendi (temel test vakaları).
 
+[X] `modules/custom/clean_hepsiburada_scrape.py` güncellendi: in-place temizleme (orijinal sütunların üzerine yazma), sağlam fiyat parsing, güvenli extra parsing, ve `deleted_records_log.csv` için zenginleştirilmiş logging eklendi.
+[X] `modules/pipeline_manager.py` eklendi/ayrıştırıldı: `selected_modules_list` desteği ve `run_pipeline` metodu ile GUI seçimlerine göre modül çalıştırma sağlandı.
+[X] `neatdata_gui.py` güncellendi: GUI seçimleri pipeline'a aktarılıyor; CSV-only seçilince .xlsx kopyası oluşturulmuyor.
+[X] `modules/data_loader.py` için delimiter-fallback eklendi (tek sütunlu okuma tespit edilirse `sep=','` ile tekrar deniyor).
+[X] `tests/test_clean_hepsiburada_scrape.py` eklendi ve lokal test runner ile çalıştırıldı (geçti).
+
+## Yapılacaklar (güncellendi):
+ - [ ] `bad_lines.csv` içindeki problemli satırların kaynağına bak (scraper/escaping düzeltmesi önerilir).
+ - [ ] Opsiyonel: GUI'ye "Ayrıca Excel (.xlsx) kaydet" checkbox ekle.
+
 ## Bitenler:
 [X] CLI'ye --modules argümanı ekle (cli_handler.py).
 [X] clean_currency.py modülü yaz (Salary sütunu için).

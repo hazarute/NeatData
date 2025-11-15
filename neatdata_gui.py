@@ -175,15 +175,33 @@ class NeatDataGUI(ctk.CTk):
 
         self.log_message(f"{file_path} okundu (satır: {len(dataframe)}).")
 
-        core_selection = [key for key, var in self.core_module_vars.items() if var.get()]
-        custom_selection = [key for key, var in self.custom_module_vars.items() if var.get()]
-        self.pipeline_manager.build_pipeline(core_keys=core_selection or None, custom_keys=custom_selection or None)
+        # Build `selected_modules` from GUI selections
+        selected_modules = []
+        for key, var in self.core_module_vars.items():
+            try:
+                if var.get():
+                    selected_modules.append(key)
+            except Exception:
+                continue
 
-        try:
-            cleaned = self.pipeline_manager.run(dataframe)
-        except Exception as exc:  # pylint: disable=broad-except
-            self.log_message(f"Pipeline hatası: {exc}")
-            return
+        for key, var in self.custom_module_vars.items():
+            try:
+                if var.get():
+                    selected_modules.append(key)
+            except Exception:
+                continue
+
+        if not selected_modules:
+            self.log_message("Hiç modül seçilmedi; temizleme atlandı.")
+            cleaned = dataframe
+        else:
+            # Use new run_pipeline that executes only selected modules
+            self.pipeline_manager.selected_modules_list = selected_modules
+            try:
+                cleaned = self.pipeline_manager.run_pipeline(dataframe)
+            except Exception as exc:  # pylint: disable=broad-except
+                self.log_message(f"Pipeline hatası: {exc}")
+                return
 
         self.progress_bar.set(0.7)
         output_dir = Path(self.entry_output_dir.get() or Path(file_path).parent)
@@ -196,8 +214,11 @@ class NeatDataGUI(ctk.CTk):
 
             save_to_excel_process(cleaned, output_file=str(output_path))
         else:
-            # Save CSV using UTF-8 with BOM so Excel (Windows) opens columns reliably
-            cleaned.to_csv(output_path, index=False, encoding="utf-8-sig")
+                # Save CSV using UTF-8 with BOM and write 'sep=,' preamble so Excel correctly detects the delimiter
+                with open(output_path, "w", encoding="utf-8-sig", newline="") as f:
+                    f.write("sep=,\n")
+                    cleaned.to_csv(f, index=False)
+                # Do not create an Excel copy when CSV is explicitly requested.
 
         self.progress_bar.set(1)
         self.log_message(f"Çıktı kaydedildi: {output_path}")

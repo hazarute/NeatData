@@ -4,6 +4,8 @@ from modules.core.text_normalize import clean_text_pipeline
 from pathlib import Path
 import os
 import unicodedata
+import json
+import ast
 
 META = {
     "name": "clean_hepsiburada_scrape",
@@ -98,62 +100,175 @@ def _clean_name(s: str, fix_mojibake: bool = True) -> str:
 
 
 def _clean_price(series: pd.Series) -> pd.Series:
-    # Remove grouping separators and currency symbols if present and parse to float
-    s = series.astype(str)
-    s = s.str.replace(r"[^0-9.,-]", "", regex=True)
-    # convert comma-as-thousands or decimal
-    # Hepsiburada export uses dot as decimal in observed file, so prefer '.'; convert commas if needed
-    s = s.str.replace(',', '')
-    return pd.to_numeric(s, errors='coerce')
+    # Robust price parsing supporting formats like:
+    # - 1.234,56  (dot thousands, comma decimal)
+    # - 1,234.56  (comma thousands, dot decimal)
+    # - 1234.56   (dot decimal)
+    # - 1234,56   (comma decimal)
+    import re
+
+    def normalize_price_text(text: str) -> str:
+        if text is None:
+            return ''
+        s = str(text).strip()
+        # drop currency abbreviations and NBSP
+        s = s.replace('\u00a0', ' ')
+        s = re.sub(r"[^0-9,\.\-]", "", s)
+        if s == "":
+            return s
+
+        # European style: dots as thousand sep, comma as decimal (e.g. 1.234,56)
+        euro_re = re.compile(r'^\d{1,3}(?:\.\d{3})*(?:,\d+)?$')
+        # US style: commas as thousand sep, dot as decimal (e.g. 1,234.56)
+        us_re = re.compile(r'^\d{1,3}(?:,\d{3})*(?:\.\d+)?$')
+
+        if euro_re.match(s):
+            s = s.replace('.', '')
+            s = s.replace(',', '.')
+            return s
+        if us_re.match(s):
+            s = s.replace(',', '')
+            return s
+
+        # Mixed or ambiguous cases: fallback heuristics
+        # If there is both '.' and ',' decide based on last separator
+        if ',' in s and '.' in s:
+            if s.rfind(',') > s.rfind('.'):
+                # comma likely decimal
+                s = s.replace('.', '')
+                s = s.replace(',', '.')
+            else:
+                # dot likely decimal
+                s = s.replace(',', '')
+            return s
+
+        # Only commas -> treat comma as decimal
+        if ',' in s and '.' not in s:
+            s = s.replace(',', '.')
+            return s
+
+        # Only dots -> if single dot and <=2 digits after it => decimal, else remove dots
+        if '.' in s and ',' not in s:
+            parts = s.split('.')
+            if len(parts) == 2 and 1 <= len(parts[1]) <= 2:
+                # looks like decimal
+                return s
+            # otherwise remove dots (thousand separators)
+            s = s.replace('.', '')
+            return s
+
+        return s
+
+    s = series.astype(str).fillna("")
+    normalized = s.map(normalize_price_text)
+    # empty strings -> NA
+    normalized = normalized.replace('', pd.NA)
+    return pd.to_numeric(normalized, errors='coerce')
+
+
+def _parse_extra(info):
+    """Parse an 'extra' JSON-like field safely.
+
+    Returns a dict for valid JSON/dict-like input, or {} for empty/invalid values.
+    Ensures we never call string methods on NaN (which caused crashes).
+    """
+    if pd.isna(info):
+        return {}
+    if isinstance(info, dict):
+        return info
+    s = str(info).strip()
+    if s == "":
+        return {}
+    # Try JSON first, fall back to ast.literal_eval, then to a lax replace-based attempt
+    try:
+        return json.loads(s)
+    except Exception:
+        try:
+            return ast.literal_eval(s)
+        except Exception:
+            try:
+                return json.loads(s.replace("'", '"'))
+            except Exception:
+                return {}
 
 
 def run(df: pd.DataFrame, fix_mojibake: bool = True) -> pd.DataFrame:
     """Plugin to clean hepsiburada-like scraped product rows.
 
-    - Replaces NBSP and normalizes space
-    - Normalizes smart quotes and prime/inch notations
-    - Attempts mojibake fixes (if enabled)
-    - Standardizes price field to float (numbers only)
+    Improvements:
+    - Robust price parsing (handles both ' TL' and 'TL', removes '.' thousands and converts ',' to '.')
+    - Reviews count cleansing (removes parentheses and '.' thousands separators)
+    - Safe parsing of extra/info JSON-like fields (returns {} for NaN / empty cells)
 
-    Returns a cleaned DataFrame with columns: the original plus
-    `Clean_Name` and `Cleaned_Price`.
+    Returns the DataFrame with added columns: `Clean_Name`, `Cleaned_Price`,
+    `Cleaned_Reviews` (if a reviews column is present) and `Extra_Parsed` (if an extra/info column exists).
     """
 
     df = df.copy()
     cols = list(df.columns)
     name_col = _choose_column(cols, ["name", "title", "product", "product_name", "Name"]) or (cols[0] if cols else None)
-    price_col = _choose_column(cols, ["price", "Price", "amount", "Amount"]) or None
+    price_col = _choose_column(cols, ["price", "Price", "amount", "Amount", "fiyat", "Fiyat"]) or None
+    reviews_col = _choose_column(cols, ["reviews", "review_count", "yorum", "yorum_sayisi", "comments", "Reviews"]) or None
+    extra_col = _choose_column(cols, ["extra", "extra_info", "info", "details", "metadata", "extraInfo"]) or None
 
-    # Clean names
-    if name_col:
+    # Clean names in-place (replace original column values)
+    if name_col and name_col in df.columns:
         df[name_col] = df[name_col].astype(str)
-        df["Clean_Name"] = df[name_col].apply(lambda s: _clean_name(s, fix_mojibake=fix_mojibake))
-        # First run general text normalization for item names (ftfy/unidecode optional)
-        mask_item = df[name_col].notna()
+        cleaned_names = df[name_col].apply(lambda s: _clean_name(s, fix_mojibake=fix_mojibake))
+        mask_item = cleaned_names.notna()
         try:
-            df.loc[mask_item, name_col] = clean_text_pipeline(df.loc[mask_item, name_col], fix_mojibake_opt=True, use_unidecode=False)
+            cleaned_names.loc[mask_item] = clean_text_pipeline(cleaned_names.loc[mask_item], fix_mojibake_opt=True, use_unidecode=False)
         except Exception:
-            # Fall back to safe title-case if normalization fails
-            df.loc[mask_item, name_col] = df.loc[mask_item, name_col].astype(str)
+            # if pipeline fails, keep our normalized names
+            pass
+        df[name_col] = cleaned_names
 
-    # Clean price
+    # Clean price in-place: preserve original text for logging then overwrite column
     if price_col and price_col in df.columns:
-        df["Cleaned_Price"] = _clean_price(df[price_col])
-    else:
-        # try to find a numeric column or guess
-        df["Cleaned_Price"] = pd.Series([pd.NA] * len(df), index=df.index)
+        orig_price = df[price_col].copy()
+        try:
+            cleaned_prices = _clean_price(orig_price)
+        except Exception:
+            s = orig_price.astype(str).str.replace('\u00a0', ' ', regex=False)
+            s = s.str.replace(r'[^0-9,\.\-]', '', regex=True)
+            s = s.replace('', pd.NA)
+            cleaned_prices = pd.to_numeric(s, errors='coerce')
 
-    # Optional: log rows with null price but original had price text
-    if price_col:
-        bad_price_mask = df["Cleaned_Price"].isna() & df[price_col].notna()
+        # Overwrite original price column with numeric cleaned values
+        df[price_col] = cleaned_prices
+
+        # Log rows where original had text but cleaned price is NA
+        bad_price_mask = cleaned_prices.isna() & orig_price.notna()
         if bad_price_mask.any():
             log_filename = "deleted_records_log.csv"
             invalid_rows = df.loc[bad_price_mask].copy()
+            invalid_rows["Orig_Price_Text"] = orig_price.loc[bad_price_mask].astype(str)
+            invalid_rows["Row_Index"] = invalid_rows.index
             invalid_rows["Reason"] = "Invalid Price"
             write_header = not Path(log_filename).exists()
             invalid_rows.to_csv(log_filename, mode="a", header=write_header, index=False, encoding="utf-8")
 
-    # Return cleaned frame
+    # Clean reviews in-place (replace original column values)
+    if reviews_col and reviews_col in df.columns:
+        r = df[reviews_col].astype(str).fillna('')
+        r = r.str.replace(r'[\(\)]', '', regex=True)
+        r = r.str.replace(r'\.', '', regex=True)
+        r = r.str.replace(r'[^0-9\-]', '', regex=True)
+        r = r.replace('', pd.NA)
+        cleaned_reviews = pd.to_numeric(r, errors='coerce', downcast='integer')
+        df[reviews_col] = cleaned_reviews
+
+    # Optionally parse extra/info column but keep it in the same column (stringified JSON)
+    if extra_col and extra_col in df.columns:
+        def _to_jsonish(x):
+            parsed = _parse_extra(x)
+            try:
+                return json.dumps(parsed, ensure_ascii=False)
+            except Exception:
+                return str(x) if not pd.isna(x) else x
+
+        df[extra_col] = df[extra_col].apply(lambda x: _to_jsonish(x) if not pd.isna(x) else x)
+
     return df
 
 

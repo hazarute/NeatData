@@ -25,11 +25,22 @@ class PipelineStep:
 class PipelineManager:
     """Builds and executes a dataframe cleaning pipeline."""
 
-    def __init__(self, custom_path: Optional[str] = None) -> None:
+    def __init__(self, custom_path: Optional[str] = None, selected_modules_list: Optional[Iterable[str]] = None) -> None:
+        """Initialize PipelineManager.
+
+        Args:
+            custom_path: optional path to `modules/custom` directory.
+            selected_modules_list: iterable of module keys or names selected by the GUI.
+                If provided, `run_pipeline` will execute only the modules listed here.
+        """
         self.logger = logging.getLogger("PipelineManager")
         self.custom_path = Path(custom_path or Path(__file__).parent / "custom")
+        # load core descriptors keyed by descriptor.key
         self.core_modules = {descriptor.key: descriptor for descriptor in load_core_modules()}
+        # discover custom descriptors
         self.custom_modules = self._discover_custom_modules()
+        # list provided by GUI (module keys or display names)
+        self.selected_modules_list: List[str] = list(selected_modules_list) if selected_modules_list is not None else []
         self.steps: List[PipelineStep] = []
 
     def available_core_modules(self) -> Dict[str, ModuleDescriptor]:
@@ -108,6 +119,55 @@ class PipelineManager:
                 frame = step.process(frame, **step.params)
             except Exception as exc:  # pylint: disable=broad-except
                 raise RuntimeError(f"Pipeline adımı hata verdi ({step.key}): {exc}") from exc
+        return frame
+
+    def _find_descriptor(self, identifier: str) -> Optional[ModuleDescriptor]:
+        """Find a ModuleDescriptor by key or name (case-insensitive).
+
+        Returns the descriptor from core or custom registry, or None if not found.
+        """
+        if not identifier:
+            return None
+        ident = identifier.strip()
+        # direct key match
+        desc = self.core_modules.get(ident) or self.custom_modules.get(ident)
+        if desc:
+            return desc
+        # case-insensitive key/name match
+        lower = ident.lower()
+        for d in list(self.core_modules.values()) + list(self.custom_modules.values()):
+            if (getattr(d, "key", "").lower() == lower) or (getattr(d, "name", "").lower() == lower):
+                return d
+        return None
+
+    def run_pipeline(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Run only the modules listed in `selected_modules_list`.
+
+        Behavior:
+        - If `selected_modules_list` is empty or None, the pipeline is a no-op and returns the input frame.
+        - Each entry in `selected_modules_list` may be a module `key` or a human-friendly `name`.
+        - Modules are executed in the order provided by `selected_modules_list`.
+        """
+        frame = df.copy()
+        if not self.selected_modules_list:
+            self.logger.info("Hiç modül seçilmedi; pipeline çalıştırılmıyor.")
+            return frame
+
+        # Ensure we have up-to-date custom modules
+        self.refresh_custom_modules()
+
+        for sel in self.selected_modules_list:
+            descriptor = self._find_descriptor(sel)
+            if not descriptor:
+                self.logger.warning("Seçili modül bulunamadı: %s (atlandı)", sel)
+                continue
+            self.logger.info("Çalıştırılıyor: %s (%s)", descriptor.name, descriptor.key)
+            params = getattr(descriptor, "defaults", {}) or {}
+            try:
+                frame = descriptor.process(frame, **params)
+            except Exception as exc:  # pylint: disable=broad-except
+                raise RuntimeError(f"Seçili modül '{descriptor.key}' çalışırken hata: {exc}") from exc
+
         return frame
 
     def _discover_custom_modules(self) -> Dict[str, ModuleDescriptor]:
