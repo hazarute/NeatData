@@ -18,7 +18,7 @@ Modüler mimari yeniden kuruldu: core ve custom modüller ayrıldı, dinamik plu
 - Core seti genişletme ve plugin metadata/parametre yapılandırmasını esnekleştirme.
 - Core: `text_normalize.py` için ek testler ve opsiyonel işlevler eklemek (emoji remover, currency normalizer, locale aware numeric parsing).
 
-## Son Yapılan Değişiklikler (kısa)
+## Son Yapılan Değişiklikler
 - PipelineManager: `build_pipeline` davranışı düzeltildi; boş seçim artık hiçbir core modülünün çalışmamasını sağlar.
 - `handle_missing` modülü varsayılan olarak no-op olacak şekilde güncellendi; bir işlem yapılması için `columns` parametresi gerekmektedir.
 - `fix_cafe_business_logic` modülü güvenli hale getirildi; hatalı kayıtlar `deleted_records_log.csv` ile loglanıyor ve `process` alias'ı eklendi.
@@ -26,9 +26,6 @@ Modüler mimari yeniden kuruldu: core ve custom modüller ayrıldı, dinamik plu
  - `clean_hepsiburada_scrape` custom plugin'i core `clean_text_pipeline` kullanacak şekilde refactor edildi; plugin özel iş kuralları custom modülde kalır.
  - `requirements.txt` opsiyonel bağımlılıklar için güncellendi (`ftfy`, `Unidecode` notları eklendi).
  - `tests/test_text_normalize.py` eklendi (temel durumlar, NBSP, tırnaklar, mojibake fallback testleri).
-
-## Son Oturum Değişiklikleri (otomatik kaydedildi)
-
 - `modules/custom/clean_hepsiburada_scrape.py` güncellendi: artık ayrı `Clean_*` sütunları üretmiyor; orijinal sütunları doğrudan temizleyip aynı isimle kaydediyor. Fiyat parsing daha sağlam hale getirildi (Avrupa/US/mixed heuristikleri), `extra` alanı güvenli şekilde parse edilip JSON-string olarak saklanabiliyor ve hatalı fiyat dönüşümleri `deleted_records_log.csv` içine `Orig_Price_Text` ve `Row_Index` ile loglanıyor.
 - `modules/pipeline_manager.py` içerisinde GUI'den gelen seçime göre çalıştırma desteklendi (`selected_modules_list` ve `run_pipeline`). Boş seçim durumunda core modüller çalıştırılmıyor.
 - `neatdata_gui.py` güncellendi: GUI seçimleri (`core` ve `custom`) `selected_modules` olarak toplanıyor ve `pipeline_manager.run_pipeline` çağrılıyor; CSV seçiliyse artık otomatik .xlsx kopyası oluşturulmuyor.

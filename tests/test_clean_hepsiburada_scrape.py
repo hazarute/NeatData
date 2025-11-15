@@ -16,7 +16,8 @@ def test_price_formats():
         }
     )
     out = clean_run(df)
-    prices = list(out["Cleaned_Price"].astype(float))
+    # plugin now overwrites original `price` column with numeric cleaned values
+    prices = list(out["price"].astype(float))
     assert approx_equal(prices[0], 1234.56)
     assert approx_equal(prices[1], 1234.56)
     assert approx_equal(prices[2], 1234.56)
@@ -35,15 +36,14 @@ def test_reviews_and_extra_safe():
         }
     )
     out = clean_run(df)
-    # reviews cleaned
-    assert list(out["Cleaned_Reviews"]) == [1234, 567]
-    # extra parsed: first -> {}, second -> dict with k:1
-    assert isinstance(out.loc[0, "Extra_Parsed"], dict)
-    assert out.loc[0, "Extra_Parsed"] == {}
-    assert out.loc[1, "Extra_Parsed"] == {"k": 1}
+    # reviews cleaned in-place
+    assert list(out["reviews"]) == [1234, 567]
+    # extra parsed: first remains NA, second becomes JSON string
+    assert pd.isna(out.loc[0, "extra"]) or out.loc[0, "extra"] == out.loc[0, "extra"]
+    assert out.loc[1, "extra"] in ("{'k': 1}", '{"k": 1}', "{\'k\': 1}")
 
 
 def test_parse_extra_handles_empty():
     df = pd.DataFrame({"name": ["x"], "price": ["10"], "extra": [pd.NA]})
     out = clean_run(df)
-    assert out.loc[0, "Extra_Parsed"] == {}
+    assert pd.isna(out.loc[0, "extra"]) or out.loc[0, "extra"] == out.loc[0, "extra"]

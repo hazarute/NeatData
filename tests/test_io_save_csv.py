@@ -23,7 +23,7 @@ def test_save_and_reload_csv(tmp_path):
     assert list(reloaded.columns) == ["name", "price"]
 
     # The GUI/CLI also writes an XLSX fallback - check it was created and round-trips
-    from modules.save_to_excel import process as save_to_excel_process
+    from modules.save_output import save_excel as save_to_excel_process
 
     xlsx_path = out.with_suffix(".xlsx")
     save_to_excel_process(cleaned, output_file=str(xlsx_path))

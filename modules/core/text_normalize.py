@@ -35,7 +35,7 @@ def replace_nbsp(text: Union[str, pd.Series]) -> Union[str, pd.Series]:
     """Replace non-breaking spaces with regular spaces."""
 
     def _replace(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         return s.replace("\u00a0", " ")
 
@@ -48,7 +48,7 @@ def remove_zero_width(text: Union[str, pd.Series]) -> Union[str, pd.Series]:
     ZW_PATTERN = "[\u200B\u200C\u200D\u2060\uFEFF]"
 
     def _remove(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         return re.sub(ZW_PATTERN, "", s)
 
@@ -59,7 +59,7 @@ def normalize_whitespace(text: Union[str, pd.Series], collapse: bool = True) -> 
     """Trim and optionally collapse repeated whitespace into a single space."""
 
     def _norm(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         s = s.strip()
         return " ".join(s.split()) if collapse else s
@@ -89,7 +89,7 @@ def normalize_quotes(text: Union[str, pd.Series]) -> Union[str, pd.Series]:
     }
 
     def _map(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         for k, v in mapping.items():
             s = s.replace(k, v)
@@ -108,7 +108,7 @@ def fix_mojibake(text: Union[str, pd.Series], use_ftfy: bool = True) -> Union[st
     """
 
     def _fix(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         s = str(s)
         # try ftfy first
@@ -144,7 +144,7 @@ def unicode_normalize_text(text: Union[str, pd.Series], form: str = "NFC") -> Un
     """Normalize unicode canonical form: NFC or NFD."""
 
     def _norm(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         return unicodedata.normalize(form, s)
 
@@ -158,7 +158,7 @@ def to_ascii(text: Union[str, pd.Series], use_unidecode: bool = True) -> Union[s
     """
 
     def _to(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         if use_unidecode and unidecode is not None:
             try:
@@ -178,7 +178,7 @@ def strip_html_tags(text: Union[str, pd.Series]) -> Union[str, pd.Series]:
     TAG_RE = re.compile(r"<[^>]+>")
 
     def _strip(s: str) -> str:
-        if s is None:
+        if s is None or pd.isna(s):
             return s
         s = TAG_RE.sub("", s)
         s = html.unescape(s)
