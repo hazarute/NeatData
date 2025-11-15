@@ -60,23 +60,13 @@ def run_pipeline_for_file(input_file: str, args, manager: PipelineManager, loade
     report_payload["tekrar_silinen"] = report_payload["satir_sayisi_ilk"] - len(cleaned_df)
     output_path = _resolve_output_path(input_file, args.output, multi_input)
 
+    from modules.save_output import save_csv, save_excel
+
     if output_path.suffix.lower() == ".xlsx":
-        from modules.save_to_excel import process as save_to_excel_process
-
-        save_to_excel_process(cleaned_df, output_file=str(output_path))
+        save_excel(cleaned_df, output_path)
     elif output_path.suffix.lower() == ".csv":
-        # Save CSV using UTF-8 with BOM and write 'sep=,' preamble so Excel correctly detects the delimiter
-        with open(output_path, "w", encoding="utf-8-sig", newline="") as f:
-            f.write("sep=,\n")
-            cleaned_df.to_csv(f, index=False)
-        # Also generate an Excel copy for convenience
-        try:
-            from modules.save_to_excel import process as save_to_excel_process
-
-            xlsx_output = output_path.with_suffix(".xlsx")
-            save_to_excel_process(cleaned_df, output_file=str(xlsx_output))
-        except Exception:
-            pass
+        # Save CSV using helper and also create an Excel copy for CLI convenience
+        save_csv(cleaned_df, output_path, sep_preamble=True, encoding="utf-8-sig", create_excel_copy=True)
     else:
         raise ValueError("Çıktı sadece .xlsx veya .csv olabilir")
 

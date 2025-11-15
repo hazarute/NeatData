@@ -209,16 +209,13 @@ class NeatDataGUI(ctk.CTk):
         suffix = ".xlsx" if "Excel" in self.seg_output_type.get() else ".csv"
         output_path = output_dir / f"cleaned_{Path(file_path).stem}{suffix}"
 
-        if suffix == ".xlsx":
-            from modules.save_to_excel import process as save_to_excel_process
+        from modules.save_output import save_csv, save_excel
 
-            save_to_excel_process(cleaned, output_file=str(output_path))
+        if suffix == ".xlsx":
+            save_excel(cleaned, output_path)
         else:
-                # Save CSV using UTF-8 with BOM and write 'sep=,' preamble so Excel correctly detects the delimiter
-                with open(output_path, "w", encoding="utf-8-sig", newline="") as f:
-                    f.write("sep=,\n")
-                    cleaned.to_csv(f, index=False)
-                # Do not create an Excel copy when CSV is explicitly requested.
+            # Save CSV using helper; do NOT create an Excel copy by default from GUI
+            save_csv(cleaned, output_path, sep_preamble=True, encoding="utf-8-sig", create_excel_copy=False)
 
         self.progress_bar.set(1)
         self.log_message(f"Çıktı kaydedildi: {output_path}")
