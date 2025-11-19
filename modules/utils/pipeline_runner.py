@@ -1,5 +1,7 @@
 """Pipeline Runner: Orchestrates pipeline execution for GUI, CLI, and tests."""
 
+from time import perf_counter
+
 import pandas as pd
 from pathlib import Path
 from typing import Callable, Optional, List
@@ -52,67 +54,77 @@ class PipelineRunner:
         Returns:
             True if successful, False otherwise
         """
+        start_time = perf_counter()
+        self.logger.section("İşlem Başlatılıyor")
         try:
-            # Validate input
             if not state.file_path:
                 self.logger.error("Lütfen bir veri dosyası seçin.")
                 return False
-            
+
             if not GuiIO.check_file_exists(state.file_path):
                 self.logger.error(f"Dosya bulunamadı veya okunamıyor: {state.file_path}")
                 return False
-            
-            # Load data
+
             self._update_progress(progress_callback, 0.0)
-            self.logger.info(f"Dosya yükleniyor: {state.file_path}")
-            
+            self.logger.step("Dosya okunuyor...")
+
             try:
                 dataframe = self.data_loader.load(state.file_path)
             except Exception as exc:
                 self.logger.error(f"Dosya okunamadı: {exc}")
                 return False
-            
-            self.logger.info(f"Dosya okundu ({len(dataframe)} satır)")
+
+            self.logger.success(f"Dosya yüklendi (Satır: {len(dataframe)})")
             self._update_progress(progress_callback, 0.2)
-            
-            # Run pipeline
-            if not state.get_all_selected_modules():
+
+            selected_modules = state.get_all_selected_modules()
+            self.logger.step(
+                f"Pipeline Hazırlanıyor... (Seçili modül sayısı: {len(selected_modules)})"
+            )
+
+            if not selected_modules:
                 self.logger.warning("Hiç modül seçilmedi; temizleme atlandı.")
                 cleaned_dataframe = dataframe
             else:
-                self.logger.info(f"Pipeline çalıştırılıyor: {state.get_all_selected_modules()}")
+                self.logger.step(f"Seçilen modüller: {selected_modules}")
                 try:
-                    cleaned_dataframe = self._execute_pipeline(dataframe, state.get_all_selected_modules())
+                    cleaned_dataframe = self._execute_pipeline(dataframe, selected_modules)
                 except Exception as exc:
                     self.logger.error(f"Pipeline hatası: {exc}")
                     return False
-                
-                self.logger.info(
+
+                self.logger.success(
                     f"Pipeline tamamlandı ({len(dataframe)} → {len(cleaned_dataframe)} satır)"
                 )
-            
+
             self._update_progress(progress_callback, 0.7)
-            
-            # Save output
+
+            self.logger.step("Sonuçlar kaydediliyor...")
             try:
                 output_path = self._save_output(state, cleaned_dataframe)
-                self.logger.info(f"Çıktı kaydedildi: {output_path}")
+                self.logger.success(f"Kayıt Başarılı: {output_path}")
             except Exception as exc:
                 self.logger.error(f"Çıktı kaydedilemedi: {exc}")
                 return False
-            
+
             self._update_progress(progress_callback, 0.9)
-            
-            # Generate report
+
+            duration = perf_counter() - start_time
+            self.logger.section("Temizlik Raporu")
+            self.logger.info(f"Satır (Başlangıç): {len(dataframe)}")
+            self.logger.info(f"Satır (Son): {len(cleaned_dataframe)}")
+            self.logger.info(f"Silinen satır: {len(dataframe) - len(cleaned_dataframe)}")
+            self.logger.info(f"Süre: {duration:.2f} saniye")
+
             try:
                 self._generate_report(state.file_path, dataframe, cleaned_dataframe)
             except Exception as exc:
                 self.logger.warning(f"Rapor oluşturulamadı: {exc}")
-            
+
             self._update_progress(progress_callback, 1.0)
-            self.logger.info("İşlem başarıyla tamamlandı.")
+            self.logger.success("İşlem başarıyla tamamlandı.")
             return True
-        
+
         except Exception as exc:  # pylint: disable=broad-except
             self.logger.error(f"Beklenmeyen hata: {exc}")
             return False

@@ -1,4 +1,4 @@
-"""GUI Logger: Centralized logging adapter for GUI and tests."""
+"""GUI Logger: Centralized logging adapter for GUI and tests with styled output."""
 
 import logging
 from typing import Callable, Optional
@@ -6,99 +6,59 @@ from datetime import datetime
 
 
 class GuiLogger:
-    """
-    Adapter for logging messages to GUI textbox and/or Python logging.
-    
-    Allows GUI textbox callbacks while maintaining compatibility with
-    standard logging and test environments.
-    """
-    
+    """Adapter that logs to terminal (with timestamps) and GUI callbacks."""
+
     def __init__(self, gui_callback: Optional[Callable[[str], None]] = None, level: int = logging.INFO):
-        """
-        Initialize GuiLogger.
-        
-        Args:
-            gui_callback: Function to call for GUI updates (e.g., lambda msg: log_box.insert(...))
-            level: Logging level (default: INFO)
-        """
         self.gui_callback = gui_callback
         self.level = level
-        
-        # Setup Python logging
+
         self.logger = logging.getLogger("NeatData")
         self.logger.setLevel(level)
-        
-        # Console handler for non-GUI environments
+
         if not self.logger.handlers:
             handler = logging.StreamHandler()
             handler.setLevel(level)
             formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
             handler.setFormatter(formatter)
             self.logger.addHandler(handler)
-    
-    def log(self, message: str, level: int = logging.INFO):
-        """
-        Log a message to GUI callback and Python logging.
-        
-        Args:
-            message: Message to log
-            level: Log level (default: INFO)
-        """
-        # Format timestamp
+
+    def _emit(self, message: str, level: int = logging.INFO, gui_prefix: str = "") -> None:
         timestamp = datetime.now().strftime("%H:%M:%S")
-        formatted_msg = f"[{timestamp}] {message}"
-        
-        # Send to GUI if callback exists
+        terminal_message = f"[{timestamp}] {message}"
+
         if self.gui_callback:
             try:
-                self.gui_callback(f">> {formatted_msg}")
+                self.gui_callback(f"{gui_prefix}{message}")
             except Exception as exc:
                 self.logger.warning(f"GUI callback failed: {exc}")
-        
-        # Send to Python logging
-        if level == logging.DEBUG:
-            self.logger.debug(formatted_msg)
-        elif level == logging.INFO:
-            self.logger.info(formatted_msg)
-        elif level == logging.WARNING:
-            self.logger.warning(formatted_msg)
-        elif level == logging.ERROR:
-            self.logger.error(formatted_msg)
-        elif level == logging.CRITICAL:
-            self.logger.critical(formatted_msg)
-    
-    def info(self, message: str):
-        """Log info message."""
-        self.log(message, logging.INFO)
-    
-    def warning(self, message: str):
-        """Log warning message."""
-        self.log(message, logging.WARNING)
-    
-    def error(self, message: str):
-        """Log error message."""
-        self.log(message, logging.ERROR)
-    
-    def debug(self, message: str):
-        """Log debug message."""
-        self.log(message, logging.DEBUG)
-    
-    def section_header(self, title: str) -> None:
-        """Log a formatted section header."""
-        self.info("")
-        self.info(f"--- {title} ---")
-    
-    def section_footer(self) -> None:
-        """Log a formatted section footer."""
-        self.info("--------------------------------")
-        self.info("")
-    
-    def batch_summary(self, title: str) -> None:
-        """Log a formatted batch summary header."""
-        self.info("")
-        self.info(f"=== {title} ===")
-    
-    def batch_summary_footer(self) -> None:
-        """Log a formatted batch summary footer."""
-        self.info("===========================")
-        self.info("")
+
+        self.logger.log(level, terminal_message)
+
+    def section(self, title: str) -> None:
+        """Log a prominent section header."""
+        self._emit("", logging.INFO)
+        self._emit(f"--- [ {title} ] ---", logging.INFO)
+
+    def step(self, message: str) -> None:
+        """Log a pipeline step indicator."""
+        self._emit(message, logging.INFO, gui_prefix=">> ")
+
+    def success(self, message: str) -> None:
+        """Log a success message."""
+        self._emit(message, logging.INFO, gui_prefix="✅ ")
+
+    def warning(self, message: str) -> None:
+        """Log a warning message."""
+        self._emit(message, logging.WARNING, gui_prefix="⚠️ ")
+
+    def error(self, message: str) -> None:
+        """Log an error message."""
+        self._emit(message, logging.ERROR, gui_prefix="❌ ")
+
+    def info(self, message: str) -> None:
+        """Log an informational message."""
+        self._emit(message, logging.INFO)
+
+    def debug(self, message: str) -> None:
+        """Log a debug message."""
+        self._emit(message, logging.DEBUG, gui_prefix="🐛 ")
