@@ -9,7 +9,6 @@ from typing import Callable, Optional, List
 from modules.data_loader import DataLoader
 from modules.pipeline_manager import PipelineManager
 from modules.save_output import save_csv, save_excel
-from modules.report_generator import generate_gui_report
 from .ui_state import UIState
 from .gui_logger import GuiLogger
 from .gui_io import GuiIO
@@ -24,7 +23,6 @@ class PipelineRunner:
     - Module selection
     - Pipeline execution
     - Output saving
-    - Report generation
     - Error handling and logging
     """
     
@@ -110,19 +108,21 @@ class PipelineRunner:
             self._update_progress(progress_callback, 0.9)
 
             duration = perf_counter() - start_time
-            self.logger.section("Temizlik Raporu")
-            self.logger.info(f"Satır (Başlangıç): {len(dataframe)}")
-            self.logger.info(f"Satır (Son): {len(cleaned_dataframe)}")
-            self.logger.info(f"Silinen satır: {len(dataframe) - len(cleaned_dataframe)}")
-            self.logger.info(f"Süre: {duration:.2f} saniye")
+            initial_rows = len(dataframe)
+            final_rows = len(cleaned_dataframe)
+            deleted_rows = initial_rows - final_rows
 
-            try:
-                self._generate_report(state.file_path, dataframe, cleaned_dataframe)
-            except Exception as exc:
-                self.logger.warning(f"Rapor oluşturulamadı: {exc}")
+            self.logger.section("TEMİZLİK ÖZETİ")
+            self.logger.info(f"• Süre: {duration:.2f} sn")
+            self.logger.info(f"• Başlangıç: {initial_rows} Satır")
+            self.logger.info(f"• Bitiş: {final_rows} Satır")
+            if deleted_rows > 0:
+                self.logger.warning(f"• Silinen satır: {deleted_rows}")
+            else:
+                self.logger.success("• Silinen satır: 0")
 
             self._update_progress(progress_callback, 1.0)
-            self.logger.success("İşlem başarıyla tamamlandı.")
+            self.logger.success("İŞLEM BAŞARIYLA TAMAMLANDI.")
             return True
 
         except Exception as exc:  # pylint: disable=broad-except
@@ -169,30 +169,6 @@ class PipelineRunner:
             save_csv(dataframe, output_path, sep_preamble=True, encoding="utf-8-sig", create_excel_copy=False)
         
         return output_path
-    
-    def _generate_report(
-        self,
-        input_file: str,
-        original_df: pd.DataFrame,
-        cleaned_df: pd.DataFrame,
-    ) -> None:
-        """
-        Generate cleaning report.
-        
-        Args:
-            input_file: Input file path
-            original_df: Original dataframe
-            cleaned_df: Cleaned dataframe
-        """
-        report = {
-            "dosya": input_file,
-            "satir_sayisi_ilk": len(original_df),
-            "satir_sayisi_son": len(cleaned_df),
-            "tekrar_silinen": len(original_df) - len(cleaned_df),
-            "eksik_silinen": "Pipeline tarafından yönetildi",
-            "hatalar": [],
-        }
-        generate_gui_report(report, log_callback=self.logger.info)
     
     @staticmethod
     def _update_progress(callback: Optional[Callable[[float], None]], value: float) -> None:
