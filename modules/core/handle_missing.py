@@ -51,11 +51,11 @@ def process(
         return frame
 
     if strategy == "ffill":
-        frame[target_columns] = frame[target_columns].fillna(method="ffill", limit=limit)
+        frame[target_columns] = frame[target_columns].ffill(limit=limit)
         return frame
 
     if strategy == "bfill":
-        frame[target_columns] = frame[target_columns].fillna(method="bfill", limit=limit)
+        frame[target_columns] = frame[target_columns].bfill(limit=limit)
         return frame
 
     raise ValueError(f"Bilinmeyen strateji: {strategy}")

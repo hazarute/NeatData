@@ -50,7 +50,7 @@ def process(
         prepared = series.astype(str).str.strip()
         if strip_characters:
             prepared = prepared.apply(lambda value: _clean_numeric_string(value, strip_characters))
-        numeric_series = pd.to_numeric(prepared, errors="coerce" if coerce else "ignore")
+        numeric_series = pd.to_numeric(prepared, errors="coerce" if coerce else "raise")
         non_null_ratio = numeric_series.notna().mean()
         if non_null_ratio >= numeric_threshold:
             frame[column] = numeric_series

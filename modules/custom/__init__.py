@@ -1,77 +1,53 @@
-"""Custom Plugins Directory - Organisation-specific cleaning logic.
+# modules/custom/__init__.py
 
-This directory contains custom cleaning plugins that extend NeatData's core functionality.
-The PipelineManager dynamically imports every .py file in this folder.
+import pandas as pd
+from typing import Protocol, runtime_checkable, Any, Dict
 
-PLUGIN STRUCTURE TEMPLATE:
-==========================
+"""
+NEATDATA CUSTOM PLUGIN STANDARDI
+================================
+Bu klasöre eklenecek her yeni .py dosyası (plugin) PipelineManager ile uyumlu
+olmak için aşağıdaki yapıya sahip olmalıdır.
 
-Each plugin must follow this structure:
+ZORUNLU YAPILAR:
+1. META Sözlüğü: Plugin'in arayüzde nasıl görüneceğini belirler.
+2. process Fonksiyonu: Temizlik mantığını içerir. 'run' DEĞİL, 'process' olmalıdır.
 
-    ```python
-    # modules/custom/my_plugin.py
-    import pandas as pd
-    from typing import Optional, List
+ÖRNEK KOD ŞABLONU:
+------------------
+META = {
+    "key": "my_plugin_key",          # Benzersiz ID
+    "name": "Plugin Görünen Adı",    # GUI'de görünecek isim
+    "description": "Ne işe yarar?",  # Açıklama
+    "defaults": {}                   # Varsayılan parametreler (Opsiyonel)
+}
+
+def process(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
+    df_copy = df.copy()
+    # İşlemler...
+    return df_copy
+"""
+
+@runtime_checkable
+class NeatDataPlugin(Protocol):
+    """
+    GitHub Copilot için teknik imza. 
+    PipelineManager.py dosyası 'process' fonksiyonunu aradığı için
+    burada da 'process' tanımlanmıştır.
+    """
     
-    # Metadata describing the plugin
-    META = {
-        "key": "my_plugin",              # Unique identifier (used in CLI/GUI)
-        "name": "My Custom Plugin",      # Display name
-        "description": "Cleans specific data in our domain",  # Description
-        "parameters": {
-            "columns": {
-                "type": "list",
-                "description": "Columns to clean",
-                "default": []
-            }
-        },
-        "defaults": {}
-    }
-    
-    def process(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
-        '''
-        Main processing function.
+    # PipelineManager META verisini okur, bu yüzden bu değişkenin varlığı önemlidir.
+    META: Dict[str, Any]
+
+    def process(self, df: pd.DataFrame, **kwargs: Any) -> pd.DataFrame:
+        """
+        Veri temizleme mantığını uygulayan ana fonksiyon.
         
         Args:
-            df: Input dataframe
-            **kwargs: Additional parameters (e.g., columns=['col1', 'col2'])
+            df (pd.DataFrame): Temizlenecek ham veri.
+            **kwargs: META['defaults'] içindeki parametreler buraya gelir.
             
         Returns:
-            Cleaned dataframe
-        '''
-        df_copy = df.copy()
-        
-        # Your custom cleaning logic here
-        # Example: Clean specific columns, fix formats, standardize values
-        columns = kwargs.get("columns", [])
-        if columns:
-            for col in columns:
-                if col in df_copy.columns:
-                    # Apply your custom logic
-                    df_copy[col] = df_copy[col].str.strip().str.lower()
-        
-        return df_copy
-    ```
-
-GUIDELINES:
-===========
-1. Always work on a copy: `df_copy = df.copy()` to avoid modifying the original
-2. META dict must include: key, name, description, parameters, defaults
-3. process() must accept **kwargs for flexible parameterization
-4. Keep the function stateless (no side effects)
-5. Handle missing values gracefully (check if columns exist)
-6. Return the cleaned dataframe
-7. Plugin errors are logged but don't stop the pipeline
-
-EXAMPLES:
-=========
-- clean_hepsiburada_scrape.py: Site-specific e-commerce data cleaning
-- fix_cafe_business_logic.py: Business domain-specific logic (CSV logging, date parsing)
-- Future HR plugins: clean_currency, clean_phone_format, clean_dates
-
-REGISTRATION:
-=============
-Once created, plugins are automatically discovered by PipelineManager.
-Use in CLI:  python -m modules.cli_handler --input data.csv --custom-modules my_plugin
-Use in GUI:  GUI module selection panel automatically includes your plugin
-"""
+            pd.DataFrame: Temizlenmiş veri.
+        """
+        ...

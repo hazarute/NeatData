@@ -1,0 +1,10001 @@
+order_id,customer,item,qty
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+102,Bora ,Tea,1
+103, Cenk ,Sugar,5
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+104,Derya,Milk,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+102,Bora ,Tea,1
+101, Anna,Coffee ,2
+102,Bora,Tea,1
+103, Cenk ,Sugar,5
+102,Bora,Tea,1
+102,Bora ,Tea,1
+104,Derya,Milk,1
+104,Derya,Milk,1
+102,Bora,Tea,1
+101, Anna,Coffee ,2
+101, Anna,Coffee ,2

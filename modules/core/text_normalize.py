@@ -140,8 +140,13 @@ def fix_mojibake(text: Union[str, pd.Series], use_ftfy: bool = True) -> Union[st
     return _call_on_series_or_string(_fix, text)
 
 
-def unicode_normalize_text(text: Union[str, pd.Series], form: str = "NFC") -> Union[str, pd.Series]:
-    """Normalize unicode canonical form: NFC or NFD."""
+from typing import Literal
+
+def unicode_normalize_text(
+    text: Union[str, pd.Series],
+    form: Literal["NFC", "NFD", "NFKC", "NFKD"] = "NFC"
+) -> Union[str, pd.Series]:
+    """Normalize unicode canonical form: NFC, NFD, NFKC, or NFKD."""
 
     def _norm(s: str) -> str:
         if s is None or pd.isna(s):
