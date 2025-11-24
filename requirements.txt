@@ -7,6 +7,10 @@ python-dateutil
 word2number
 # Optional / GUI
 customtkinter
+# Web API (FastAPI)
+fastapi
+uvicorn[standard]
+pydantic
 # Optional for improved mojibake fixes
 # ftfy  # recommended: fixes garbled Unicode (mojibake) in scraped text
 # GUI için ek paketler (Tkinter Python ile birlikte gelir)

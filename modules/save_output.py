@@ -1,22 +1,25 @@
-import json
 from pathlib import Path
-from typing import Optional
 
 import pandas as pd
 
 
-def save_csv(df: pd.DataFrame, output_file: str | Path, *, sep_preamble: bool = True, encoding: str = "utf-8-sig", create_excel_copy: bool = False) -> Path:
-    """Save DataFrame to CSV with BOM and optional 'sep=,' preamble.
+def save_csv(
+    df: pd.DataFrame,
+    output_file: str | Path,
+    *,
+    sep_preamble: bool = False,
+    encoding: str = "utf-8-sig",
+    create_excel_copy: bool = False,
+) -> Path:
+    """Save a DataFrame to CSV without inserting a ``sep=,`` preamble.
 
-    If create_excel_copy is True, also write an .xlsx copy using the existing excel helper.
-    Returns the Path to the written CSV file.
+    The legacy ``sep_preamble`` flag is kept for callers that still pass it,
+    but the value is ignored because the GUI now expects clean CSV files.
     """
+
     outp = Path(output_file)
     outp.parent.mkdir(parents=True, exist_ok=True)
-    with open(outp, "w", encoding=encoding, newline="") as f:
-        if sep_preamble:
-            f.write("sep=,\n")
-        df.to_csv(f, index=False)
+    df.to_csv(outp, index=False, encoding=encoding)
 
     if create_excel_copy:
         try:

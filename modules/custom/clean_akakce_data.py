@@ -18,8 +18,8 @@ def process(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     def split_name(name):
         parts = name.split(' ', 1)  # İlk boşluğa göre böl
         if len(parts) == 2:
-            return pd.Series({"marka": parts[0], "model": parts[1]})
-        return pd.Series({"marka": name, "model": None})
+            return pd.Series({"brand": parts[0], "model": parts[1]})
+        return pd.Series({"brand": name, "model": None})
 
     name_split = df_copy['name'].apply(split_name)
     df_copy = pd.concat([df_copy, name_split], axis=1)

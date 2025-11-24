@@ -1,7 +1,11 @@
 # Ürün Bağlamı (productContext.md)
 
 ## Neden Var?
-Kullanıcıların, analiz öncesi dağınık ve tutarsız CSV veri setlerini hızlıca temizleyip, güvenilir ve standart bir formata dönüştürmelerini sağlamak için geliştirilmiştir. Son strateji: Kullanıcıya modern, koyu temalı ve ferah bir arayüz sunmak.
+Kullanıcıların ve **diğer sistemlerin**, analiz öncesi dağınık ve tutarsız CSV veri setlerini hızlıca temizleyip, güvenilir ve standart bir formata dönüştürmelerini sağlamak için geliştirilmiştir. 
+
+**Çift Interface Stratejisi:** 
+- **GUI (CustomTkinter):** İnsan kullanıcılar için modern, koyu temalı ve ferah bir masaüstü arayüzü.
+- **REST API (FastAPI):** Otomatik sistemler ve uygulamalar için, JSON tabanlı veri temizleme servisi.
 
 ## Çözülen Problemler
 - Tekrarlanan satırlar nedeniyle veri bütünlüğünün bozulması
@@ -25,6 +29,7 @@ Kullanıcıların, analiz öncesi dağınık ve tutarsız CSV veri setlerini hı
 - Dosya okuma sırasında ayraç ve encoding otomatik tespit edilir veya kullanıcıdan alınır.
 - Sütun adları ve veri tipleri core modüller ile normalize edilir.
 - Eksik/hatalı değerler PipelineManager üzerinden seçilen strateji ile işlenir.
-- Kullanıcı core modülleri Switch ile, custom plugin’leri dinamik Checkbox ile açıp kapatır (GUI) veya CLI argümanlarıyla belirtir.
-- Sonuç yeni bir Excel veya CSV dosyasına kaydedilir, temizlik raporu üretilir.
+- **GUI'de:** Kullanıcı core modülleri Switch ile, custom plugin'leri dinamik Checkbox ile açıp kapatır. Sonuç yeni bir Excel veya CSV dosyasına kaydedilir.
+- **API'de:** JSON payload gönderilen endpoint'ler, temizlenmiş veriyi JSON ile döner. Sonuç seçilerek CSV/Excel olarak da kaydedilebilir.
 - Modern GUI CustomTkinter tabanlıdır; log, ilerleme ve otomatik plugin keşfi sunar.
+- REST API FastAPI tabanlıdır; Swagger UI (/docs) otomatik dokümantasyon sunar.
