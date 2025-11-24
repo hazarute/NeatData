@@ -152,3 +152,25 @@ class PipelineRunResponse(BaseModel):
             "message": "Pipeline başarıyla çalıştırıldı",
             "timestamp": "2025-11-24T17:55:10"
         }
+
+
+class FileUploadResponse(BaseModel):
+    """CSV dosyası upload yanıt modeli."""
+    status: str = Field(..., description="Upload durumu (success/error)")
+    filename: str = Field(..., description="Yüklenen dosya adı")
+    file_size: int = Field(..., description="Dosya boyutu (byte)")
+    rows: int = Field(..., description="CSV satır sayısı")
+    columns: int = Field(..., description="CSV sütun sayısı")
+    message: Optional[str] = Field(None, description="İşlem mesajı")
+    timestamp: str = Field(..., description="Upload zamanı")
+    
+    class Config:
+        example = {
+            "status": "success",
+            "filename": "messy_data.csv",
+            "file_size": 5240,
+            "rows": 100,
+            "columns": 5,
+            "message": "Dosya başarıyla yüklendi ve ayrıştırıldı",
+            "timestamp": "2025-11-25T10:30:00"
+        }

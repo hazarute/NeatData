@@ -2,7 +2,7 @@
 
 ## Yapılacaklar:
 ### Faz 7: İleri Features & Enhancement
-- [ ] CSV dosyası upload endpoint'i (multipart/form-data)
+- [x] CSV dosyası upload endpoint'i (multipart/form-data) ✅ (25.11.2025)
 - [ ] Database integration (SQLite starter, PostgreSQL optional)
 - [ ] Authentication & Authorization (API key / JWT)
 - [ ] WebSocket for real-time progress

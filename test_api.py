@@ -95,7 +95,7 @@ def test_available_modules():
 def test_pipeline_run():
     """POST /pipeline/run endpoint'ini test et."""
     print("\n" + "="*60)
-    print("TEST 7: POST /pipeline/run (DataFrame temizle)")
+    print("TEST 7: POST /pipeline/run")
     print("="*60)
     payload = {
         "data": {
@@ -106,6 +106,24 @@ def test_pipeline_run():
     }
     print(f"Request:\n{json.dumps(payload, indent=2, ensure_ascii=False)}")
     response = requests.post(f"{BASE_URL}/pipeline/run", json=payload)
+    print(f"Status Code: {response.status_code}")
+    print(f"Response:\n{json.dumps(response.json(), indent=2, ensure_ascii=False)}")
+    return response.status_code == 200
+
+
+def test_upload_csv():
+    """POST /upload/csv endpoint'ini test et."""
+    print("\n" + "="*60)
+    print("TEST 8: POST /upload/csv (CSV dosyası yükle)")
+    print("="*60)
+    
+    # Test CSV dosyası oluştur
+    csv_content = b"name,age,city\nJohn,25,NYC\nJane,30,LA\nBob,35,Chicago"
+    
+    # Multipart/form-data ile gönder
+    files = {'file': ('test_data.csv', csv_content, 'text/csv')}
+    print(f"File: test_data.csv ({len(csv_content)} bytes)")
+    response = requests.post(f"{BASE_URL}/upload/csv", files=files)
     print(f"Status Code: {response.status_code}")
     print(f"Response:\n{json.dumps(response.json(), indent=2, ensure_ascii=False)}")
     return response.status_code == 200
@@ -125,6 +143,7 @@ if __name__ == "__main__":
         results.append(("Root", test_root()))
         results.append(("Available Modules", test_available_modules()))
         results.append(("Pipeline Run", test_pipeline_run()))
+        results.append(("Upload CSV", test_upload_csv()))
         
         print("\n" + "="*60)
         print("SONUÇLAR")

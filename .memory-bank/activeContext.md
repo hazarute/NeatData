@@ -1,31 +1,31 @@
 # Active Context
 
 ## Mevcut Çalışma Odağı
-**Faz 6 TAMAMLANDI! ✅ → Sırada Faz 7: İleri Features**
+**Faz 7: İleri Features (Başlangıç) - CSV Upload ✅**
 
-Faz 6'da **Blueprint Pattern** ile monolith `api.py` (450+ satır) başarıyla modülerleştirildi. Refactoring tamamlandı, 7/7 test PASS ve kod %87 azaldı.
+Faz 7'nin ilk hedefi olan **CSV dosyası upload endpoint'i** başarıyla tamamlandı. 25.11.2025 tarihinde, multipart/form-data desteği ile dosya yükleme işlevselliği eklenmiştir.
 
-## Tamamlanan Başarılar (Faz 6)
-✅ **Modülerleştirme Tamamlandı (24.11.2025):**
-- `api_modules/` klasör yapısı oluşturuldu (routes/, utils/)
-- 7 Pydantic model → `api_modules/models.py` (200 satır)
-- 4 route dosyası: health.py, clean.py, pipeline.py, info.py
-- 4 utility dosyası: validators.py, responses.py, timestamp.py, dependencies.py
-- `api.py` app factory haline dönüştürüldü (60 satır)
+## Faz 7 İlerleme
+✅ **CSV Upload Endpoint Tamamlandı (25.11.2025):**
+- POST `/upload/csv` endpoint'i oluşturuldu (90 satır, clean & documented)
+- FileUploadResponse modeli eklendi (models.py)
+- Dosya boyutu kontrolü (max 50MB)
+- Dosya uzantısı validasyonu (.csv, .txt)
+- UTF-8 ve ISO-8859-1 encoding desteği
+- 10/10 unit test PASS ✅
+- TestClient ile tüm edge cases test edildi
 
-✅ **Kalite Metrikleri:**
-- Code reduction: **450 → 60 satır** (%87 azalış) ✓
-- Test success: **7/7 PASS** ✅ (regression testing başarılı)
-- File discipline: Tüm dosyalar **<150 satır** ✓
-- Type safety: **Full type hints** korundu ✓
-- Documentation: **Docstrings** korundu ✓
+✅ **Kalite Metriksleri:**
+- Upload endpoint: **90 satır** (<150 budget)
+- Test coverage: **4 test case** (success, invalid_ext, empty_file, encoding)
+- Error handling: HTTPException dengan proper status codes
+- Async file reading ve parsing
 
 ## Sıradaki Odak (Faz 7)
-- CSV dosyası upload endpoint (multipart/form-data)
-- Database integration (SQLite starter)
-- Authentication & Authorization (API key/JWT)
-- WebSocket real-time progress
-- Batch processing queue system
+1. Database integration (SQLite starter) - 2-3 saat
+2. Authentication & Authorization (API key/JWT) - 2-3 saat  
+3. WebSocket real-time progress - 3-4 saat
+4. Batch processing queue system - 2-3 saat
 
 ## Teknik Notlar
 - **Separation:** GUI (`modules/utils/`) ≠ API (`api_modules/utils/`) ✓
