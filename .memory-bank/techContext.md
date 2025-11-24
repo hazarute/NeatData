@@ -45,6 +45,7 @@ NeatData/
 │   ├── security.py                    # API Key auth (NEW - Faz 7 Step 4, 250 satır)
 │   ├── queue.py                       # Batch queue system (NEW - Faz 7 Step 5, 200 satır)
 │   ├── logging_service.py             # Structured logging (NEW - Faz 7 Step 6, 200 satır)
+│   ├── websocket_manager.py           # WebSocket manager (NEW - Faz 7 Step 7, 280+ satır)
 │   ├── routes/
 │   │   ├── __init__.py
 │   │   ├── health.py                  # GET /health (public)
@@ -53,7 +54,8 @@ NeatData/
 │   │   ├── info.py                    # GET / (public)
 │   │   ├── upload.py                  # POST /upload/csv (NEW - Faz 7 Step 1, protected)
 │   │   ├── database.py                # GET /db/* (NEW - Faz 7 Step 2, protected)
-│   │   └── queue.py                   # 5 queue endpoints (NEW - Faz 7 Step 5, protected)
+│   │   ├── queue.py                   # 5 queue endpoints (NEW - Faz 7 Step 5, protected)
+│   │   └── websocket.py               # 2 WebSocket endpoints (NEW - Faz 7 Step 7, protected)
 │   └── utils/
 │       ├── __init__.py
 │       ├── validators.py
@@ -66,7 +68,7 @@ NeatData/
 │
 ├── tests/
 │   ├── test_core_modules.py
-│   ├── test_api_unit.py               # Comprehensive API tests (23/23 PASS)
+│   ├── test_api_unit.py               # Comprehensive API tests (28/28 PASS)
 │   ├── generate_messy_data.py
 │   ├── test_cafe_business_logic.py
 │   ├── test_clean_hepsiburada_scrape.py
@@ -87,9 +89,11 @@ NeatData/
 └── ...
 ```
 
-## API Architecture (Faz 7 Tamamı)
+## API Architecture (Faz 7 Tamamı - 28/28 Test PASS)
 
-### 14 API Endpoints
+### 16 API Endpoints (14 REST + 2 WebSocket)
+
+#### REST Endpoints (14 Total)
 
 | Endpoint | Metod | Auth | Açıklama |
 |----------|-------|------|----------|
@@ -108,6 +112,13 @@ NeatData/
 | **/queue/jobs/{id}/cancel** | POST | ✅ | Cancel job (protected) |
 | **/queue/stats** | GET | ✅ | Queue statistics (protected) |
 
+#### WebSocket Endpoints (2 Total - NEW Faz 7 Step 7)
+
+| Endpoint | Type | Auth | Açıklama |
+|----------|------|------|----------|
+| **/ws/{job_id}** | WebSocket | ✅ | Job-specific progress stream (protected) |
+| **/ws** | WebSocket | ✅ | Broadcast channel for all updates (protected) |
+
 ### Pydantic Models (13 Total)
 
 **Request Models:**
@@ -121,6 +132,9 @@ NeatData/
 - UploadHistoryItem, UploadHistoryResponse
 - ProcessingLogItem, ProcessingLogsResponse
 - JobResponse, JobListResponse, QueueStatsResponse
+
+**WebSocket Models (NEW - Faz 7 Step 7):**
+- ProgressUpdate dataclass (job_id, status, progress_percent, current_step, step_message, timestamp, error_details)
 
 ### Singleton Patterns (4 Total)
 
@@ -141,13 +155,14 @@ NeatData/
    - 5-state job lifecycle (PENDING → PROCESSING → COMPLETED/FAILED/CANCELLED)
    - Atomic state transitions with Lock
    - Statistics tracking
+   - Progress tracking (progress_percent, current_step, step_message fields)
 
-4. **StructuredLogger Singleton** (api_modules/logging_service.py)
-   - JSON structured logging
-   - File logging (logs/api.log, DEBUG level)
-   - Console logging (stdout, INFO level)
-   - Request/response tracking
-   - Error context capture
+4. **WebSocketManager Singleton** (api_modules/websocket_manager.py) - NEW Faz 7 Step 7
+   - Connection pool management
+   - Job-specific subscriptions (pub/sub pattern)
+   - Broadcast channel support
+   - Thread-safe Lock-based synchronization
+   - ProgressUpdate broadcasting
    - Database operation tracking
    - Job event tracking
    - Pipeline execution tracking
@@ -269,14 +284,70 @@ CREATE TABLE pipeline_results (
 - TestUpload (5 tests: success, validation, auth)
 - TestDatabase (3 tests: list, detail, logs)
 - TestQueue (6 tests: submit, list, detail, cancel, stats)
+- TestWebSocket (5 tests: job_not_found, submit_and_track, progress_update, broadcast_channel, unsubscribe_command)
+
+## WebSocket Protocol (NEW - Faz 7 Step 7)
+
+### Connection Types
+
+**1. Job-Specific Stream (`/ws/{job_id}`)**
+- Purpose: Track specific job progress in real-time
+- Authentication: Required (API key in query params)
+- Message Format: JSON ProgressUpdate
+- Client Commands: `{"command": "unsubscribe"}` to stop listening
+- Automatic Features: Auto-sends initial job state on connect
+
+**2. Broadcast Channel (`/ws`)**
+- Purpose: Receive all job updates in the system
+- Authentication: Required (API key in query params)
+- Message Format: JSON ProgressUpdate with broadcast indicator
+- Client Commands: `{"command": "ping"}` for keepalive
+- Automatic Features: Welcome message on connect
+
+### Message Format
+
+```json
+{
+  "job_id": "uuid-string",
+  "status": "pending|processing|completed|failed|cancelled|error",
+  "progress_percent": 0-100,
+  "current_step": "step_name",
+  "message": "human-readable update message",
+  "timestamp": "2025-11-25T14:30:00.123456",
+  "error_details": null | "error message if status is error"
+}
+```
+
+### Implementation Details
+
+**WebSocketManager Singleton:**
+- Maintains active_connections list (all connected clients)
+- Maintains job_subscriptions dict (job_id → Set[WebSocket])
+- Thread-safe with threading.Lock for concurrent access
+- Methods:
+  * connect(websocket) - Accept and register new connection
+  * disconnect(websocket) - Remove and cleanup connection
+  * subscribe(websocket, job_id) - Add to job-specific subscriptions
+  * unsubscribe(websocket) - Remove from all subscriptions
+  * broadcast(update: ProgressUpdate) - Send to job subscribers
+  * broadcast_to_all(message) - Send to all active connections
+  * get_connection_count() - Total active connections
+  * get_job_subscriber_count(job_id) - Subscribers for specific job
+
+**Job Progress Tracking:**
+- Job model includes: progress_percent (0-100), current_step (str), step_message (str)
+- ProcessingQueue.update_job_progress(job_id, progress_percent, current_step, step_message)
+- Atomic updates with Lock synchronization
+- Clients receive updates via broadcast() method
 
 ## Performance Considerations
 
 - **Database:** SQLite with connection pooling
 - **Queue:** In-memory FIFO (Redis alternative for scaling)
+- **WebSocket:** In-memory connection pool (scalable via connection pooling)
 - **Logging:** JSON format suitable for log aggregation
 - **API:** FastAPI async support (future enhancement)
-- **Caching:** To be implemented in Faz 7 Step 7+
+- **Caching:** To be implemented in Faz 7 Step 9+
 
 ## Security
 
@@ -284,8 +355,9 @@ CREATE TABLE pipeline_results (
 - **Logging:** API key masking (first 8 + last 4)
 - **Database:** SQLite (local only, no remote exposure)
 - **Error Messages:** Generic (detailed errors only in logs)
-- **CORS:** To be configured in Faz 7 Step 8+
-- **Rate Limiting:** To be implemented in Faz 7 Step 8+
+- **WebSocket:** Requires API key authentication (same as REST endpoints)
+- **CORS:** To be configured in Faz 7 Step 10+
+- **Rate Limiting:** To be implemented in Faz 7 Step 10+
 
 if __name__ == "__main__":
     import uvicorn

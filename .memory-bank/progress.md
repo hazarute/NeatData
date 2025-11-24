@@ -8,9 +8,10 @@
 - [x] Authentication & Authorization (API key / JWT) ✅ (25.11.2025)
 - [x] Batch processing (queue system) ✅ (25.11.2025)
 - [x] Error handling & logging (Structured logging) ✅ (25.11.2025)
-- [ ] WebSocket for real-time progress
+- [x] WebSocket for real-time progress ✅ (25.11.2025)
 - [ ] Performance optimization (Caching, async processing)
 - [ ] API versioning (/v1/, /v2/)
+- [ ] Rate limiting & CORS
 
 ## Bitenler
 ### Faz 7: İleri Features (Tamamlama ✅ - 25.11.2025)
@@ -99,6 +100,76 @@
 - Code quality: Type hints, docstrings, error handling tam
 - Architecture patterns: Blueprint, Singleton, Repository, Middleware, DI
 
+#### Adım 7: WebSocket Real-Time Progress Streaming ✅ (25.11.2025)
+- [x] `api_modules/websocket_manager.py` oluşturuldu (280+ satır)
+  * WebSocketManager singleton class
+  * ProgressUpdate dataclass (job_id, status, progress_percent, current_step, step_message, timestamp, error_details)
+  * connect() - WebSocket'i bağla ve kaydet
+  * disconnect() - WebSocket'i kapat ve temizle
+  * subscribe(websocket, job_id) - İş özel güncellemelere abone ol
+  * unsubscribe(websocket) - Tüm güncellemelerin aboneliğini iptal et
+  * broadcast(update: ProgressUpdate) - İş spesifik güncellemeyi gönder
+  * broadcast_to_all(message) - Tüm müşterilere mesaj gönder
+  * get_connection_count(), get_job_subscriber_count(job_id)
+  * Thread-safe Lock synchronization (active_connections, job_subscriptions)
+- [x] `api_modules/routes/websocket.py` oluşturuldu (220+ satır)
+  * GET `/ws/{job_id}` endpoint (job-specific progress streaming)
+    - WebSocket bağlantısını kabul et
+    - İş aboneliğine abone ol
+    - İlk iş durumunu gönder
+    - Müşteri komutlarını dinle (unsubscribe)
+    - Hata yönetimi ve zarif bağlantı kesme
+  * GET `/ws` endpoint (broadcast channel for all updates)
+    - WebSocket bağlantısını kabul et
+    - Hoşgeldin mesajı gönder
+    - Keepalive için ping komutlarını işle
+    - Tüm güncellelemeleri müşterilere broadcast et
+  * Logging entegrasyon (logger.debug, logger.error)
+  * Context dict ile detaylı loglama
+- [x] Job model enhanced (api_modules/queue.py)
+  * progress_percent: int = 0 (0-100 aralığı)
+  * current_step: str = "" (processing step adı)
+  * step_message: str = "" (işlem detayı)
+  * update_job_progress() metodu (atomic update with Lock)
+- [x] ProcessingQueue.update_job_progress() metodu
+  * Parametreler: job_id, progress_percent, current_step, step_message
+  * İş durumu doğrulaması
+  * Thread-safe Lock synchronization
+  * Boolean return (başarı/başarısızlık)
+- [x] API enhancement (api.py, api_modules/routes/__init__.py)
+  * WebSocket routerını import et ve kaydet
+  * 8. APIRouter eklendi (websocket_router)
+- [x] 5 yeni WebSocket test case (TestWebSocket class)
+  * test_websocket_job_not_found - Varolmayan işe bağlan, hata mesajını kontrol et
+  * test_websocket_submit_and_track - İş gönder, WebSocket bağlan, ilk durumu kontrol et
+  * test_websocket_progress_update - İş gönder, başlat, ilerlemeyi güncelle, alanları kontrol et
+  * test_websocket_broadcast_channel - Broadcast `/ws` kanalına bağlan, hoşgeldin mesajını kontrol et, ping test et
+  * test_websocket_unsubscribe_command - İş gönder, bağlan, unsubscribe komutu gönder, onayı kontrol et
+- [x] Status code fix
+  * POST /queue/submit: 200 → 201 (Created status)
+  * test_submit_job ve test_get_job_details güncellenmiş
+- [x] Enum value fix
+  * Job.status.value lowercase ("pending" not "PENDING")
+  * Test assertions güncellenmiş
+- [x] Logging fix
+  * logger.log_event() → logger.debug() (existing method)
+  * logger.error(error=e) for exceptions
+- [x] 28/28 unit test PASS ✅ (5 new + 23 existing, zero regression)
+
+**Başarı Metrikleri (Faz 7 Adım 1-7 TAMAMLANDI):**
+- API endpoint'leri: 16 tane (14 REST + 2 WebSocket, 3 public, 13 protected)
+- Pydantic modelleri: 13 tane
+- Database tabloları: 3 tane (auto-initialized, persistent)
+- API Key storage: JSON (api_keys.json, persistent)
+- Queue storage: In-memory (thread-safe, atomic transitions)
+- WebSocket storage: In-memory (thread-safe, dynamic)
+- Logging storage: JSON file (logs/api.log, structured)
+- Singleton instances: 4 (Database, APIKeyManager, ProcessingQueue, WebSocketManager)
+- APIRouter instances: 8 (7 REST + 1 WebSocket)
+- Unit test coverage: 28/28 PASS (100%)
+- Code quality: Type hints, docstrings, error handling tam
+- Architecture patterns: Blueprint, Singleton, Repository, Middleware, DI, Pub/Sub
+
 ### Faz 6: API Modülerleştirme (Blueprint Pattern) (TAMAMLANDI ✅ - 24.11.2025)
 - [x] api_modules/ klasör yapısı (routes/, utils/) oluşturuldu
 - [x] 7 Pydantic model'i models.py'ye taşındı (200 satır)
@@ -145,12 +216,16 @@
 - [x] PipelineManager implementasyonu
 
 ## Bilinen Hatalar
-- Yok (23/23 test PASS)
+- Yok (28/28 test PASS)
 
 ## İstatistikler
-- **Test Başarı Oranı:** 23/23 PASS (100%)
-- **API Endpoint'leri:** 14 (3 public, 11 protected)
+- **Test Başarı Oranı:** 28/28 PASS (100%)
+- **API Endpoint'leri:** 16 (14 REST + 2 WebSocket, 3 public, 13 protected)
 - **Database Tabloları:** 3 (auto-initialized)
-- **Git Commit'leri (Faz 7):** 5 commit (Steps 1-6)
-- **Kod Kalitesi:** Full type hints, docstrings, logging
+- **Singleton Instances:** 4 (Database, APIKeyManager, ProcessingQueue, WebSocketManager)
+- **APIRouter Instances:** 8 (7 REST + 1 WebSocket)
+- **Git Commit'leri (Faz 7):** 6 commit (Steps 1-7, latest: 227fe7b)
+- **Kod Kalitesi:** Full type hints, docstrings, error handling tam
+- **WebSocket Endpoints:** 2 (job-specific + broadcast)
+- **Real-time Features:** Progress streaming, job tracking, broadcast channel
 
