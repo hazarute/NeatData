@@ -20,7 +20,7 @@ OpenAPI Schema:
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from api_modules.utils import get_iso_timestamp
-from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router
+from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router, queue_router
 
 
 def create_app() -> FastAPI:
@@ -46,6 +46,7 @@ def create_app() -> FastAPI:
     app.include_router(pipeline_router)
     app.include_router(upload_router)
     app.include_router(database_router)
+    app.include_router(queue_router)
     
     # Error Handler
     @app.exception_handler(Exception)

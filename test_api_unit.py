@@ -252,5 +252,91 @@ class TestDatabase:
         assert "timestamp" in data
 
 
+class TestQueue:
+    """Queue/Batch processing endpoint tests."""
+    
+    def test_submit_job(self):
+        """POST /queue/submit endpoint'ini test et."""
+        payload = {
+            "upload_id": 1,
+            "modules": ["trim_spaces", "drop_duplicates"]
+        }
+        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "success" or "id" in data
+        assert data["upload_id"] == 1
+        assert data["status"] == "pending"
+        assert "id" in data
+        assert len(data["modules"]) == 2
+    
+    def test_list_jobs(self):
+        """GET /queue/jobs endpoint'ini test et."""
+        response = client.get("/queue/jobs", headers=get_headers_with_key())
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "success"
+        assert "total_jobs" in data
+        assert "jobs" in data
+        assert isinstance(data["jobs"], list)
+    
+    def test_get_job_details(self):
+        """GET /queue/jobs/{job_id} endpoint'ini test et."""
+        # İlk job'u al
+        response = client.post(
+            "/queue/submit",
+            json={"upload_id": 2, "modules": ["trim_spaces"]},
+            headers=get_headers_with_key()
+        )
+        assert response.status_code == 200
+        job_data = response.json()
+        job_id = job_data["id"]
+        
+        # Job detaylarını al
+        response = client.get(f"/queue/jobs/{job_id}", headers=get_headers_with_key())
+        assert response.status_code == 200
+        data = response.json()
+        assert data["id"] == job_id
+        assert data["upload_id"] == 2
+    
+    def test_get_job_not_found(self):
+        """GET /queue/jobs/{job_id} endpoint'ini test et (job bulunamadı)."""
+        response = client.get("/queue/jobs/nonexistent-id", headers=get_headers_with_key())
+        assert response.status_code == 404
+    
+    def test_cancel_job(self):
+        """POST /queue/jobs/{job_id}/cancel endpoint'ini test et."""
+        # Job oluştur
+        response = client.post(
+            "/queue/submit",
+            json={"upload_id": 3, "modules": ["trim_spaces"]},
+            headers=get_headers_with_key()
+        )
+        job_id = response.json()["id"]
+        
+        # Job'u iptal et
+        response = client.post(f"/queue/jobs/{job_id}/cancel", headers=get_headers_with_key())
+        assert response.status_code == 200
+        data = response.json()
+        assert data["id"] == job_id
+        assert data["status"] == "cancelled"
+    
+    def test_queue_stats(self):
+        """GET /queue/stats endpoint'ini test et."""
+        response = client.get("/queue/stats", headers=get_headers_with_key())
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "success"
+        assert "total_jobs" in data
+        assert "pending" in data
+        assert "processing" in data
+        assert "completed" in data
+        assert "failed" in data
+        assert "cancelled" in data
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
