@@ -153,5 +153,44 @@ class TestUpload:
         assert "detail" in data
 
 
+class TestDatabase:
+    """Database endpoint tests."""
+    
+    def test_get_uploads_history(self):
+        """GET /db/uploads endpoint'ini test et."""
+        response = client.get("/db/uploads")
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "success"
+        assert "total_uploads" in data
+        assert "uploads" in data
+        assert isinstance(data["uploads"], list)
+        assert "timestamp" in data
+    
+    def test_get_upload_details(self):
+        """GET /db/uploads/{upload_id} endpoint'ini test et."""
+        # İlk olarak boş ID ile test et (bulunamadı)
+        response = client.get("/db/uploads/99999")
+        assert response.status_code == 404
+        
+        # Geçerli yanıt formatı kontrol et
+        data = response.json()
+        assert "detail" in data or "message" in data
+    
+    def test_get_processing_logs(self):
+        """GET /db/logs/{upload_id} endpoint'ini test et."""
+        response = client.get("/db/logs/1")
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "success"
+        assert "upload_id" in data
+        assert "total_logs" in data
+        assert "logs" in data
+        assert isinstance(data["logs"], list)
+        assert "timestamp" in data
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

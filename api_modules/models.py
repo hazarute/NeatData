@@ -174,3 +174,104 @@ class FileUploadResponse(BaseModel):
             "message": "Dosya başarıyla yüklendi ve ayrıştırıldı",
             "timestamp": "2025-11-25T10:30:00"
         }
+
+
+class UploadHistoryItem(BaseModel):
+    """Yükleme geçmişi öğesi."""
+    id: int = Field(..., description="Upload ID")
+    filename: str = Field(..., description="Dosya adı")
+    file_size: int = Field(..., description="Dosya boyutu (byte)")
+    rows: int = Field(..., description="Satır sayısı")
+    columns: int = Field(..., description="Sütun sayısı")
+    status: str = Field(..., description="İşlem durumu")
+    uploaded_at: str = Field(..., description="Yükleme zamanı")
+    
+    class Config:
+        example = {
+            "id": 1,
+            "filename": "data.csv",
+            "file_size": 1024,
+            "rows": 10,
+            "columns": 3,
+            "status": "success",
+            "uploaded_at": "2025-11-25T10:30:00"
+        }
+
+
+class UploadHistoryResponse(BaseModel):
+    """Yükleme geçmişi yanıtı."""
+    status: str = Field(default="success", description="İşlem durumu")
+    total_uploads: int = Field(..., description="Toplam yükleme sayısı")
+    uploads: List[UploadHistoryItem] = Field(..., description="Yükleme listesi")
+    timestamp: str = Field(..., description="İşlem zamanı")
+    
+    class Config:
+        example = {
+            "status": "success",
+            "total_uploads": 5,
+            "uploads": [
+                {
+                    "id": 1,
+                    "filename": "data.csv",
+                    "file_size": 1024,
+                    "rows": 10,
+                    "columns": 3,
+                    "status": "success",
+                    "uploaded_at": "2025-11-25T10:30:00"
+                }
+            ],
+            "timestamp": "2025-11-25T10:35:00"
+        }
+
+
+class ProcessingLogItem(BaseModel):
+    """İşleme günlüğü öğesi."""
+    id: int = Field(..., description="Log ID")
+    upload_id: int = Field(..., description="Upload ID")
+    module_name: str = Field(..., description="Modül adı")
+    module_origin: str = Field(..., description="Modül kaynağı (core/custom)")
+    status: str = Field(..., description="Durum (success/error)")
+    execution_time_ms: Optional[float] = Field(None, description="Çalışma süresi (ms)")
+    error_message: Optional[str] = Field(None, description="Hata mesajı")
+    processed_at: str = Field(..., description="İşleme zamanı")
+    
+    class Config:
+        example = {
+            "id": 1,
+            "upload_id": 1,
+            "module_name": "trim_spaces",
+            "module_origin": "core",
+            "status": "success",
+            "execution_time_ms": 125.5,
+            "error_message": None,
+            "processed_at": "2025-11-25T10:30:05"
+        }
+
+
+class ProcessingLogsResponse(BaseModel):
+    """İşleme günlüğü yanıtı."""
+    status: str = Field(default="success", description="İşlem durumu")
+    upload_id: int = Field(..., description="Upload ID")
+    total_logs: int = Field(..., description="Toplam günlük sayısı")
+    logs: List[ProcessingLogItem] = Field(..., description="Günlük listesi")
+    timestamp: str = Field(..., description="İşlem zamanı")
+    
+    class Config:
+        example = {
+            "status": "success",
+            "upload_id": 1,
+            "total_logs": 2,
+            "logs": [
+                {
+                    "id": 1,
+                    "upload_id": 1,
+                    "module_name": "trim_spaces",
+                    "module_origin": "core",
+                    "status": "success",
+                    "execution_time_ms": 125.5,
+                    "error_message": None,
+                    "processed_at": "2025-11-25T10:30:05"
+                }
+            ],
+            "timestamp": "2025-11-25T10:35:00"
+        }
