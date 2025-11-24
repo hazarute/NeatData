@@ -13,6 +13,7 @@ from api_modules.models import (
 )
 from api_modules.utils import get_iso_timestamp
 from api_modules.dependencies import get_pipeline_manager
+from api_modules.security import verify_api_key
 from modules.pipeline_manager import PipelineManager
 from typing import Dict, List, Any
 from typing import cast
@@ -76,12 +77,14 @@ async def get_available_modules(
     responses={
         200: {"description": "Pipeline başarıyla çalıştırıldı"},
         400: {"description": "Hatalı istek (veri formatı)"},
+        401: {"description": "Unauthorized - geçersiz API key"},
         500: {"description": "Pipeline çalıştırırken hata"}
     }
 )
 async def run_pipeline(
     request: PipelineRunRequest,
-    pm: PipelineManager = Depends(get_pipeline_manager)
+    pm: PipelineManager = Depends(get_pipeline_manager),
+    api_key: str = Depends(verify_api_key)
 ) -> PipelineRunResponse:
     """
     Verilen DataFrame'de seçili modülleri çalıştır.

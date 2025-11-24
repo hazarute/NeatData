@@ -4,9 +4,10 @@ File Upload Routes
 CSV dosyası yüklemesi ve ayrıştırması endpoint'leri.
 """
 
-from fastapi import APIRouter, HTTPException, UploadFile, File
+from fastapi import APIRouter, HTTPException, UploadFile, File, Depends
 from api_modules.models import FileUploadResponse
 from api_modules.utils import get_iso_timestamp
+from api_modules.security import verify_api_key
 from db import Database, UploadRecord
 import pandas as pd
 import io
@@ -23,11 +24,12 @@ router = APIRouter(prefix="/upload", tags=["Upload"])
     responses={
         200: {"description": "Dosya başarıyla yüklendi"},
         400: {"description": "Hatalı dosya formatı"},
+        401: {"description": "Unauthorized - geçersiz API key"},
         413: {"description": "Dosya çok büyük (max 50MB)"},
         500: {"description": "Sunucu hatası"}
     }
 )
-async def upload_csv(file: UploadFile = File(...)) -> FileUploadResponse:
+async def upload_csv(file: UploadFile = File(...), api_key: str = Depends(verify_api_key)) -> FileUploadResponse:
     """
     CSV dosyasını sunucuya yükle ve ayrıştır.
     

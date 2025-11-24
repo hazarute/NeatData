@@ -4,9 +4,10 @@ Text Cleaning Routes
 Metin temizleme endpoint'leri.
 """
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from api_modules.models import CleanRequest, CleanResponse
 from api_modules.utils import get_iso_timestamp
+from api_modules.security import verify_api_key
 from typing import List
 
 router = APIRouter(prefix="/clean", tags=["Cleaning"])
@@ -41,10 +42,11 @@ def clean_text_simple(text: str, operations: List[str]) -> str:
     responses={
         200: {"description": "Başarılı temizleme"},
         400: {"description": "Hatalı istek"},
+        401: {"description": "Unauthorized - geçersiz API key"},
         500: {"description": "İntemal sunucu hatası"}
     }
 )
-async def clean_data(request: CleanRequest) -> CleanResponse:
+async def clean_data(request: CleanRequest, api_key: str = Depends(verify_api_key)) -> CleanResponse:
     """
     Verilen metni belirtilen işlemler ile temizle.
     

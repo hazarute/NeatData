@@ -7,8 +7,19 @@ FastAPI'nin TestClient'ı kullanarak endpoint'leri test et.
 import pytest
 from fastapi.testclient import TestClient
 from api import app
+from api_modules.security import APIKeyManager
 
 client = TestClient(app)
+
+# Test için geçerli API key al
+manager = APIKeyManager()
+test_keys = list(manager.list_keys().keys())
+valid_api_key = test_keys[0] if test_keys else None
+
+# Headers with API key
+def get_headers_with_key():
+    """API key ile request header'ı oluştur."""
+    return {"X-API-Key": valid_api_key} if valid_api_key else {}
 
 
 class TestHealth:
@@ -33,7 +44,7 @@ class TestClean:
             "data": "  kirli veri  ",
             "operations": ["trim"]
         }
-        response = client.post("/clean", json=payload)
+        response = client.post("/clean", json=payload, headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
@@ -46,7 +57,7 @@ class TestClean:
             "data": "KIRLI VERI",
             "operations": ["lowercase"]
         }
-        response = client.post("/clean", json=payload)
+        response = client.post("/clean", json=payload, headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
@@ -58,11 +69,22 @@ class TestClean:
             "data": "  KIRLI VERI  ",
             "operations": ["trim", "lowercase"]
         }
-        response = client.post("/clean", json=payload)
+        response = client.post("/clean", json=payload, headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
         assert data["cleaned_data"] == "kirli veri"
+    
+    def test_clean_missing_api_key(self):
+        """POST /clean endpoint'ini test et (missing API key)."""
+        payload = {
+            "data": "test",
+            "operations": ["trim"]
+        }
+        response = client.post("/clean", json=payload)  # No API key
+        assert response.status_code == 401
+        data = response.json()
+        assert "detail" in data
 
 
 class TestRoot:
@@ -100,7 +122,7 @@ class TestPipeline:
             },
             "modules": ["trim_spaces"]
         }
-        response = client.post("/pipeline/run", json=payload)
+        response = client.post("/pipeline/run", json=payload, headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
@@ -108,6 +130,15 @@ class TestPipeline:
         assert data["original_shape"] == [2, 2] or data["original_shape"] == (2, 2)
         assert data["cleaned_shape"] == [2, 2] or data["cleaned_shape"] == (2, 2)
         assert "trim_spaces" in data["modules_executed"]
+    
+    def test_pipeline_run_missing_api_key(self):
+        """POST /pipeline/run endpoint'ini test et (missing API key)."""
+        payload = {
+            "data": {"col": [1, 2]},
+            "modules": ["trim_spaces"]
+        }
+        response = client.post("/pipeline/run", json=payload)  # No API key
+        assert response.status_code == 401
 
 
 class TestUpload:
@@ -119,7 +150,8 @@ class TestUpload:
         
         response = client.post(
             "/upload/csv",
-            files={"file": ("test_data.csv", csv_content, "text/csv")}
+            files={"file": ("test_data.csv", csv_content, "text/csv")},
+            headers=get_headers_with_key()
         )
         
         assert response.status_code == 200
@@ -129,14 +161,15 @@ class TestUpload:
         assert data["rows"] == 3
         assert data["columns"] == 3
         assert data["file_size"] == len(csv_content)
-        assert "upload_id" in data  # Veritabanına kaydedildi
-        assert data["upload_id"] is None or isinstance(data["upload_id"], int)  # ID veya None olabilir
+        assert "upload_id" in data
+        assert data["upload_id"] is None or isinstance(data["upload_id"], int)
     
     def test_upload_csv_invalid_extension(self):
         """POST /upload/csv endpoint'ini test et (invalid extension)."""
         response = client.post(
             "/upload/csv",
-            files={"file": ("test_data.xlsx", b"invalid", "application/octet-stream")}
+            files={"file": ("test_data.xlsx", b"invalid", "application/octet-stream")},
+            headers=get_headers_with_key()
         )
         
         assert response.status_code == 400
@@ -147,10 +180,35 @@ class TestUpload:
         """POST /upload/csv endpoint'ini test et (empty file)."""
         response = client.post(
             "/upload/csv",
-            files={"file": ("test_data.csv", b"", "text/csv")}
+            files={"file": ("test_data.csv", b"", "text/csv")},
+            headers=get_headers_with_key()
         )
         
         assert response.status_code == 400
+        data = response.json()
+        assert "detail" in data
+    
+    def test_upload_csv_missing_api_key(self):
+        """POST /upload/csv endpoint'ini test et (missing API key)."""
+        csv_content = b"name,age\nJohn,25"
+        response = client.post(
+            "/upload/csv",
+            files={"file": ("test.csv", csv_content, "text/csv")}
+            # No headers with API key
+        )
+        assert response.status_code == 401
+        data = response.json()
+        assert "detail" in data
+    
+    def test_upload_csv_invalid_api_key(self):
+        """POST /upload/csv endpoint'ini test et (invalid API key)."""
+        csv_content = b"name,age\nJohn,25"
+        response = client.post(
+            "/upload/csv",
+            files={"file": ("test.csv", csv_content, "text/csv")},
+            headers={"X-API-Key": "invalid-key-12345"}
+        )
+        assert response.status_code == 401
         data = response.json()
         assert "detail" in data
 
