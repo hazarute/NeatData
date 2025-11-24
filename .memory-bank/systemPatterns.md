@@ -1,86 +1,124 @@
-# System Patterns
+# Sistem Desenleri ve Mimarı
 
-## Mimari Tasarım (Modular & Layered & Multi-Interface & Blueprint)
-
-Proje, sorumlulukların ayrıldığı katmanlı bir mimari izler. **Birden fazla interface (GUI & API)** aynı Core'u kullanır ve **Blueprint Pattern** ile API modülerleştirilir:
-
+## Katmanlı Mimari (Layered Architecture)
 ```
 ┌─────────────────────────────────────────┐
-│  Client Layer (Interface)               │
+│ Interface Layer (GUI + API)             │
+│ neatdata_gui.py (CustomTkinter)         │
+│ api.py + api_modules/routes/*.py (8)    │
 ├─────────────────────────────────────────┤
-│  GUI (CustomTkinter)  │  API (FastAPI) │
-│  neatdata_gui.py      │  api.py        │
+│ Orchestration Layer (Singletons)        │
+│ Database | APIKeyManager                │
+│ ProcessingQueue | WebSocketManager      │
+│ StructuredLogger                        │
 ├─────────────────────────────────────────┤
-│  API Blueprints (Modular Routing)       │
-│  api_modules/routes/*.py (health,clean) │
+│ Core Business Logic                     │
+│ PipelineManager (dynamic plugin loader) │
 ├─────────────────────────────────────────┤
-│  Controller / Orchestrator              │
-│  PipelineRunner (GUI) │ Dependencies    │
+│ Plugin Layer (Core + Custom)            │
+│ modules/core/* + modules/custom/*       │
 ├─────────────────────────────────────────┤
-│  Core Business Logic                    │
-│  PipelineManager (Dinamik Modül Yükle) │
-├─────────────────────────────────────────┤
-│  Plugins (Core & Custom)                │
-│  modules/core/* + modules/custom/*      │
+│ Data Layer                              │
+│ SQLite Database + JSON storage          │
 └─────────────────────────────────────────┘
 ```
 
-### Katmanlar
-
-1.  **View / Interface Layer:**
-    * **GUI (`neatdata_gui.py`):** CustomTkinter tabanlı masaüstü uygulaması. "Aptal" katman, iş mantığı yok.
-    * **API (`api.py`):** FastAPI app factory. Router registration ve middleware setup.
-
-2.  **API Blueprint Layer (YENİ - Faz 6):**
-    * **`api_modules/routes/health.py`:** `GET /health` endpoint (50 satır)
-    * **`api_modules/routes/clean.py`:** `POST /clean` endpoint (80 satır)
-    * **`api_modules/routes/pipeline.py`:** `GET/POST /pipeline/*` endpoint'leri (120 satır)
-    * **`api_modules/routes/info.py`:** `GET /` endpoint (30 satır)
-    * Her route `APIRouter` ile ayrı olarak kaydediliyor
-    * **`api_modules/models.py`:** 7 Pydantic model (200 satır)
-    * **`api_modules/utils/`:** Validator'lar, response formatters, utility fonksiyonlar
-    * **`api_modules/dependencies.py`:** FastAPI dependencies (PipelineManager factory)
-
-3.  **Controller / Orchestrator Layer:**
-    * **GUI için:** `modules/utils/pipeline_runner.py` → Süreci yönetir, GUI ↔ Backend köprüsü.
-    * **API için:** `api_modules/dependencies.py` → PipelineManager instance'ı sağlar.
-
-4.  **Core Logic (`modules/pipeline_manager.py`):**
-    * Dinamik modül yükleyicisidir.
-    * `modules/core/` ve `modules/custom/` klasörlerini tarar.
-    * Seçilen modülleri sırasıyla çalıştırır (`run_pipeline`).
-    * GUI ve API'den çağrılabilir.
-
-5.  **Plugins (Core & Custom):**
-    * Tüm temizlik işlemleri bağımsız `.py` dosyalarıdır.
-    * Protokol: `process(df: pd.DataFrame, **kwargs) -> pd.DataFrame`
-    * Metadata: `META` sözlüğü ile tanımlanır.
+## Folder Yapısı
+```
+NeatData/
+├── neatdata_gui.py           # GUI entry point
+├── api.py                    # API entry point + middleware
+├── api_modules/              # API layer (Blueprint pattern)
+│   ├── models.py             # 13 Pydantic schemas
+│   ├── security.py           # APIKeyManager singleton
+│   ├── queue.py              # ProcessingQueue singleton
+│   ├── websocket_manager.py  # WebSocketManager singleton
+│   ├── logging_service.py    # StructuredLogger singleton
+│   ├── routes/               # 8 APIRouters (REST + WebSocket)
+│   │   ├── health.py, clean.py, pipeline.py, info.py
+│   │   ├── upload.py, database.py, queue.py, websocket.py
+│   └── utils/                # Helpers, validators
+├── db/
+│   └── database.py           # Database singleton
+├── modules/
+│   ├── pipeline_manager.py
+│   ├── core/                 # Built-in plugins (8)
+│   ├── custom/               # User plugins
+│   └── utils/                # GUI utilities
+├── tests/                    # Unit tests (28/28 PASS)
+│   ├── test_api_unit.py
+│   ├── test_api.py
+│   └── other test files
+└── .memory-bank/             # AI assistant memory (this dir)
+```
 
 ## Tasarım Desenleri
 
-### 1. Blueprint Pattern (API Modülerleştirme)
-FastAPI `APIRouter` kullanarak route'ları bölünmüş dosyalara organize etme:
-- Her endpoint'in kendi dosyası olması (Single Responsibility)
-- `api.py` sadece app factory ve router registration
-- Test etmesi ve bakımı kolay
+### 1. **Blueprint Pattern** (API modularization)
+FastAPI `APIRouter` with separate route files:
+- Each endpoint in its own file (~100-200 lines)
+- Single responsibility principle
+- Centralized registration in api.py
 
-### 2. Dependency Injection
-FastAPI `Depends()` kullanarak:
-- `get_pipeline_manager()` → PipelineManager instance'ı inject etme
-- Request-scoped dependencies
+### 2. **Singleton Pattern**
+4 critical singletons (instance per process):
+- **Database:** SQLite connection + ORM models
+- **APIKeyManager:** UUID-based key storage (api_keys.json)
+- **ProcessingQueue:** Thread-safe FIFO job queue (in-memory)
+- **WebSocketManager:** Connection pool + pub/sub (in-memory)
 
-### 3. Plugin (Eklenti) Deseni
-Custom modüller dinamik olarak keşfedilir. Her plugin şu protokolü uygulamalıdır:
-* **Fonksiyon:** `process(df: pd.DataFrame, **kwargs) -> pd.DataFrame`
-* **Metadata:** `META` sözlüğü (key, name, description, defaults)
+### 3. **Dependency Injection** (FastAPI style)
+```python
+@router.post("/queue/submit")
+async def submit(queue: ProcessingQueue = Depends(get_queue)):
+    ...
+```
 
-### 4. Helper / Utility Ayrımı
-- **`modules/utils/`:** GUI utilities (gui_helpers, gui_io, gui_logger, pipeline_runner, ui_state)
-- **`api_modules/utils/`:** API utilities (validators, responses, timestamp)
+### 4. **Plugin/Eklenti Deseni**
+Dynamic module discovery. Each plugin implements:
+```python
+META = {"key": "trim_spaces", "name": "Trim Spaces", ...}
+def process(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
+    return df  # cleaned
+```
+
+### 5. **Pub/Sub Pattern** (WebSocket)
+WebSocketManager manages subscriptions:
+- Job-specific: Client → get updates for specific job only
+- Broadcast: Client → get updates for all jobs
+
+### 6. **Middleware Pattern**
+API middleware for:
+- Request/response logging with timing
+- Global exception handling with context
+
+## Protokoller
+
+### API Response Format
+```json
+{
+  "status": "success|error",
+  "data": {...},
+  "timestamp": "2025-11-25T14:30:00Z"
+}
+```
+
+### WebSocket Message Format
+```json
+{
+  "job_id": "uuid",
+  "status": "pending|processing|completed|failed|error",
+  "progress_percent": 0-100,
+  "current_step": "step_name",
+  "message": "human-readable message",
+  "timestamp": "ISO8601"
+}
+```
 
 ## Kod Standartları
-* **Type Hinting:** Tüm fonksiyonlarda tip tanımlamaları kullanılmalı.
-* **Docstrings:** Modüllerin ve fonksiyonların açıklaması.
-* **API Response:** Yapılandırılmış JSON (status + data + timestamp).
-* **Pydantic Models:** API request/response şemaları.
-* **Blueprint Organization:** Her route kendi dosyasında, max 100-150 satır/dosya.
+- **Type Hints:** Mandatory for all functions
+- **Docstrings:** Module, class, method level
+- **Error Handling:** Try-except + logging with context
+- **Testing:** pytest + TestClient (no server startup)
+- **Logging:** Structured JSON for observability
+- **Security:** API key masking in logs, stateless auth
