@@ -48,3 +48,205 @@
 {"timestamp": "2025-11-24T22:55:07.605838", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/jobs/fdc5f90a-9166-4627-9713-b6c515677759/cancel", "status_code": 200, "response_time_ms": 0.2722740173339844}}
 {"timestamp": "2025-11-24T22:55:07.607753", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/stats", "query_params": null, "api_key": "60f7acf3...5c44"}}
 {"timestamp": "2025-11-24T22:55:07.608028", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/stats", "status_code": 200, "response_time_ms": 0.29277801513671875}}
+{"timestamp": "2025-11-24T23:04:11.405028", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/health", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.405496", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/health", "status_code": 200, "response_time_ms": 0.5092620849609375}}
+{"timestamp": "2025-11-24T23:04:11.410223", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.410798", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.6046295166015625}}
+{"timestamp": "2025-11-24T23:04:11.413551", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.413981", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.44536590576171875}}
+{"timestamp": "2025-11-24T23:04:11.416118", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.416520", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.41866302490234375}}
+{"timestamp": "2025-11-24T23:04:11.418723", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.419072", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 401, "response_time_ms": 0.3647804260253906}}
+{"timestamp": "2025-11-24T23:04:11.421120", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.421394", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/", "status_code": 200, "response_time_ms": 0.2944469451904297}}
+{"timestamp": "2025-11-24T23:04:11.423414", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/pipeline/available", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.481881", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/pipeline/available", "status_code": 200, "response_time_ms": 58.481693267822266}}
+{"timestamp": "2025-11-24T23:04:11.484810", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.489131", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 200, "response_time_ms": 4.344940185546875}}
+{"timestamp": "2025-11-24T23:04:11.491527", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.492906", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 401, "response_time_ms": 1.3916492462158203}}
+{"timestamp": "2025-11-24T23:04:11.495036", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.501728", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 200, "response_time_ms": 6.707668304443359}}
+{"timestamp": "2025-11-24T23:04:11.504670", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.505247", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.5946159362792969}}
+{"timestamp": "2025-11-24T23:04:11.507531", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.507996", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.4773139953613281}}
+{"timestamp": "2025-11-24T23:04:11.510362", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.510779", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.4298686981201172}}
+{"timestamp": "2025-11-24T23:04:11.513109", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "invalid-...2345"}}
+{"timestamp": "2025-11-24T23:04:11.513798", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.7014274597167969}}
+{"timestamp": "2025-11-24T23:04:11.516009", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.516688", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads", "status_code": 200, "response_time_ms": 0.701904296875}}
+{"timestamp": "2025-11-24T23:04:11.518892", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads/99999", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.519507", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads/99999", "status_code": 404, "response_time_ms": 0.6349086761474609}}
+{"timestamp": "2025-11-24T23:04:11.521567", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/logs/1", "query_params": null}}
+{"timestamp": "2025-11-24T23:04:11.522068", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/logs/1", "status_code": 200, "response_time_ms": 0.5199909210205078}}
+{"timestamp": "2025-11-24T23:04:11.524249", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.524713", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.4832744598388672}}
+{"timestamp": "2025-11-24T23:04:11.527046", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.527406", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs", "status_code": 200, "response_time_ms": 0.3795623779296875}}
+{"timestamp": "2025-11-24T23:04:11.529622", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.530084", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.4787445068359375}}
+{"timestamp": "2025-11-24T23:04:11.531519", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/a3de8c5c-5e75-490c-8fd9-251dbb295f66", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.545629", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/a3de8c5c-5e75-490c-8fd9-251dbb295f66", "status_code": 200, "response_time_ms": 14.123201370239258}}
+{"timestamp": "2025-11-24T23:04:11.548338", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.548615", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "status_code": 404, "response_time_ms": 0.29850006103515625}}
+{"timestamp": "2025-11-24T23:04:11.550703", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.551329", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.6399154663085938}}
+{"timestamp": "2025-11-24T23:04:11.552639", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/jobs/95d57bd1-d45d-4166-8c5e-e55a37b59030/cancel", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.552913", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/jobs/95d57bd1-d45d-4166-8c5e-e55a37b59030/cancel", "status_code": 200, "response_time_ms": 0.2932548522949219}}
+{"timestamp": "2025-11-24T23:04:11.555102", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/stats", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.555391", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/stats", "status_code": 200, "response_time_ms": 0.3085136413574219}}
+{"timestamp": "2025-11-24T23:04:11.758462", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.759022", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.5841255187988281}}
+{"timestamp": "2025-11-24T23:04:11.764295", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.764750", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.4696846008300781}}
+{"timestamp": "2025-11-24T23:04:11.924303", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "12b2ef22...86e9"}}
+{"timestamp": "2025-11-24T23:04:11.924880", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.6036758422851562}}
+{"timestamp": "2025-11-24T23:05:15.966536", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "nonexistent-job-id", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:15.966930", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "nonexistent-job-id", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:15.969510", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "cc48ac7b...17d6"}}
+{"timestamp": "2025-11-24T23:05:15.970056", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.5784034729003906}}
+{"timestamp": "2025-11-24T23:05:15.971666", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "2988c8f1-523f-4b69-8a82-b51d597504b8", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:15.972199", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "2988c8f1-523f-4b69-8a82-b51d597504b8", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:15.975341", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "cc48ac7b...17d6"}}
+{"timestamp": "2025-11-24T23:05:15.975774", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.45037269592285156}}
+{"timestamp": "2025-11-24T23:05:15.977297", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "5c77767e-31fa-41a5-90dd-9bf20d755431", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:15.977746", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "5c77767e-31fa-41a5-90dd-9bf20d755431", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:15.980101", "level": "DEBUG", "message": "WebSocket Broadcast Channel Connected", "context": {"channel": "all", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:15.980605", "level": "DEBUG", "message": "WebSocket Broadcast Disconnected", "context": {"channel": "all", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:15.982674", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "cc48ac7b...17d6"}}
+{"timestamp": "2025-11-24T23:05:15.983073", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4191398620605469}}
+{"timestamp": "2025-11-24T23:05:15.984355", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "a15438c5-4f38-4207-9004-d0628f036153", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:15.984712", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "a15438c5-4f38-4207-9004-d0628f036153", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:31.548697", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/health", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.549080", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/health", "status_code": 200, "response_time_ms": 0.4246234893798828}}
+{"timestamp": "2025-11-24T23:05:31.551816", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.552362", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.5643367767333984}}
+{"timestamp": "2025-11-24T23:05:31.554381", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.554796", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.4286766052246094}}
+{"timestamp": "2025-11-24T23:05:31.556501", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.556867", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.377655029296875}}
+{"timestamp": "2025-11-24T23:05:31.558688", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.559031", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 401, "response_time_ms": 0.3554821014404297}}
+{"timestamp": "2025-11-24T23:05:31.560750", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.560962", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/", "status_code": 200, "response_time_ms": 0.23031234741210938}}
+{"timestamp": "2025-11-24T23:05:31.562911", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/pipeline/available", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.617833", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/pipeline/available", "status_code": 200, "response_time_ms": 54.93783950805664}}
+{"timestamp": "2025-11-24T23:05:31.620868", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.624919", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 200, "response_time_ms": 4.078388214111328}}
+{"timestamp": "2025-11-24T23:05:31.626994", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.628444", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 401, "response_time_ms": 1.4605522155761719}}
+{"timestamp": "2025-11-24T23:05:31.630300", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.635220", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 200, "response_time_ms": 4.938364028930664}}
+{"timestamp": "2025-11-24T23:05:31.637455", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.637982", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.5385875701904297}}
+{"timestamp": "2025-11-24T23:05:31.639886", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.640326", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.45108795166015625}}
+{"timestamp": "2025-11-24T23:05:31.642197", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.642616", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.43082237243652344}}
+{"timestamp": "2025-11-24T23:05:31.644404", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "invalid-...2345"}}
+{"timestamp": "2025-11-24T23:05:31.644854", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.46253204345703125}}
+{"timestamp": "2025-11-24T23:05:31.646496", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.647059", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads", "status_code": 200, "response_time_ms": 0.5817413330078125}}
+{"timestamp": "2025-11-24T23:05:31.648928", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads/99999", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.649421", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads/99999", "status_code": 404, "response_time_ms": 0.5109310150146484}}
+{"timestamp": "2025-11-24T23:05:31.651135", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/logs/1", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:31.651618", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/logs/1", "status_code": 200, "response_time_ms": 0.5009174346923828}}
+{"timestamp": "2025-11-24T23:05:31.653448", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.653858", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4284381866455078}}
+{"timestamp": "2025-11-24T23:05:31.656312", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.656606", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs", "status_code": 200, "response_time_ms": 0.3116130828857422}}
+{"timestamp": "2025-11-24T23:05:31.658528", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.658908", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.3933906555175781}}
+{"timestamp": "2025-11-24T23:05:31.661496", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.661934", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "status_code": 404, "response_time_ms": 0.45609474182128906}}
+{"timestamp": "2025-11-24T23:05:31.663852", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.664241", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4024505615234375}}
+{"timestamp": "2025-11-24T23:05:31.665648", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/jobs/3d52cec6-0c30-4bb4-80b0-f0c7377efb6a/cancel", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.666446", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/jobs/3d52cec6-0c30-4bb4-80b0-f0c7377efb6a/cancel", "status_code": 200, "response_time_ms": 0.8168220520019531}}
+{"timestamp": "2025-11-24T23:05:31.668084", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/stats", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.668393", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/stats", "status_code": 200, "response_time_ms": 0.32639503479003906}}
+{"timestamp": "2025-11-24T23:05:31.670517", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "nonexistent-job-id", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:31.671001", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "nonexistent-job-id", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:31.672872", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.673267", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4112720489501953}}
+{"timestamp": "2025-11-24T23:05:31.674577", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "b0835f01-260a-44ac-a0fe-e56b4f3b038d", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:31.674914", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "b0835f01-260a-44ac-a0fe-e56b4f3b038d", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:31.676972", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.677377", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.41794776916503906}}
+{"timestamp": "2025-11-24T23:05:31.678667", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "a94d14e9-39d9-4bf9-8138-9d9744f95725", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:31.679005", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "a94d14e9-39d9-4bf9-8138-9d9744f95725", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:31.681008", "level": "DEBUG", "message": "WebSocket Broadcast Channel Connected", "context": {"channel": "all", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:31.681408", "level": "DEBUG", "message": "WebSocket Broadcast Disconnected", "context": {"channel": "all", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:31.683296", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "166104ec...88db"}}
+{"timestamp": "2025-11-24T23:05:31.683677", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.3941059112548828}}
+{"timestamp": "2025-11-24T23:05:31.684939", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "3bc50515-9d34-4ed7-82fe-be61348296ac", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:31.685263", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "3bc50515-9d34-4ed7-82fe-be61348296ac", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:54.343089", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/health", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.343477", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/health", "status_code": 200, "response_time_ms": 0.4258155822753906}}
+{"timestamp": "2025-11-24T23:05:54.346084", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.346603", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.5438327789306641}}
+{"timestamp": "2025-11-24T23:05:54.348718", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.349107", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.4024505615234375}}
+{"timestamp": "2025-11-24T23:05:54.350806", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.351171", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.3762245178222656}}
+{"timestamp": "2025-11-24T23:05:54.352851", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.353214", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 401, "response_time_ms": 0.37360191345214844}}
+{"timestamp": "2025-11-24T23:05:54.355260", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.355474", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/", "status_code": 200, "response_time_ms": 0.2384185791015625}}
+{"timestamp": "2025-11-24T23:05:54.357163", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/pipeline/available", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.403547", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/pipeline/available", "status_code": 200, "response_time_ms": 46.39935493469238}}
+{"timestamp": "2025-11-24T23:05:54.406115", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.410162", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 200, "response_time_ms": 4.0740966796875}}
+{"timestamp": "2025-11-24T23:05:54.412469", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.413851", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 401, "response_time_ms": 1.394033432006836}}
+{"timestamp": "2025-11-24T23:05:54.415949", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.420680", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 200, "response_time_ms": 4.748821258544922}}
+{"timestamp": "2025-11-24T23:05:54.423085", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.423636", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.5643367767333984}}
+{"timestamp": "2025-11-24T23:05:54.425457", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.425902", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.45561790466308594}}
+{"timestamp": "2025-11-24T23:05:54.427825", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.428248", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.4334449768066406}}
+{"timestamp": "2025-11-24T23:05:54.430060", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "invalid-...2345"}}
+{"timestamp": "2025-11-24T23:05:54.430470", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.4222393035888672}}
+{"timestamp": "2025-11-24T23:05:54.432289", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.432870", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads", "status_code": 200, "response_time_ms": 0.6055831909179688}}
+{"timestamp": "2025-11-24T23:05:54.434590", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads/99999", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.435074", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads/99999", "status_code": 404, "response_time_ms": 0.5025863647460938}}
+{"timestamp": "2025-11-24T23:05:54.436831", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/logs/1", "query_params": null}}
+{"timestamp": "2025-11-24T23:05:54.437322", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/logs/1", "status_code": 200, "response_time_ms": 0.5097389221191406}}
+{"timestamp": "2025-11-24T23:05:54.439006", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.439410", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4227161407470703}}
+{"timestamp": "2025-11-24T23:05:54.441313", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.441598", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs", "status_code": 200, "response_time_ms": 0.3032684326171875}}
+{"timestamp": "2025-11-24T23:05:54.443213", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.443568", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.3669261932373047}}
+{"timestamp": "2025-11-24T23:05:54.445232", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/3a714416-7874-4c66-8523-696cc03796e1", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.459740", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/3a714416-7874-4c66-8523-696cc03796e1", "status_code": 200, "response_time_ms": 14.519214630126953}}
+{"timestamp": "2025-11-24T23:05:54.462104", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.462372", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "status_code": 404, "response_time_ms": 0.28824806213378906}}
+{"timestamp": "2025-11-24T23:05:54.464307", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.464723", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.6260871887207031}}
+{"timestamp": "2025-11-24T23:05:54.466142", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/jobs/d03edc82-e06f-4610-bf6a-c577302e21dd/cancel", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.466451", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/jobs/d03edc82-e06f-4610-bf6a-c577302e21dd/cancel", "status_code": 200, "response_time_ms": 0.32806396484375}}
+{"timestamp": "2025-11-24T23:05:54.468167", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/stats", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.468412", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/stats", "status_code": 200, "response_time_ms": 0.26297569274902344}}
+{"timestamp": "2025-11-24T23:05:54.470092", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "nonexistent-job-id", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:54.470420", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "nonexistent-job-id", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:54.472267", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.472661", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4067420959472656}}
+{"timestamp": "2025-11-24T23:05:54.473915", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "0db8a2f4-a1bf-4f98-9d04-aea292f31a91", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:54.474173", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "0db8a2f4-a1bf-4f98-9d04-aea292f31a91", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:54.476139", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.476529", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4029273986816406}}
+{"timestamp": "2025-11-24T23:05:54.477759", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "40230885-364b-4b59-a745-cde8e60ade69", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:54.478134", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "40230885-364b-4b59-a745-cde8e60ade69", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:54.480061", "level": "DEBUG", "message": "WebSocket Broadcast Channel Connected", "context": {"channel": "all", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:54.480833", "level": "DEBUG", "message": "WebSocket Broadcast Disconnected", "context": {"channel": "all", "action": "disconnect"}}
+{"timestamp": "2025-11-24T23:05:54.482523", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "9f60d293...ba4b"}}
+{"timestamp": "2025-11-24T23:05:54.482980", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 201, "response_time_ms": 0.4703998565673828}}
+{"timestamp": "2025-11-24T23:05:54.484193", "level": "DEBUG", "message": "WebSocket Connection Accepted", "context": {"job_id": "24ba4f07-a4da-44cf-b577-da6b80e6c138", "action": "connect"}}
+{"timestamp": "2025-11-24T23:05:54.484475", "level": "DEBUG", "message": "WebSocket Disconnected", "context": {"job_id": "24ba4f07-a4da-44cf-b577-da6b80e6c138", "action": "disconnect"}}

@@ -21,7 +21,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from api_modules.utils import get_iso_timestamp
 from api_modules.logging_service import StructuredLogger
-from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router, queue_router
+from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router, queue_router, websocket_router
 import time
 
 
@@ -48,6 +48,8 @@ def create_app() -> FastAPI:
     app.include_router(pipeline_router)
     app.include_router(upload_router)
     app.include_router(database_router)
+    app.include_router(queue_router)
+    app.include_router(websocket_router)
     app.include_router(queue_router)
     
     # Logging middleware

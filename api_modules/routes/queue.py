@@ -64,9 +64,10 @@ class QueueStatsResponse(BaseModel):
 @router.post(
     "/submit",
     response_model=JobResponse,
+    status_code=201,
     summary="Job'u Queue'ya Gönder",
     responses={
-        200: {"description": "Job başarıyla queue'ya eklendi"},
+        201: {"description": "Job başarıyla queue'ya eklendi"},
         400: {"description": "Hatalı istek (upload_id, modules)"},
         401: {"description": "Unauthorized - geçersiz API key"},
         500: {"description": "Sunucu hatası"}

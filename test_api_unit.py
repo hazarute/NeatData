@@ -263,7 +263,7 @@ class TestQueue:
         }
         response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
         
-        assert response.status_code == 200
+        assert response.status_code == 201
         data = response.json()
         assert data["status"] == "success" or "id" in data
         assert data["upload_id"] == 1
@@ -290,7 +290,7 @@ class TestQueue:
             json={"upload_id": 2, "modules": ["trim_spaces"]},
             headers=get_headers_with_key()
         )
-        assert response.status_code == 200
+        assert response.status_code == 201
         job_data = response.json()
         job_id = job_data["id"]
         
@@ -336,6 +336,123 @@ class TestQueue:
         assert "completed" in data
         assert "failed" in data
         assert "cancelled" in data
+
+
+class TestWebSocket:
+    """WebSocket endpoint tests."""
+    
+    def test_websocket_job_not_found(self):
+        """WebSocket /ws/{job_id} endpoint'i - job not found."""
+        with client.websocket_connect("/ws/nonexistent-job-id") as websocket:
+            data = websocket.receive_text()
+            import json
+            message = json.loads(data)
+            assert message["status"] == "ERROR"
+            assert message["job_id"] == "nonexistent-job-id"
+            assert "not found" in message["message"].lower()
+    
+    def test_websocket_submit_and_track(self):
+        """WebSocket job submission ve progress tracking."""
+        # First, submit a job
+        from api_modules.queue import ProcessingQueue
+        queue = ProcessingQueue()
+        
+        payload = {
+            "upload_id": 1,
+            "modules": ["trim_spaces", "drop_duplicates"]
+        }
+        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        assert response.status_code == 201
+        job_id = response.json()["id"]
+        
+        # Connect to WebSocket for this job
+        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+            # Should receive initial job state
+            data = websocket.receive_text()
+            import json
+            message = json.loads(data)
+            assert message["job_id"] == job_id
+            assert message["status"] in ["pending", "processing", "completed", "failed", "cancelled", "error"]
+            assert "progress_percent" in message
+            assert "current_step" in message
+    
+    def test_websocket_progress_update(self):
+        """WebSocket progress updates."""
+        from api_modules.queue import ProcessingQueue
+        queue = ProcessingQueue()
+        
+        # Submit job
+        payload = {
+            "upload_id": 1,
+            "modules": ["test_module"]
+        }
+        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        job_id = response.json()["id"]
+        
+        # Start job
+        queue.start_job(job_id)
+        
+        # Connect and get initial state
+        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+            # Receive initial state
+            data = websocket.receive_text()
+            import json
+            message = json.loads(data)
+            
+            # Update progress
+            queue.update_job_progress(
+                job_id,
+                progress_percent=50,
+                current_step="processing",
+                step_message="Processing step 2 of 5"
+            )
+            
+            # Get updated job
+            job = queue.get_job(job_id)
+            assert job is not None
+            assert job.progress_percent == 50
+            assert job.current_step == "processing"
+            assert job.step_message == "Processing step 2 of 5"
+    
+    def test_websocket_broadcast_channel(self):
+        """WebSocket broadcast channel."""
+        with client.websocket_connect("/ws?channel=all") as websocket:
+            # Should receive welcome message
+            data = websocket.receive_json()
+            assert data["status"] == "connected"
+            assert data["channel"] == "all"
+            assert "message" in data
+            
+            # Send ping command
+            websocket.send_json({"command": "ping"})
+            response = websocket.receive_json()
+            assert response["status"] == "pong"
+    
+    def test_websocket_unsubscribe_command(self):
+        """WebSocket unsubscribe command."""
+        from api_modules.queue import ProcessingQueue
+        queue = ProcessingQueue()
+        
+        # Submit job
+        payload = {
+            "upload_id": 1,
+            "modules": ["test"]
+        }
+        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        job_id = response.json()["id"]
+        
+        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+            # Receive initial state
+            websocket.receive_text()
+            
+            # Send unsubscribe command
+            import json
+            websocket.send_text(json.dumps({"command": "unsubscribe"}))
+            
+            # Should receive unsubscribed confirmation
+            response = websocket.receive_json()
+            assert response["status"] == "unsubscribed"
+            assert response["job_id"] == job_id
 
 
 if __name__ == "__main__":

@@ -33,6 +33,9 @@ class Job:
     completed_at: Optional[str] = None
     modules: List[str] = field(default_factory=list)
     error_message: Optional[str] = None
+    progress_percent: int = 0  # 0-100
+    current_step: str = ""  # e.g., "reading_file", "processing", "saving_results"
+    step_message: str = ""  # Detailed message about current step
     
     def to_dict(self) -> dict:
         """Serialize to dict."""
@@ -44,7 +47,10 @@ class Job:
             "started_at": self.started_at,
             "completed_at": self.completed_at,
             "modules": self.modules,
-            "error_message": self.error_message
+            "error_message": self.error_message,
+            "progress_percent": self.progress_percent,
+            "current_step": self.current_step,
+            "step_message": self.step_message
         }
 
 
@@ -175,3 +181,32 @@ class ProcessingQueue:
                 "failed": len([j for j in all_jobs if j.status == JobStatus.FAILED]),
                 "cancelled": len([j for j in all_jobs if j.status == JobStatus.CANCELLED])
             }
+    
+    def update_job_progress(
+        self,
+        job_id: str,
+        progress_percent: int,
+        current_step: str = "",
+        step_message: str = ""
+    ) -> bool:
+        """
+        Update job progress without changing status.
+        
+        Args:
+            job_id: Job ID
+            progress_percent: Progress percentage (0-100)
+            current_step: Current processing step (e.g., "reading_file")
+            step_message: Detailed message about the step
+        
+        Returns:
+            True if update successful, False if job not found
+        """
+        job = self._jobs.get(job_id)
+        if not job:
+            return False
+        
+        with self._lock:
+            job.progress_percent = min(100, max(0, progress_percent))
+            job.current_step = current_step
+            job.step_message = step_message
+            return True
