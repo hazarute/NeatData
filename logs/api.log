@@ -1,0 +1,50 @@
+{"timestamp": "2025-11-24T22:55:07.522987", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/health", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.523403", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/health", "status_code": 200, "response_time_ms": 0.4570484161376953}}
+{"timestamp": "2025-11-24T22:55:07.526215", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.526707", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.5142688751220703}}
+{"timestamp": "2025-11-24T22:55:07.529381", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.529841", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.4734992980957031}}
+{"timestamp": "2025-11-24T22:55:07.531811", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.532186", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 200, "response_time_ms": 0.3879070281982422}}
+{"timestamp": "2025-11-24T22:55:07.533951", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/clean", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.534320", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/clean", "status_code": 401, "response_time_ms": 0.3807544708251953}}
+{"timestamp": "2025-11-24T22:55:07.536289", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.536504", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/", "status_code": 200, "response_time_ms": 0.23245811462402344}}
+{"timestamp": "2025-11-24T22:55:07.538695", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/pipeline/available", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.557495", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/pipeline/available", "status_code": 200, "response_time_ms": 18.814802169799805}}
+{"timestamp": "2025-11-24T22:55:07.560243", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.564529", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 200, "response_time_ms": 4.309177398681641}}
+{"timestamp": "2025-11-24T22:55:07.566654", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/pipeline/run", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.567823", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/pipeline/run", "status_code": 401, "response_time_ms": 1.1789798736572266}}
+{"timestamp": "2025-11-24T22:55:07.570017", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.575096", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 200, "response_time_ms": 5.097627639770508}}
+{"timestamp": "2025-11-24T22:55:07.577192", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.577675", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.4963874816894531}}
+{"timestamp": "2025-11-24T22:55:07.579800", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.580255", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 400, "response_time_ms": 0.46753883361816406}}
+{"timestamp": "2025-11-24T22:55:07.581968", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.582675", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.7176399230957031}}
+{"timestamp": "2025-11-24T22:55:07.584449", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/upload/csv", "query_params": null, "api_key": "invalid-...2345"}}
+{"timestamp": "2025-11-24T22:55:07.584884", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/upload/csv", "status_code": 401, "response_time_ms": 0.44727325439453125}}
+{"timestamp": "2025-11-24T22:55:07.586699", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.587264", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads", "status_code": 200, "response_time_ms": 0.5838871002197266}}
+{"timestamp": "2025-11-24T22:55:07.589243", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/uploads/99999", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.589722", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/uploads/99999", "status_code": 404, "response_time_ms": 0.4973411560058594}}
+{"timestamp": "2025-11-24T22:55:07.591646", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/db/logs/1", "query_params": null}}
+{"timestamp": "2025-11-24T22:55:07.592163", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/db/logs/1", "status_code": 200, "response_time_ms": 0.5347728729248047}}
+{"timestamp": "2025-11-24T22:55:07.593983", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.594374", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.40984153747558594}}
+{"timestamp": "2025-11-24T22:55:07.596088", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.596365", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs", "status_code": 200, "response_time_ms": 0.2944469451904297}}
+{"timestamp": "2025-11-24T22:55:07.597910", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.598258", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.3597736358642578}}
+{"timestamp": "2025-11-24T22:55:07.599639", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/b0522f9b-3cdc-4c99-b67b-12d45a339869", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.600118", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/b0522f9b-3cdc-4c99-b67b-12d45a339869", "status_code": 200, "response_time_ms": 0.4940032958984375}}
+{"timestamp": "2025-11-24T22:55:07.601949", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.602223", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/jobs/nonexistent-id", "status_code": 404, "response_time_ms": 0.29206275939941406}}
+{"timestamp": "2025-11-24T22:55:07.603908", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/submit", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.604276", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/submit", "status_code": 200, "response_time_ms": 0.38123130798339844}}
+{"timestamp": "2025-11-24T22:55:07.605594", "level": "INFO", "message": "API Request", "context": {"method": "POST", "path": "/queue/jobs/fdc5f90a-9166-4627-9713-b6c515677759/cancel", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.605838", "level": "INFO", "message": "API Response", "context": {"method": "POST", "path": "/queue/jobs/fdc5f90a-9166-4627-9713-b6c515677759/cancel", "status_code": 200, "response_time_ms": 0.2722740173339844}}
+{"timestamp": "2025-11-24T22:55:07.607753", "level": "INFO", "message": "API Request", "context": {"method": "GET", "path": "/queue/stats", "query_params": null, "api_key": "60f7acf3...5c44"}}
+{"timestamp": "2025-11-24T22:55:07.608028", "level": "INFO", "message": "API Response", "context": {"method": "GET", "path": "/queue/stats", "status_code": 200, "response_time_ms": 0.29277801513671875}}

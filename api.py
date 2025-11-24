@@ -17,10 +17,12 @@ OpenAPI Schema:
     http://127.0.0.1:8000/openapi.json
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from api_modules.utils import get_iso_timestamp
+from api_modules.logging_service import StructuredLogger
 from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router, queue_router
+import time
 
 
 def create_app() -> FastAPI:
@@ -48,10 +50,65 @@ def create_app() -> FastAPI:
     app.include_router(database_router)
     app.include_router(queue_router)
     
+    # Logging middleware
+    logger = StructuredLogger()
+    
+    @app.middleware("http")
+    async def logging_middleware(request: Request, call_next):
+        """Log requests ve responses."""
+        start_time = time.time()
+        
+        # Mask API key
+        api_key = request.headers.get("X-API-Key")
+        api_key_masked = f"{api_key[:8]}...{api_key[-4:]}" if api_key else None
+        
+        # Log request
+        logger.log_request(
+            method=request.method,
+            path=request.url.path,
+            query_params=dict(request.query_params) if request.query_params else None,
+            api_key_masked=api_key_masked
+        )
+        
+        # Call endpoint
+        try:
+            response = await call_next(request)
+        except Exception as e:
+            # Log error
+            logger.error(
+                "Request processing failed",
+                context={
+                    "method": request.method,
+                    "path": request.url.path
+                },
+                error=e
+            )
+            raise
+        
+        # Log response
+        process_time = (time.time() - start_time) * 1000  # milliseconds
+        logger.log_response(
+            method=request.method,
+            path=request.url.path,
+            status_code=response.status_code,
+            response_time_ms=process_time
+        )
+        
+        return response
+    
     # Error Handler
     @app.exception_handler(Exception)
-    async def general_exception_handler(request, exc):
+    async def general_exception_handler(request: Request, exc: Exception):
         """Genel exception handler."""
+        logger.error(
+            "Unhandled exception",
+            context={
+                "method": request.method,
+                "path": request.url.path
+            },
+            error=exc
+        )
+        
         return JSONResponse(
             status_code=500,
             content={
