@@ -161,6 +161,7 @@ class FileUploadResponse(BaseModel):
     file_size: int = Field(..., description="Dosya boyutu (byte)")
     rows: int = Field(..., description="CSV satır sayısı")
     columns: int = Field(..., description="CSV sütun sayısı")
+    upload_id: Optional[int] = Field(None, description="Veritabanı upload ID'si")
     message: Optional[str] = Field(None, description="İşlem mesajı")
     timestamp: str = Field(..., description="Upload zamanı")
     
@@ -171,7 +172,8 @@ class FileUploadResponse(BaseModel):
             "file_size": 5240,
             "rows": 100,
             "columns": 5,
-            "message": "Dosya başarıyla yüklendi ve ayrıştırıldı",
+            "upload_id": 42,
+            "message": "Dosya başarıyla yüklendi ve veritabanına kaydedildi",
             "timestamp": "2025-11-25T10:30:00"
         }
 

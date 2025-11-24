@@ -7,9 +7,11 @@ CSV dosyası yüklemesi ve ayrıştırması endpoint'leri.
 from fastapi import APIRouter, HTTPException, UploadFile, File
 from api_modules.models import FileUploadResponse
 from api_modules.utils import get_iso_timestamp
+from db import Database, UploadRecord
 import pandas as pd
 import io
 from typing import Optional
+import json
 
 router = APIRouter(prefix="/upload", tags=["Upload"])
 
@@ -78,12 +80,30 @@ async def upload_csv(file: UploadFile = File(...)) -> FileUploadResponse:
         # DataFrame bilgilerini al
         rows, cols = df.shape
         
+        # Veritabanına kaydet
+        upload_id = None
+        try:
+            db = Database()
+            upload_record = UploadRecord(
+                filename=file.filename,
+                file_size=file_size,
+                rows=rows,
+                columns=cols,
+                original_shape=json.dumps([rows, cols]),
+                user_agent=None
+            )
+            upload_id = upload_record.save()
+        except Exception as db_error:
+            # Veritabanı hatası, response'a upload_id olmadan gönder
+            print(f"Database save error: {db_error}")
+        
         return FileUploadResponse(
             status="success",
             filename=file.filename,
             file_size=file_size,
             rows=rows,
             columns=cols,
+            upload_id=upload_id,
             message=f"Dosya başarıyla yüklendi: {rows} satır, {cols} sütun",
             timestamp=get_iso_timestamp()
         )

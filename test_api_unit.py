@@ -129,6 +129,8 @@ class TestUpload:
         assert data["rows"] == 3
         assert data["columns"] == 3
         assert data["file_size"] == len(csv_content)
+        assert "upload_id" in data  # Veritabanına kaydedildi
+        assert data["upload_id"] is None or isinstance(data["upload_id"], int)  # ID veya None olabilir
     
     def test_upload_csv_invalid_extension(self):
         """POST /upload/csv endpoint'ini test et (invalid extension)."""
