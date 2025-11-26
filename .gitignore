@@ -4,3 +4,24 @@ __pycache__/
 *.pyc
 
 deleted_records_log.csv
+
+# Local environment / secrets
+api_keys.json
+.env
+
+# Uploads and user data
+uploads/
+"Messy Data"/
+
+# Database files
+db/*.db
+
+# Logs
+logs/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Python virtual env
+venv/
