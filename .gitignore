@@ -11,7 +11,7 @@ api_keys.json
 
 # Uploads and user data
 uploads/
-"Messy Data"/
+Messy Data/
 
 # Database files
 db/*.db
