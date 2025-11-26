@@ -1,58 +1,63 @@
 # Progress / Görev Panosu
 
-## Faz 7: İleri Features & Enhancement (TAMAMLANDI ✅)
+## Faz 1-7: Temel Altyapı (TAMAMLANDI ✅)
+- [x] Core Pipeline Logic
+- [x] Desktop GUI
+- [x] FastAPI Temel Kurulum
+- [x] Database & Auth
+- [x] Logging & Tests (%100 Coverage)
 
-### Completed Steps
-- [x] Adım 1: CSV Upload Endpoint (25.11.2025)
-- [x] Adım 2: Database Integration (25.11.2025)
-- [x] Adım 3: Upload-Database Integration (25.11.2025)
-- [x] Adım 4: Authentication (API Keys) (25.11.2025)
-- [x] Adım 5: Batch Processing Queue (25.11.2025)
-- [x] Adım 6: Structured Logging (25.11.2025)
-- [x] Adım 7: WebSocket Real-Time Progress (25.11.2025)
+## Faz 8: Database-Driven Streamlit Entegrasyonu (AKTİF 🚧)
+**Amaç:** Streamlit arayüzünün, API ile "Upload ID" üzerinden konuşmasını sağlamak ve büyük dosyaları JSON payload yerine disk üzerinden işlemek.
 
-### Next Steps
-- [ ] Adım 8: API Versioning (/v1/, /v2/) - Backward compatibility, deprecation headers
-- [ ] Adım 9: Performance Optimization - Caching, async processing
-- [ ] Adım 10: Rate Limiting & CORS - Security, cross-origin support
+### Adım 1: Veritabanı Şeması ve Modellerin Güncellenmesi
+*Bu adım, dosyaların diskteki konumunu takip etmek için gereklidir.*
+- [x] **Database Schema Update (`db/database.py`):**
+    - `uploads` tablosuna `file_path` (TEXT) sütununu ekle.
+    - `init_db` fonksiyonunu güncelle.
+- [x] **Model Update (`db/database.py` - `UploadRecord`):**
+    - `__init__` metoduna `file_path` parametresini ekle.
+    - `save` metodundaki `INSERT` sorgusunu `file_path` içerecek şekilde güncelle.
+    - `to_dict` metoduna `file_path` ekle.
 
-## Sistem Metrikleri (Faz 7 Complete - 25.11.2025)
+### Adım 2: Upload Endpoint'inin Dosya Kaydetmesi
+*Bu adım, yüklenen dosyanın sadece metadata değil, fiziksel olarak da saklanmasını sağlar.*
+ - [x] **Storage Utility (`api_modules/utils/storage.py` - YENİ):**
+     - `save_upload_file(file: UploadFile) -> str` fonksiyonu yazıldı.
+     - Dosyaları `uploads/` klasörüne benzersiz isimle (UUID) kaydeder.
+ - [x] **Upload Endpoint Refactor (`api_modules/routes/v1/upload.py`):**
+     - Dosyayı `storage.py` ile diske kaydeder ve `file_path` veritabanına kaydedildi.
 
-| Metrik | Değer | Durum |
-|--------|-------|-------|
-| API Endpoints | 16 (14 REST + 2 WebSocket) | ✅ |
-| Test Coverage | 28/28 PASS (100%) | ✅ |
-| Singletons | 4 (Database, APIKeyManager, ProcessingQueue, WebSocketManager) | ✅ |
-| API Routers | 8 (Blueprint pattern) | ✅ |
-| Pydantic Models | 13 | ✅ |
-| Database Tables | 3 (auto-initialize) | ✅ |
-| Authentication | UUID-based API Keys + expiration | ✅ |
-| Logging | Structured JSON (api.log) | ✅ |
-| Error Handling | Global exception handler + middleware | ✅ |
-| Real-time | WebSocket (job-specific + broadcast) | ✅ |
+### Adım 3: Pipeline Endpoint'inin Refactoring'i (Kritik)
+*Bu adım, API'nin JSON veri yerine ID ile çalışmasını sağlar.*
+- [x] **Request Model Update (`api_modules/models.py`):**
+    - `PipelineRunRequest` modelini değiştir veya yeni `PipelineRunByIdRequest` oluştur.
+    - Alanlar: `upload_id: int`, `modules: List[str]`.
+- [x] **Pipeline Logic Refactor (`api_modules/routes/v1/pipeline.py`):**
+    - `/run` endpoint'ini güncelle:
+        1. `upload_id` ile veritabanından kaydı çek (`get_upload_by_id`).
+        2. Kayıttaki `file_path` üzerinden dosyayı `pandas` ile oku.
+        3. `PipelineManager`'ı çalıştır.
+        4. Sonucu (DataFrame) JSON olarak dön (veya geçici dosyaya yazıp link dön).
 
-## Git Commits (Faz 7)
-- `227fe7b` - Faz 7 Adim 7: WebSocket Real-Time Progress TAMAMLANDI
-- `da50d76` - Housekeeping: Test dosyalarını tests/ klasörüne taşı
+### Adım 4: Frontend (Streamlit) Altyapısı
+- [x] **API Client (`frontend/api_client.py`):**
+    - `upload_file(file)` -> Döner: `upload_id`
+    - `run_pipeline(upload_id, modules)` -> Döner: `json_result`
+    - `get_modules()` -> Döner: `list`
+- [x] **Streamlit App (`streamlit_app.py`):**
+    - **Sidebar:** API Bağlantı Durumu (Health Check).
+    - **Ana Ekran:**
+        1. Dosya Yükleme Alanı (`st.file_uploader`).
+        2. Modül Seçimi (API'den gelen listeye göre checkboxlar).
+        3. "Başlat" butonu (ID ile API çağrısı).
+        4. Sonuç Tablosu (`st.dataframe`) ve İndirme Butonu.
 
-## Test Status
-```
-28 passed, 109 warnings in 0.68s
+### Adım 5: Temizlik ve Test
+- [x] `api_modules/routes/v1/clean.py` dosyasını sil (Artık gereksiz).
+- [x] Eski testleri (`tests/test_api_unit.py`) yeni `upload_id` mantığına göre güncelle.
+- [x] Manuel Test: Streamlit üzerinden 10MB+ bir dosya yükleyip işle.
 
-Test Classes:
-- TestHealth (1 test) ✅
-- TestClean (5 tests) ✅
-- TestRoot (1 test) ✅
-- TestPipeline (3 tests) ✅
-- TestUpload (5 tests) ✅
-- TestDatabase (3 tests) ✅
-- TestQueue (6 tests) ✅
-- TestWebSocket (5 tests) ✅
-```
-
-## Bilinên Hatalar
-- Yok (28/28 PASS, 0 failures)
-
-## Proje Durumu
-🟢 **Production-Ready** - API fully operational with auth, logging, error handling, and real-time WebSocket support
-
+## Bilinen Sorunlar / Notlar
+- Swagger UI son kullanıcı için uygun değil, Streamlit bu boşluğu dolduracak.
+- `api_modules\routes\v1\clean.py` şimdilik atıl durumda, odak `api_modules\routes\v1\pipeline.py` üzerinde.
