@@ -21,7 +21,7 @@ from api_modules.queue import ProcessingQueue
 from api_modules.logging_service import StructuredLogger
 from datetime import datetime
 
-router = APIRouter(tags=["websocket"])
+router = APIRouter(prefix="/v1/ws", tags=["websocket"])
 
 # Singletons
 ws_manager = WebSocketManager()
@@ -29,7 +29,7 @@ queue = ProcessingQueue()
 logger = StructuredLogger()
 
 
-@router.websocket("/ws/{job_id}")
+@router.websocket("/{job_id}")
 async def websocket_job_progress(websocket: WebSocket, job_id: str):
     """
     WebSocket endpoint for real-time job progress tracking.
@@ -139,7 +139,7 @@ async def websocket_job_progress(websocket: WebSocket, job_id: str):
         )
 
 
-@router.websocket("/ws")
+@router.websocket("/")
 async def websocket_broadcast(
     websocket: WebSocket,
     channel: Optional[str] = Query("all")

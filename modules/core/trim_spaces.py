@@ -9,7 +9,7 @@ META = {
     "name": "Boşlukları Temizle",
     "description": "Tüm metin sütunlarındaki baştaki ve sondaki boşlukları temizler, iç boşlukları korur.",
     "defaults": {},
-    "order": 40,
+    "order": 18,
 }
 
 

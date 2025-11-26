@@ -9,7 +9,7 @@ from api_modules.models import UploadHistoryResponse, UploadHistoryItem, Process
 from api_modules.utils import get_iso_timestamp
 from db import get_all_uploads, get_logs_by_upload_id, get_upload_by_id
 
-router = APIRouter(prefix="/db", tags=["Database"])
+router = APIRouter(prefix="/v1/db", tags=["Database"])
 
 
 @router.get(

@@ -8,11 +8,11 @@ from fastapi import APIRouter
 from api_modules.models import HealthCheckResponse
 from api_modules.utils import get_iso_timestamp
 
-router = APIRouter(tags=["Health"])
+router = APIRouter(prefix="/v1/health", tags=["Health"])
 
 
 @router.get(
-    "/health",
+    "",
     response_model=HealthCheckResponse,
     summary="Sistem Durumu Kontrolü"
 )

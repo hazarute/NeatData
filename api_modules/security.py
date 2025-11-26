@@ -18,12 +18,12 @@ KEYS_FILE = Path("api_keys.json")
 class APIKey:
     """API Key yönetimi."""
     
-    def __init__(self, key: str, name: str, created_at: str, expires_at: Optional[str] = None):
+    def __init__(self, key: str, name: str, created_at: str, expires_at: Optional[str] = None, active: bool = True):
         self.key = key
         self.name = name
         self.created_at = created_at
         self.expires_at = expires_at
-        self.active = True
+        self.active = active
     
     def is_valid(self) -> bool:
         """Key'in geçerli olup olmadığını kontrol et."""
@@ -170,22 +170,22 @@ async def verify_api_key(x_api_key: Optional[str] = Header(None)) -> str:
             status_code=401,
             detail="Missing API key. Please provide X-API-Key header."
         )
-    
+
     manager = APIKeyManager()
     api_key = manager.get_key(x_api_key)
-    
+
     if not api_key:
         raise HTTPException(
             status_code=401,
-            detail="Invalid API key."
+            detail="Invalid API key. The provided key does not exist."
         )
-    
+
     if not api_key.is_valid():
         raise HTTPException(
             status_code=401,
-            detail="API key is invalid or expired."
+            detail="API key is invalid or expired. Please check the key's status or expiration date."
         )
-    
+
     return x_api_key
 
 

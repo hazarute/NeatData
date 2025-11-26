@@ -14,7 +14,7 @@ from api_modules.utils import get_iso_timestamp
 from typing import List, Optional
 from pydantic import BaseModel
 
-router = APIRouter(prefix="/queue", tags=["Queue"])
+router = APIRouter(prefix="/v1/queue", tags=["Queue"])
 
 
 class JobSubmitRequest(BaseModel):

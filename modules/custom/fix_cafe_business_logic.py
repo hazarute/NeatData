@@ -11,8 +11,9 @@ def _choose_column(cols: List[str], candidates: List[str]) -> Optional[str]:
 
 
 def _parse_numeric_series(series: pd.Series) -> pd.Series:
-    # Remove anything except digits, dot and minus
-    cleaned = series.astype(str).str.replace(r"[^0-9.\-]", "", regex=True)
+    # Convert to string, replace comma with dot, then remove non-numeric
+    s = series.astype(str).str.replace(",", ".")
+    cleaned = s.str.replace(r"[^0-9.\-]", "", regex=True)
     return pd.to_numeric(cleaned, errors="coerce")
 
 
@@ -25,6 +26,7 @@ def run(df: pd.DataFrame) -> pd.DataFrame:
     - Tarih parse'ı esnektir (ilk deneme infer, ikinci deneme dayfirst=True).
     - Parse edilemeyen Tarih veya Fiyat satırları `deleted_records_log.csv` dosyasına yazılır ("Reason" sütunu ile).
     - Mükerrer silme tüm satır eşleşmesine göre yapılır (tüm sütunlar).
+    - Kategori ve Ürün isimlerini baş harfleri büyük olacak şekilde düzenler.
     """
 
     initial_count = len(df)
@@ -34,12 +36,13 @@ def run(df: pd.DataFrame) -> pd.DataFrame:
 
     # Normalize column selection
     cols = list(df.columns)
-    txn_col = _choose_column(cols, ["Transaction ID", "Txn ID", "TransactionID"])
-    item_col = _choose_column(cols, ["Item Ordered", "Item", "Product"])
-    total_spent_col = _choose_column(cols, ["Total Spent", "Total_Spent", "Amount", "Price"]) 
-    price_per_unit_col = _choose_column(cols, ["Price Per Unit", "Price_Per_Unit", "Unit Price", "PricePerUnit"])
-    quantity_col = _choose_column(cols, ["Quantity", "Qty"])
-    date_col = _choose_column(cols, ["Order Date", "OrderDate", "Transaction Date", "TransactionDate"])
+    txn_col = _choose_column(cols, ["Transaction ID", "Txn ID", "TransactionID", "transaction_id", "order_id"])
+    item_col = _choose_column(cols, ["Item Ordered", "Item", "Product", "product_name", "productname"])
+    category_col = _choose_column(cols, ["Category", "category"])
+    total_spent_col = _choose_column(cols, ["Total Spent", "Total_Spent", "Amount", "Price", "pricetl", "price_tl", "price"]) 
+    price_per_unit_col = _choose_column(cols, ["Price Per Unit", "Price_Per_Unit", "Unit Price", "PricePerUnit", "price_per_unit"])
+    quantity_col = _choose_column(cols, ["Quantity", "Qty", "quantity"])
+    date_col = _choose_column(cols, ["Order Date", "OrderDate", "Transaction Date", "TransactionDate", "date"])
 
     # 1) Drop exact duplicate rows only
     df = df.drop_duplicates(keep="last")
@@ -53,6 +56,13 @@ def run(df: pd.DataFrame) -> pd.DataFrame:
         )
         corrections = {"Expresso": "Espresso", "Tea - Hot": "Tea", "Tea - Iced": "Iced Tea", "Cappucino": "Cappuccino"}
         df.loc[mask_item, item_col] = df.loc[mask_item, item_col].replace(corrections)
+
+    # 2.1) Standardize category names if present
+    if category_col:
+        mask_cat = df[category_col].notna()
+        df.loc[mask_cat, category_col] = (
+            df.loc[mask_cat, category_col].astype(str).str.strip().str.title()
+        )
 
     # Normalize common placeholder tokens (UNKNOWN, ERROR, N/A) to actual missing values
     placeholder_tokens = {"UNKNOWN", "ERROR", "NA", "N/A", "NONE", "-"}
@@ -132,9 +142,12 @@ def run(df: pd.DataFrame) -> pd.DataFrame:
     df_clean = df.loc[~invalid_mask].copy()
 
     # 8) Assign cleaned parsed values back into canonical column names for downstream
-    # Use 'Cleaned_Price' and 'Cleaned_Date' to avoid overwriting original source columns
-    df_clean["Cleaned_Price"] = price_parsed.loc[df_clean.index]
-    df_clean["Cleaned_Date"] = pd.to_datetime(date_parsed.loc[df_clean.index], errors="coerce").dt.strftime("%Y-%m-%d")
+    # Update original columns if they exist
+    if total_spent_col:
+        df_clean[total_spent_col] = price_parsed.loc[df_clean.index]
+
+    if date_col:
+        df_clean[date_col] = pd.to_datetime(date_parsed.loc[df_clean.index], errors="coerce").dt.strftime("%Y-%m-%d")
 
     # 9) Convert Quantity to numeric if present
     if quantity_col and quantity_col in df_clean.columns:

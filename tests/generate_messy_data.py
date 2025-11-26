@@ -1,106 +1,95 @@
-"""Generate messy CSV files for tests.
-
-Creates CSVs in the repository's `Messy Data/` directory that exercise
-the `modules/core/drop_duplicates.py` and `modules/core/trim_spaces.py`
-cleaning functions.
-
-Run as a script from the repo root or from this file's directory.
-"""
-
-from __future__ import annotations
-
-from pathlib import Path
 import pandas as pd
-from random import Random
+import numpy as np
+import random
+import os
 
+# Hedef dosya boyutu (MB)
+TARGET_SIZE_MB = 50
+FILE_NAME = "messy_cafe_data_50mb.csv"
 
-ROOT = Path(__file__).resolve().parents[1]
-MESSY_DIR = ROOT / "Messy Data"
+print(f"--- {TARGET_SIZE_MB}MB Kirli Veri Üretimi Başlıyor ---")
 
+# 1. Temel Veri Seti (Seed Data)
+# Bu veriler, Fix Cafe plugin'inin düzelteceği türden hatalar içeriyor.
+products = [
+    "Latte", "Cappuccino", "Americano", "Espresso", "Turkish Coffee",
+    "Filter Coffee", "Tea", "Herbal Tea", "Hot Chocolate", "Mocha",
+    "Iced Latte", "Frappe", "Lemonade", "Orange Juice", "Water",
+    "Soda", "Cheesecake", "Brownie", "Cookie", "Sandwich"
+]
 
-def ensure_dir():
-    MESSY_DIR.mkdir(parents=True, exist_ok=True)
+# Kategori Hataları (Büyük/Küçük Harf, Boşluk)
+categories_messy = [
+    "Hot Drinks", "hot drinks", "HOT DRINKS ", " Hot Drinks",
+    "Cold Drinks", "cold drinks", "COLD DRINKS",
+    "Desserts", "desserts ", " DESSERTS",
+    "Food", "food", " FOOD "
+]
 
+# Fiyat Hataları (TL yazısı, Virgül)
+def generate_messy_price():
+    base_price = random.uniform(10, 80)
+    error_type = random.choice(["clean", "tl_suffix", "comma", "both"])
 
-def make_drop_duplicates_csv(path: Path, n: int = 10000, seed: int = 1):
-    """Create a CSV with duplicates and near-duplicates.
+    if error_type == "clean":
+        return f"{base_price:.2f}"
+    elif error_type == "tl_suffix":
+        return f"{base_price:.2f} TL"
+    elif error_type == "comma":
+        return f"{base_price:.2f}".replace(".", ",")
+    elif error_type == "both":
+        return f"{base_price:.2f}".replace(".", ",") + " TL"
 
-    Produces at least `n` rows by repeating a small pattern and shuffling.
-    """
-    base = [
-        {"id": 1, "name": "Alice", "amount": 10},
-        {"id": 2, "name": "Bob", "amount": 20},
-        {"id": 1, "name": "Alice", "amount": 10},  # exact duplicate
-        {"id": 3, "name": "Charlie", "amount": 30},
-        {"id": 2, "name": "Bob", "amount": 20},    # exact duplicate
-        {"id": 2, "name": "Bob ", "amount": 20},   # near-duplicate (trailing space)
-        {"id": 4, "name": "Dana", "amount": 40},
-    ]
-    # repeat the base rows enough times to reach n
-    reps = (n // len(base)) + 2
-    df = pd.concat([pd.DataFrame(base) for _ in range(reps)], ignore_index=True)
-    # trim to exactly n rows
-    df = df.head(n).copy()
-    # shuffle deterministically
-    rng = Random(seed)
-    df = df.sample(frac=1, random_state=seed).reset_index(drop=True)
-    df.to_csv(path, index=False)
+# 2. Büyük Veri Çoğaltma Döngüsü
+# 50MB'a ulaşana kadar veri üreteceğiz.
+chunks = []
+total_rows = 0
+current_size_mb = 0
 
+while current_size_mb < TARGET_SIZE_MB:
+    # Her döngüde 50.000 satırlık bir blok oluştur
+    chunk_size = 50000
+    
+    data = {
+        # Kirli Başlıklar (Boşluklu)
+        " Product Name ": random.choices(products, k=chunk_size),
+        " Category ": random.choices(categories_messy, k=chunk_size),
+        # Fiyat sütunu string olacak
+        "Price(TL)": [generate_messy_price() for _ in range(chunk_size)],
+        # Rastgele sipariş ID'leri
+        "Order ID": np.random.randint(1000, 99999, size=chunk_size),
+        # Rastgele tarihler
+        "Date": pd.date_range(start="2023-01-01", end="2023-12-31", periods=chunk_size).strftime("%Y-%m-%d")
+    }
+    
+    df_chunk = pd.DataFrame(data)
+    
+    # Tekrar Eden Satırlar Ekle (Verinin %10'u kadar)
+    duplicates = df_chunk.sample(frac=0.1)
+    df_chunk = pd.concat([df_chunk, duplicates], ignore_index=True)
+    
+    chunks.append(df_chunk)
+    total_rows += len(df_chunk)
+    
+    # Geçici boyutu hesapla (Tahmini)
+    # Bellekteki boyut diskteki boyuttan farklı olabilir, bu kaba bir tahmin.
+    current_size_mb = sum([chunk.memory_usage(deep=True).sum() for chunk in chunks]) / (1024 * 1024)
+    print(f"Toplam Satır: {total_rows:,} | Tahmini Boyut: {current_size_mb:.2f} MB")
 
-def make_trim_spaces_csv(path: Path, n: int = 10000, seed: int = 2):
-    """Create a CSV with textual fields containing leading/trailing spaces.
+# 3. Birleştir ve Kaydet
+print("Bloklar birleştiriliyor...")
+full_df = pd.concat(chunks, ignore_index=True)
 
-    Produces at least `n` rows by repeating a small catalogue of products.
-    """
-    base = [
-        {"product": "  Coffee Beans", "description": "Fresh \n roast ", "price": " 15.00 "},
-        {"product": "Tea  ", "description": "  Green tea", "price": "7.50"},
-        {"product": "Sugar", "description": "Refined  ", "price": " 3.25"},
-        {"product": "Milk", "description": "  Full fat", "price": "2.10 "},
-        {"product": "Honey  ", "description": " Natural ", "price": "12.00"},
-        {"product": "Bread", "description": " Sourdough ", "price": " 5.00"},
-    ]
-    reps = (n // len(base)) + 2
-    df = pd.concat([pd.DataFrame(base) for _ in range(reps)], ignore_index=True)
-    df = df.head(n).copy()
-    df = df.sample(frac=1, random_state=seed).reset_index(drop=True)
-    df.to_csv(path, index=False)
+# Hedef boyuta tam ulaşmak için biraz kırp veya ekle (Opsiyonel, şu an gerek yok)
+# full_df = full_df.iloc[:target_rows]
 
+print(f"CSV dosyası yazılıyor: {FILE_NAME}...")
+# index=False önemli, gereksiz boyut artışı olmasın.
+full_df.to_csv(FILE_NAME, index=False)
 
-def make_mixed_csv(path: Path, n: int = 10000, seed: int = 3):
-    """Create a CSV with both duplicates and spacing issues.
-
-    Produces at least `n` rows by repeating a pattern of problem rows.
-    """
-    base = [
-        {"order_id": 101, "customer": " Anna", "item": "Coffee ", "qty": 2},
-        {"order_id": 102, "customer": "Bora", "item": "Tea", "qty": 1},
-        {"order_id": 101, "customer": " Anna", "item": "Coffee ", "qty": 2},  # duplicate
-        {"order_id": 103, "customer": " Cenk ", "item": "Sugar", "qty": 5},
-        {"order_id": 104, "customer": "Derya", "item": "Milk", "qty": 1},
-        {"order_id": 102, "customer": "Bora ", "item": "Tea", "qty": 1},       # near-duplicate (space)
-    ]
-    reps = (n // len(base)) + 2
-    df = pd.concat([pd.DataFrame(base) for _ in range(reps)], ignore_index=True)
-    df = df.head(n).copy()
-    df = df.sample(frac=1, random_state=seed).reset_index(drop=True)
-    df.to_csv(path, index=False)
-
-
-def main(target_rows: int = 10000):
-    ensure_dir()
-    drop_path = MESSY_DIR / "messy_drop_duplicates.csv"
-    spaces_path = MESSY_DIR / "messy_trim_spaces.csv"
-    mixed_path = MESSY_DIR / "messy_mixed.csv"
-
-    make_drop_duplicates_csv(drop_path, n=target_rows)
-    make_trim_spaces_csv(spaces_path, n=target_rows)
-    make_mixed_csv(mixed_path, n=target_rows)
-
-    print(f"Wrote: {drop_path} ({target_rows} rows)")
-    print(f"Wrote: {spaces_path} ({target_rows} rows)")
-    print(f"Wrote: {mixed_path} ({target_rows} rows)")
-
-
-if __name__ == "__main__":
-    main()
+final_size_mb = os.path.getsize(FILE_NAME) / (1024 * 1024)
+print(f"--- İşlem Tamamlandı ---")
+print(f"Dosya: {FILE_NAME}")
+print(f"Son Boyut: {final_size_mb:.2f} MB")
+print(f"Toplam Satır: {len(full_df):,}")
+print("Artık bu dosyayı NeatData Streamlit arayüzüne yükleyebilirsin.")

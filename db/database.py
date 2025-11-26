@@ -52,11 +52,21 @@ class Database:
                 rows INTEGER NOT NULL,
                 columns INTEGER NOT NULL,
                 original_shape TEXT,
+                file_path TEXT,
                 uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 user_agent TEXT,
                 status TEXT DEFAULT 'success'
             )
         """)
+        # If the table existed before and didn't have `file_path`, add it.
+        cursor.execute("PRAGMA table_info(uploads)")
+        cols = [r[1] for r in cursor.fetchall()]
+        if 'file_path' not in cols:
+            try:
+                cursor.execute("ALTER TABLE uploads ADD COLUMN file_path TEXT")
+            except Exception:
+                # ALTER may fail on some old SQLite versions or if table locked; ignore and proceed
+                pass
         
         # Processing logs table
         cursor.execute("""
@@ -103,6 +113,7 @@ class UploadRecord:
         rows: int,
         columns: int,
         original_shape: str,
+        file_path: Optional[str] = None,
         user_agent: Optional[str] = None,
         id: Optional[int] = None
     ):
@@ -112,6 +123,7 @@ class UploadRecord:
         self.rows = rows
         self.columns = columns
         self.original_shape = original_shape
+        self.file_path = file_path
         self.user_agent = user_agent
         self.uploaded_at = datetime.utcnow()
         self.status = "success"
@@ -124,14 +136,15 @@ class UploadRecord:
         
         cursor.execute("""
             INSERT INTO uploads 
-            (filename, file_size, rows, columns, original_shape, user_agent, status)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            (filename, file_size, rows, columns, original_shape, file_path, user_agent, status)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             self.filename,
             self.file_size,
             self.rows,
             self.columns,
             self.original_shape,
+            self.file_path,
             self.user_agent,
             self.status
         ))
@@ -139,6 +152,8 @@ class UploadRecord:
         conn.commit()
         record_id = cursor.lastrowid
         conn.close()
+        if record_id is None:
+            raise RuntimeError("Failed to insert upload record, no row ID returned.")
         return record_id
     
     def to_dict(self) -> Dict[str, Any]:
@@ -150,6 +165,7 @@ class UploadRecord:
             "rows": self.rows,
             "columns": self.columns,
             "original_shape": self.original_shape,
+            "file_path": self.file_path,
             "status": self.status,
             "uploaded_at": self.uploaded_at.isoformat() if self.uploaded_at else None
         }
@@ -197,6 +213,8 @@ class ProcessingLog:
         conn.commit()
         log_id = cursor.lastrowid
         conn.close()
+        if log_id is None:
+            raise RuntimeError("Failed to insert processing log, no row ID returned.")
         return log_id
 
 

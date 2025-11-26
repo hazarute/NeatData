@@ -10,11 +10,13 @@ from api_modules.utils import get_iso_timestamp
 from api_modules.security import verify_api_key
 from db import Database, UploadRecord
 import pandas as pd
-import io
 from typing import Optional
 import json
+from pathlib import Path
+from api_modules.utils.storage import save_upload_file
+import os
 
-router = APIRouter(prefix="/upload", tags=["Upload"])
+router = APIRouter(prefix="/v1/upload", tags=["Upload"])
 
 
 @router.post(
@@ -53,35 +55,45 @@ async def upload_csv(file: UploadFile = File(...), api_key: str = Depends(verify
         # Dosya adı validasyonu
         if not file.filename:
             raise ValueError("Dosya adı boş olamaz")
-        
+
         # Dosya uzantısı kontrolü
         if not file.filename.lower().endswith(('.csv', '.txt')):
             raise ValueError(f"Desteklenmeyen dosya türü: {file.filename}. Sadece .csv ve .txt dosyaları kabul edilir.")
-        
+
+        # Disk'e kaydet (stream olarak) ve path döndür
+        saved_path = await save_upload_file(file)
+        saved_path_obj = Path(saved_path)
+
         # Dosya boyutu kontrolü (50MB max)
         max_size = 50 * 1024 * 1024  # 50 MB
-        contents = await file.read()
-        file_size = len(contents)
-        
+        try:
+            file_size = saved_path_obj.stat().st_size
+        except Exception:
+            raise ValueError("Kaydedilen dosyanın boyutu alınamadı")
+
         if file_size > max_size:
+            # büyük dosyayı temizle
+            try:
+                os.remove(saved_path)
+            except Exception:
+                pass
             raise ValueError(f"Dosya çok büyük: {file_size / (1024*1024):.2f}MB. Maximum 50MB.")
-        
+
         if file_size == 0:
             raise ValueError("Dosya boş olamaz")
-        
-        # CSV dosyasını DataFrame'e dönüştür
+
+        # CSV dosyasını DataFrame'e dönüştür (dosya yolundan)
         try:
-            # UTF-8 ile başla, başarısız olursa ISO-8859-1 kullan
             try:
-                df = pd.read_csv(io.BytesIO(contents), encoding='utf-8')
+                df = pd.read_csv(str(saved_path_obj), encoding='utf-8')
             except UnicodeDecodeError:
-                df = pd.read_csv(io.BytesIO(contents), encoding='iso-8859-1')
+                df = pd.read_csv(str(saved_path_obj), encoding='iso-8859-1')
         except Exception as e:
             raise ValueError(f"CSV dosyası ayrıştırılamadı: {str(e)}")
-        
+
         # DataFrame bilgilerini al
         rows, cols = df.shape
-        
+
         # Veritabanına kaydet
         upload_id = None
         try:
@@ -92,13 +104,14 @@ async def upload_csv(file: UploadFile = File(...), api_key: str = Depends(verify
                 rows=rows,
                 columns=cols,
                 original_shape=json.dumps([rows, cols]),
-                user_agent=None
+                user_agent=None,
+                file_path=str(saved_path)
             )
             upload_id = upload_record.save()
         except Exception as db_error:
             # Veritabanı hatası, response'a upload_id olmadan gönder
             print(f"Database save error: {db_error}")
-        
+
         return FileUploadResponse(
             status="success",
             filename=file.filename,

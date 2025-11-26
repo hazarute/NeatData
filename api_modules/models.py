@@ -129,6 +129,18 @@ class PipelineRunRequest(BaseModel):
         }
 
 
+class PipelineRunByIdRequest(BaseModel):
+    """Pipeline çalıştırma isteği (upload_id üzerinden)."""
+    upload_id: int = Field(..., description="Veritabanındaki upload ID")
+    modules: List[str] = Field(..., description="Çalıştırılacak modül keys veya names")
+
+    class Config:
+        example = {
+            "upload_id": 42,
+            "modules": ["trim_spaces"]
+        }
+
+
 class PipelineRunResponse(BaseModel):
     """Pipeline çalıştırma sonuç modeli."""
     status: str = Field(..., description="İşlem durumu (success/error)")

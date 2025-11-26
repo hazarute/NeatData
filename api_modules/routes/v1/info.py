@@ -6,7 +6,7 @@ API bilgilendirme endpoint'leri.
 
 from fastapi import APIRouter
 
-router = APIRouter(tags=["Info"])
+router = APIRouter(prefix="/v1", tags=["Info"])
 
 
 @router.get(

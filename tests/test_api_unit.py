@@ -26,8 +26,8 @@ class TestHealth:
     """Health check endpoint tests."""
     
     def test_health_success(self):
-        """GET /health endpoint'ini test et."""
-        response = client.get("/health")
+        """GET /v1/health endpoint'ini test et."""
+        response = client.get("/v1/health")
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "ok"
@@ -35,77 +35,18 @@ class TestHealth:
         assert "timestamp" in data
 
 
-class TestClean:
-    """Text cleaning endpoint tests."""
-    
-    def test_clean_trim(self):
-        """POST /clean endpoint'ini test et (trim)."""
-        payload = {
-            "data": "  kirli veri  ",
-            "operations": ["trim"]
-        }
-        response = client.post("/clean", json=payload, headers=get_headers_with_key())
-        assert response.status_code == 200
-        data = response.json()
-        assert data["status"] == "success"
-        assert data["cleaned_data"] == "kirli veri"
-        assert "trim" in data["operations_applied"]
-    
-    def test_clean_lowercase(self):
-        """POST /clean endpoint'ini test et (lowercase)."""
-        payload = {
-            "data": "KIRLI VERI",
-            "operations": ["lowercase"]
-        }
-        response = client.post("/clean", json=payload, headers=get_headers_with_key())
-        assert response.status_code == 200
-        data = response.json()
-        assert data["status"] == "success"
-        assert data["cleaned_data"] == "kirli veri"
-    
-    def test_clean_multiple_operations(self):
-        """POST /clean endpoint'ini test et (multiple ops)."""
-        payload = {
-            "data": "  KIRLI VERI  ",
-            "operations": ["trim", "lowercase"]
-        }
-        response = client.post("/clean", json=payload, headers=get_headers_with_key())
-        assert response.status_code == 200
-        data = response.json()
-        assert data["status"] == "success"
-        assert data["cleaned_data"] == "kirli veri"
-    
-    def test_clean_missing_api_key(self):
-        """POST /clean endpoint'ini test et (missing API key)."""
-        payload = {
-            "data": "test",
-            "operations": ["trim"]
-        }
-        response = client.post("/clean", json=payload)  # No API key
-        assert response.status_code == 401
-        data = response.json()
-        assert "detail" in data
 
 
-class TestRoot:
-    """Root endpoint test."""
-    
-    def test_root(self):
-        """GET / endpoint'ini test et."""
-        response = client.get("/")
-        assert response.status_code == 200
-        data = response.json()
-        assert data["name"] == "NeatData API"
-        assert "version" in data
-        assert "endpoints" in data
+
+
 
 
 class TestPipeline:
     """Pipeline endpoint tests."""
     
     def test_available_modules(self):
-        """GET /pipeline/available endpoint'ini test et."""
-        response = client.get("/pipeline/available")
+        """GET /v1/pipeline/available endpoint'ini test et."""
+        response = client.get("/v1/pipeline/available")
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
@@ -114,30 +55,40 @@ class TestPipeline:
         assert len(data["core_modules"]) > 0
     
     def test_pipeline_run(self):
-        """POST /pipeline/run endpoint'ini test et."""
+        """POST /v1/pipeline/run endpoint'ini test et."""
+        # 1. Önce dosya yükle
+        csv_content = b"name,age\n  John  ,25\n  Jane  ,30"
+        upload_response = client.post(
+            "/v1/upload/csv",
+            files={"file": ("test_pipeline.csv", csv_content, "text/csv")},
+            headers=get_headers_with_key()
+        )
+        assert upload_response.status_code == 200
+        upload_id = upload_response.json()["upload_id"]
+        
+        # 2. Pipeline çalıştır
         payload = {
-            "data": {
-                "name": ["  John  ", "  Jane  "],
-                "age": [25, 30]
-            },
+            "upload_id": upload_id,
             "modules": ["trim_spaces"]
         }
-        response = client.post("/pipeline/run", json=payload, headers=get_headers_with_key())
+        response = client.post("/v1/pipeline/run", json=payload, headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "success"
-        # JSON serializes tuple as list
-        assert data["original_shape"] == [2, 2] or data["original_shape"] == (2, 2)
-        assert data["cleaned_shape"] == [2, 2] or data["cleaned_shape"] == (2, 2)
+        
+        # Sonuçları kontrol et
+        result_data = data["result_data"]
+        assert "name" in result_data
+        assert result_data["name"] == ["John", "Jane"]  # Trim edilmiş olmalı
         assert "trim_spaces" in data["modules_executed"]
     
     def test_pipeline_run_missing_api_key(self):
-        """POST /pipeline/run endpoint'ini test et (missing API key)."""
+        """POST /v1/pipeline/run endpoint'ini test et (missing API key)."""
         payload = {
-            "data": {"col": [1, 2]},
+            "upload_id": 1,
             "modules": ["trim_spaces"]
         }
-        response = client.post("/pipeline/run", json=payload)  # No API key
+        response = client.post("/v1/pipeline/run", json=payload)  # No API key
         assert response.status_code == 401
 
 
@@ -145,11 +96,11 @@ class TestUpload:
     """File upload endpoint tests."""
     
     def test_upload_csv_success(self):
-        """POST /upload/csv endpoint'ini test et (valid CSV)."""
+        """POST /v1/upload/csv endpoint'ini test et (valid CSV)."""
         csv_content = b"name,age,city\nJohn,25,NYC\nJane,30,LA\nBob,35,Chicago"
         
         response = client.post(
-            "/upload/csv",
+            "/v1/upload/csv",
             files={"file": ("test_data.csv", csv_content, "text/csv")},
             headers=get_headers_with_key()
         )
@@ -162,12 +113,12 @@ class TestUpload:
         assert data["columns"] == 3
         assert data["file_size"] == len(csv_content)
         assert "upload_id" in data
-        assert data["upload_id"] is None or isinstance(data["upload_id"], int)
+        assert isinstance(data["upload_id"], int)
     
     def test_upload_csv_invalid_extension(self):
-        """POST /upload/csv endpoint'ini test et (invalid extension)."""
+        """POST /v1/upload/csv endpoint'ini test et (invalid extension)."""
         response = client.post(
-            "/upload/csv",
+            "/v1/upload/csv",
             files={"file": ("test_data.xlsx", b"invalid", "application/octet-stream")},
             headers=get_headers_with_key()
         )
@@ -177,9 +128,9 @@ class TestUpload:
         assert "error" in data or "detail" in data
     
     def test_upload_csv_empty_file(self):
-        """POST /upload/csv endpoint'ini test et (empty file)."""
+        """POST /v1/upload/csv endpoint'ini test et (empty file)."""
         response = client.post(
-            "/upload/csv",
+            "/v1/upload/csv",
             files={"file": ("test_data.csv", b"", "text/csv")},
             headers=get_headers_with_key()
         )
@@ -189,10 +140,10 @@ class TestUpload:
         assert "detail" in data
     
     def test_upload_csv_missing_api_key(self):
-        """POST /upload/csv endpoint'ini test et (missing API key)."""
+        """POST /v1/upload/csv endpoint'ini test et (missing API key)."""
         csv_content = b"name,age\nJohn,25"
         response = client.post(
-            "/upload/csv",
+            "/v1/upload/csv",
             files={"file": ("test.csv", csv_content, "text/csv")}
             # No headers with API key
         )
@@ -201,10 +152,10 @@ class TestUpload:
         assert "detail" in data
     
     def test_upload_csv_invalid_api_key(self):
-        """POST /upload/csv endpoint'ini test et (invalid API key)."""
+        """POST /v1/upload/csv endpoint'ini test et (invalid API key)."""
         csv_content = b"name,age\nJohn,25"
         response = client.post(
-            "/upload/csv",
+            "/v1/upload/csv",
             files={"file": ("test.csv", csv_content, "text/csv")},
             headers={"X-API-Key": "invalid-key-12345"}
         )
@@ -217,8 +168,8 @@ class TestDatabase:
     """Database endpoint tests."""
     
     def test_get_uploads_history(self):
-        """GET /db/uploads endpoint'ini test et."""
-        response = client.get("/db/uploads")
+        """GET /v1/db/uploads endpoint'ini test et."""
+        response = client.get("/v1/db/uploads")
         
         assert response.status_code == 200
         data = response.json()
@@ -229,9 +180,9 @@ class TestDatabase:
         assert "timestamp" in data
     
     def test_get_upload_details(self):
-        """GET /db/uploads/{upload_id} endpoint'ini test et."""
+        """GET /v1/db/uploads/{upload_id} endpoint'ini test et."""
         # İlk olarak boş ID ile test et (bulunamadı)
-        response = client.get("/db/uploads/99999")
+        response = client.get("/v1/db/uploads/99999")
         assert response.status_code == 404
         
         # Geçerli yanıt formatı kontrol et
@@ -239,8 +190,8 @@ class TestDatabase:
         assert "detail" in data or "message" in data
     
     def test_get_processing_logs(self):
-        """GET /db/logs/{upload_id} endpoint'ini test et."""
-        response = client.get("/db/logs/1")
+        """GET /v1/db/logs/{upload_id} endpoint'ini test et."""
+        response = client.get("/v1/db/logs/1")
         
         assert response.status_code == 200
         data = response.json()
@@ -256,12 +207,12 @@ class TestQueue:
     """Queue/Batch processing endpoint tests."""
     
     def test_submit_job(self):
-        """POST /queue/submit endpoint'ini test et."""
+        """POST /v1/queue/submit endpoint'ini test et."""
         payload = {
             "upload_id": 1,
             "modules": ["trim_spaces", "drop_duplicates"]
         }
-        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        response = client.post("/v1/queue/submit", json=payload, headers=get_headers_with_key())
         
         assert response.status_code == 201
         data = response.json()
@@ -272,8 +223,8 @@ class TestQueue:
         assert len(data["modules"]) == 2
     
     def test_list_jobs(self):
-        """GET /queue/jobs endpoint'ini test et."""
-        response = client.get("/queue/jobs", headers=get_headers_with_key())
+        """GET /v1/queue/jobs endpoint'ini test et."""
+        response = client.get("/v1/queue/jobs", headers=get_headers_with_key())
         
         assert response.status_code == 200
         data = response.json()
@@ -283,10 +234,10 @@ class TestQueue:
         assert isinstance(data["jobs"], list)
     
     def test_get_job_details(self):
-        """GET /queue/jobs/{job_id} endpoint'ini test et."""
+        """GET /v1/queue/jobs/{job_id} endpoint'ini test et."""
         # İlk job'u al
         response = client.post(
-            "/queue/submit",
+            "/v1/queue/submit",
             json={"upload_id": 2, "modules": ["trim_spaces"]},
             headers=get_headers_with_key()
         )
@@ -295,37 +246,37 @@ class TestQueue:
         job_id = job_data["id"]
         
         # Job detaylarını al
-        response = client.get(f"/queue/jobs/{job_id}", headers=get_headers_with_key())
+        response = client.get(f"/v1/queue/jobs/{job_id}", headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["id"] == job_id
         assert data["upload_id"] == 2
     
     def test_get_job_not_found(self):
-        """GET /queue/jobs/{job_id} endpoint'ini test et (job bulunamadı)."""
-        response = client.get("/queue/jobs/nonexistent-id", headers=get_headers_with_key())
+        """GET /v1/queue/jobs/{job_id} endpoint'ini test et (job bulunamadı)."""
+        response = client.get("/v1/queue/jobs/nonexistent-id", headers=get_headers_with_key())
         assert response.status_code == 404
     
     def test_cancel_job(self):
-        """POST /queue/jobs/{job_id}/cancel endpoint'ini test et."""
+        """POST /v1/queue/jobs/{job_id}/cancel endpoint'ini test et."""
         # Job oluştur
         response = client.post(
-            "/queue/submit",
+            "/v1/queue/submit",
             json={"upload_id": 3, "modules": ["trim_spaces"]},
             headers=get_headers_with_key()
         )
         job_id = response.json()["id"]
         
         # Job'u iptal et
-        response = client.post(f"/queue/jobs/{job_id}/cancel", headers=get_headers_with_key())
+        response = client.post(f"/v1/queue/jobs/{job_id}/cancel", headers=get_headers_with_key())
         assert response.status_code == 200
         data = response.json()
         assert data["id"] == job_id
         assert data["status"] == "cancelled"
     
     def test_queue_stats(self):
-        """GET /queue/stats endpoint'ini test et."""
-        response = client.get("/queue/stats", headers=get_headers_with_key())
+        """GET /v1/queue/stats endpoint'ini test et."""
+        response = client.get("/v1/queue/stats", headers=get_headers_with_key())
         
         assert response.status_code == 200
         data = response.json()
@@ -342,8 +293,8 @@ class TestWebSocket:
     """WebSocket endpoint tests."""
     
     def test_websocket_job_not_found(self):
-        """WebSocket /ws/{job_id} endpoint'i - job not found."""
-        with client.websocket_connect("/ws/nonexistent-job-id") as websocket:
+        """WebSocket /v1/ws/{job_id} endpoint'i - job not found."""
+        with client.websocket_connect("/v1/ws/nonexistent-job-id") as websocket:
             data = websocket.receive_text()
             import json
             message = json.loads(data)
@@ -361,12 +312,12 @@ class TestWebSocket:
             "upload_id": 1,
             "modules": ["trim_spaces", "drop_duplicates"]
         }
-        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        response = client.post("/v1/queue/submit", json=payload, headers=get_headers_with_key())
         assert response.status_code == 201
         job_id = response.json()["id"]
         
         # Connect to WebSocket for this job
-        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+        with client.websocket_connect(f"/v1/ws/{job_id}") as websocket:
             # Should receive initial job state
             data = websocket.receive_text()
             import json
@@ -386,14 +337,14 @@ class TestWebSocket:
             "upload_id": 1,
             "modules": ["test_module"]
         }
-        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        response = client.post("/v1/queue/submit", json=payload, headers=get_headers_with_key())
         job_id = response.json()["id"]
         
         # Start job
         queue.start_job(job_id)
         
         # Connect and get initial state
-        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+        with client.websocket_connect(f"/v1/ws/{job_id}") as websocket:
             # Receive initial state
             data = websocket.receive_text()
             import json
@@ -416,7 +367,7 @@ class TestWebSocket:
     
     def test_websocket_broadcast_channel(self):
         """WebSocket broadcast channel."""
-        with client.websocket_connect("/ws?channel=all") as websocket:
+        with client.websocket_connect("/v1/ws/?channel=all") as websocket:
             # Should receive welcome message
             data = websocket.receive_json()
             assert data["status"] == "connected"
@@ -438,10 +389,10 @@ class TestWebSocket:
             "upload_id": 1,
             "modules": ["test"]
         }
-        response = client.post("/queue/submit", json=payload, headers=get_headers_with_key())
+        response = client.post("/v1/queue/submit", json=payload, headers=get_headers_with_key())
         job_id = response.json()["id"]
         
-        with client.websocket_connect(f"/ws/{job_id}") as websocket:
+        with client.websocket_connect(f"/v1/ws/{job_id}") as websocket:
             # Receive initial state
             websocket.receive_text()
             

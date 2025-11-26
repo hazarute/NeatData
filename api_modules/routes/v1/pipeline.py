@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from api_modules.models import (
     AvailableModulesResponse,
     ModuleInfo,
-    PipelineRunRequest,
+    PipelineRunByIdRequest,
     PipelineRunResponse
 )
 from api_modules.utils import get_iso_timestamp
@@ -19,7 +19,7 @@ from typing import Dict, List, Any
 from typing import cast
 import pandas as pd
 
-router = APIRouter(prefix="/pipeline", tags=["Pipeline"])
+router = APIRouter(prefix="/v1/pipeline", tags=["Pipeline"])
 
 
 @router.get(
@@ -82,7 +82,7 @@ async def get_available_modules(
     }
 )
 async def run_pipeline(
-    request: PipelineRunRequest,
+    request: PipelineRunByIdRequest,
     pm: PipelineManager = Depends(get_pipeline_manager),
     api_key: str = Depends(verify_api_key)
 ) -> PipelineRunResponse:
@@ -105,21 +105,35 @@ async def run_pipeline(
         HTTPException: Veri formatı veya modül hatası
     """
     try:
-        # Veri validasyonu
-        if not request.data:
-            raise ValueError("Veri boş olamaz")
-        
+        # upload_id üzerinden çalışacak şekilde revize edildi
+        if not request.upload_id:
+            raise ValueError("upload_id belirtilmelidir")
+
         if not request.modules:
             raise ValueError("En az bir modül seçilmelidir")
-        
-        # Dict'i DataFrame'e dönüştür
+
+        # Veritabanından upload kaydını çek
+        from db import get_upload_by_id
+
+        record = get_upload_by_id(request.upload_id)
+        if not record:
+            raise ValueError(f"Upload ID bulunamadı: {request.upload_id}")
+
+        file_path = record.get("file_path")
+        if not file_path:
+            raise ValueError(f"Upload kaydında file_path yok (upload_id={request.upload_id})")
+
+        # Dosyayı pandas ile oku
         try:
-            df_original = pd.DataFrame(request.data)
+            try:
+                df_original = pd.read_csv(file_path, encoding='utf-8')
+            except UnicodeDecodeError:
+                df_original = pd.read_csv(file_path, encoding='iso-8859-1')
         except Exception as e:
-            raise ValueError(f"DataFrame oluşturulamadı: {str(e)}")
-        
+            raise ValueError(f"Dosya okunamadı veya CSV değil: {str(e)}")
+
         original_shape = df_original.shape
-        
+
         # PipelineManager'ı oluştur ve çalıştır
         pm_runner = PipelineManager(selected_modules_list=request.modules)
         df_cleaned = pm_runner.run_pipeline(df_original)

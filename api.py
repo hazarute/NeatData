@@ -21,8 +21,25 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from api_modules.utils import get_iso_timestamp
 from api_modules.logging_service import StructuredLogger
-from api_modules.routes import health_router, clean_router, pipeline_router, info_router, upload_router, database_router, queue_router, websocket_router
+from api_modules.routes.v1.health import router as health_router
+# from api_modules.routes.v1.clean import router as clean_router
+from api_modules.routes.v1.pipeline import router as pipeline_router
+from api_modules.routes.v1.info import router as info_router
+from api_modules.routes.v1.upload import router as upload_router
+from api_modules.routes.v1.database import router as database_router
+from api_modules.routes.v1.queue import router as queue_router
+from api_modules.routes.v1.websocket import router as websocket_router
 import time
+import sys
+
+sys.path.append("E:\\NewWork\\NeatData - CSV Veri Temizleme")
+
+
+try:
+    from api_modules.routes.v1.health import router as health_router
+    print("Import başarılı.")
+except ModuleNotFoundError as e:
+    print("Import hatası:", e)
 
 
 def create_app() -> FastAPI:
@@ -44,7 +61,7 @@ def create_app() -> FastAPI:
     # Router'ları kaydet
     app.include_router(info_router)
     app.include_router(health_router)
-    app.include_router(clean_router)
+    # app.include_router(clean_router)
     app.include_router(pipeline_router)
     app.include_router(upload_router)
     app.include_router(database_router)
@@ -126,6 +143,10 @@ def create_app() -> FastAPI:
 
 # App örneğini oluştur
 app = create_app()
+
+# Python path'ini yazdır (debug amaçlı)
+import sys
+print('PYTHONPATH:', sys.path)
 
 if __name__ == "__main__":
     import uvicorn
